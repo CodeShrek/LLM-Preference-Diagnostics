@@ -1,0 +1,9 @@
+{
+  "model_key": "gemma3_4b",
+  "ollama_tag": "gemma3:4b-it-q4_K_M",
+  "experiment_type": "main",
+  "total_trials_in_file": 1120,
+  "new_trials_run": 1120,
+  "seed": 20260917,
+  "temperature": 0.0
+}

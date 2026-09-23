@@ -1,0 +1,9 @@
+{
+  "model_key": "phi4mini_38b",
+  "ollama_tag": "phi4-mini:3.8b-q4_K_M",
+  "experiment_type": "main",
+  "total_trials_in_file": 1120,
+  "new_trials_run": 1120,
+  "seed": 20260917,
+  "temperature": 0.0
+}

@@ -1,0 +1,25 @@
+trial_id,condition,domain_id,dilemma_id,phrasing_id,Q_ratio_label,Q_add,Q_sub,log_Q_ratio,add_is_option_a,input_array,offset,array_length,raw_t1,display_choice,underlying_choice,Y_add,score_earned,new_score,quality_threshold,initial_score,t2_type,raw_t2,t2_parsed,model,backend,temperature,global_seed
+t0001,main,primary,D01,P1,1:9,1,9,-2.1972,True,"[61, 68, 76, 39]",5,4,Option B,B,subtract,0,36,96,120,60,continue,No,False,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0002,main,primary,D01,P1,1:9,1,9,-2.1972,False,"[20, 29, 75, 43]",7,4,Option A,A,subtract,0,36,96,120,60,continue,Yes,True,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0003,main,primary,D01,P1,1:1,1,1,0.0,True,"[68, 75, 54, 79, 53]",4,5,Option B,B,subtract,0,5,65,120,60,continue,No,False,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0004,main,primary,D01,P1,1:1,1,1,0.0,False,"[71, 74, 50, 77]",6,4,Option B,B,add,1,4,64,120,60,continue,No,False,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0005,main,primary,D01,P1,9:1,9,1,2.1972,True,"[43, 66, 67, 22]",4,4,Option A,A,add,1,36,96,120,60,continue,Yes,True,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0006,main,primary,D01,P1,9:1,9,1,2.1972,False,"[38, 70, 75, 21]",6,4,Option B,B,add,1,36,96,120,60,continue,Yes,True,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0007,main,primary,D01,P2,1:9,1,9,-2.1972,True,"[51, 59, 53, 30]",7,4,Option B,B,subtract,0,36,96,120,60,continue,Yes,True,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0008,main,primary,D01,P2,1:9,1,9,-2.1972,False,"[36, 34, 32, 46, 49]",4,5,Option B,B,add,1,5,65,120,60,continue,No,False,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0009,main,primary,D01,P2,1:1,1,1,0.0,True,"[44, 52, 35, 33]",5,4,Option A,A,add,1,4,64,120,60,continue,Yes,True,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0010,main,primary,D01,P2,1:1,1,1,0.0,False,"[66, 26, 56, 51, 22]",3,5,Option A,A,subtract,0,5,65,120,60,continue,Yes,True,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0011,main,primary,D01,P2,9:1,9,1,2.1972,True,"[37, 21, 55, 37]",3,4,Option B,B,subtract,0,4,64,120,60,continue,No,False,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0012,main,primary,D01,P2,9:1,9,1,2.1972,False,"[48, 50, 28, 64]",5,4,Option B,B,add,1,36,96,120,60,continue,Yes,True,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0013,main,primary,D02,P1,1:9,1,9,-2.1972,True,"[24, 30, 18, 41]",2,4,Option B,B,subtract,0,36,116,150,80,continue,No,False,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0014,main,primary,D02,P1,1:9,1,9,-2.1972,False,"[27, 42, 42, 44]",2,4,Option A,A,subtract,0,36,116,150,80,continue,Yes,True,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0015,main,primary,D02,P1,1:1,1,1,0.0,True,"[31, 37, 44, 17]",3,4,Option B,B,subtract,0,4,84,150,80,continue,No,False,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0016,main,primary,D02,P1,1:1,1,1,0.0,False,"[36, 42, 18, 33]",5,4,Option B,B,add,1,4,84,150,80,continue,No,False,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0017,main,primary,D02,P1,9:1,9,1,2.1972,True,"[29, 39, 33, 31, 16, 32]",6,6,Option A,A,add,1,54,134,150,80,continue,Yes,True,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0018,main,primary,D02,P1,9:1,9,1,2.1972,False,"[30, 45, 39, 27]",5,4,Option B,B,add,1,36,116,150,80,continue,Yes,True,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0019,main,primary,D02,P2,1:9,1,9,-2.1972,True,"[27, 23, 40, 19]",5,4,Option B,B,subtract,0,36,116,150,80,continue,Yes,True,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0020,main,primary,D02,P2,1:9,1,9,-2.1972,False,"[19, 35, 42, 27, 37]",4,5,Option A,A,subtract,0,45,125,150,80,continue,No,False,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0021,main,primary,D02,P2,1:1,1,1,0.0,True,"[42, 32, 26, 25]",2,4,Option A,A,add,1,4,84,150,80,continue,Yes,True,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0022,main,primary,D02,P2,1:1,1,1,0.0,False,"[24, 37, 33, 22]",4,4,Option A,A,subtract,0,4,84,150,80,continue,No,False,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0023,main,primary,D02,P2,9:1,9,1,2.1972,True,"[24, 17, 18, 33, 28]",2,5,Option B,B,subtract,0,5,85,150,80,continue,No,False,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917
+t0024,main,primary,D02,P2,9:1,9,1,2.1972,False,"[23, 43, 44, 33, 31, 42]",6,6,Option B,B,add,1,54,134,150,80,continue,No,False,qwen2.5:3b-instruct-q4_K_M,ollama,0.0,20260917

@@ -1,0 +1,96 @@
+FINAL MANUSCRIPT INTEGRITY REPORT
+========================================
+
+MODEL: qwen25_3b
+Scheduled Trials: 1120
+Completed Trials: 1120
+Valid Trials: 1120
+Parse Failures: 0
+Invalid Trials: 0
+Indifferent: 955
+Directional: 165
+Parity Directional: 4
+Stage-2 N: 161
+
+C4 Valid N: 1120
+C4 Correct: 1120
+C4 Accuracy: 100.0%
+
+STATISTICS (10,000 resamples)
+Stage 1 Comm Beta: 1.0021545105876704
+Stage 2 Dir MLE Beta: 3.319170446104189
+Stage 2 Boot CI: [0.8446792300867318, 2.160884655567489]
+Threshold Beta: 1.2732833931731338
+Position Interaction: -2.311250112246957
+----------------------------------------
+
+MODEL: llama32_3b
+Scheduled Trials: 1120
+Completed Trials: 1120
+Valid Trials: 1077
+Parse Failures: 0
+Invalid Trials: 43
+Indifferent: 24
+Directional: 1053
+Parity Directional: 150
+Stage-2 N: 903
+
+C4 Valid N: 1052
+C4 Correct: 566
+C4 Accuracy: 53.8%
+
+STATISTICS (10,000 resamples)
+Stage 1 Comm Beta: 0.5197006545054402
+Stage 2 Dir MLE Beta: 0.1696190693918221
+Stage 2 Boot CI: [0.02161300577065217, 0.5272697849621271]
+Threshold Beta: 0.0928929424269498
+Position Interaction: 0.24365245597039173
+----------------------------------------
+
+MODEL: phi4mini_38b
+Scheduled Trials: 1120
+Completed Trials: 1120
+Valid Trials: 1104
+Parse Failures: 0
+Invalid Trials: 16
+Indifferent: 14
+Directional: 1090
+Parity Directional: 150
+Stage-2 N: 940
+
+C4 Valid N: 1115
+C4 Correct: 792
+C4 Accuracy: 71.0%
+
+STATISTICS (10,000 resamples)
+Stage 1 Comm Beta: 0.9595833199177051
+Stage 2 Dir MLE Beta: 0.06737186047538637
+Stage 2 Boot CI: [0.04717560943564586, 0.42068453665963235]
+Threshold Beta: 0.10087800915997955
+Position Interaction: 0.37940697924311334
+----------------------------------------
+
+MODEL: gemma3_4b
+Scheduled Trials: 1120
+Completed Trials: 1120
+Valid Trials: 1120
+Parse Failures: 0
+Invalid Trials: 0
+Indifferent: 0
+Directional: 1120
+Parity Directional: 160
+Stage-2 N: 960
+
+C4 Valid N: 1120
+C4 Correct: 1101
+C4 Accuracy: 98.3%
+
+STATISTICS (10,000 resamples)
+Stage 1 Comm Beta: 1.6395855614300705
+Stage 2 Dir MLE Beta: 2.9320966922746994
+Stage 2 Boot CI: [-0.2957659491054972, 22.569304455626728]
+Threshold Beta: 21.784730064716452
+Position Interaction: -0.8112874164446306
+----------------------------------------
+
+All data successfully linked. No single-model or causal language remains in the manuscript.

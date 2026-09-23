@@ -1,0 +1,5 @@
+Model,Scheduled N,Completed N,Valid N,Parse Failures,Incomplete Trials,Invalid Trials,Indifferent,Directional,Parity Directional,Stage-2 N,C4 Valid N,C4 Correct,Threshold Valid N
+qwen25_3b,1120,1120,1120,0,0,0,955,165,4,161,1120,1120,1120
+llama32_3b,1120,1120,1077,0,0,43,24,1053,150,903,1052,566,1097
+phi4mini_38b,1120,1120,1104,0,0,16,14,1090,150,940,1115,792,1107
+gemma3_4b,1120,1120,1120,0,0,0,0,1120,160,960,1120,1101,1120

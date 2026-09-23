@@ -1,0 +1,9 @@
+{
+  "model_key": "qwen25_3b",
+  "ollama_tag": "qwen2.5:3b-instruct-q4_K_M",
+  "experiment_type": "C4",
+  "total_trials_in_file": 1120,
+  "new_trials_run": 0,
+  "seed": 20260917,
+  "temperature": 0.0
+}

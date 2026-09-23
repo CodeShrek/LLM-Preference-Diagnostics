@@ -1,0 +1,78 @@
+[
+  {
+    "model_id": "qwen25_3b",
+    "C4_accuracy": 1.0,
+    "Stage1_Commit_Beta": 1.0021545105876704,
+    "Stage1_Commit_P": 0.00012422990273276924,
+    "Stage2_Direction_Beta": 3.319170446104189,
+    "Stage2_Direction_P": 0.0022552762509871795,
+    "Stage2_Boot_CI_Low": 0.8446792300867318,
+    "Stage2_Boot_CI_High": 2.160884655567489,
+    "Stage2_Boot_Spec": {
+      "n_resamples": 10000,
+      "cluster_var": "dilemma_id",
+      "random_seed": 42,
+      "model_specification": "Y_dominant ~ abs_log_Q + pos_add_first"
+    },
+    "Threshold_Beta": 1.2732833931731338,
+    "Threshold_P": 0.0005814247955839531,
+    "Pos_Interaction_S2": -2.311250112246957
+  },
+  {
+    "model_id": "llama32_3b",
+    "C4_accuracy": 0.5380228136882129,
+    "Stage1_Commit_Beta": 0.5197006545054402,
+    "Stage1_Commit_P": 0.2353412415759364,
+    "Stage2_Direction_Beta": 0.1696190693918221,
+    "Stage2_Direction_P": 0.33539060406517773,
+    "Stage2_Boot_CI_Low": 0.02161300577065217,
+    "Stage2_Boot_CI_High": 0.5272697849621271,
+    "Stage2_Boot_Spec": {
+      "n_resamples": 10000,
+      "cluster_var": "dilemma_id",
+      "random_seed": 42,
+      "model_specification": "Y_dominant ~ abs_log_Q + pos_add_first"
+    },
+    "Threshold_Beta": 0.0928929424269498,
+    "Threshold_P": 0.4431823034107517,
+    "Pos_Interaction_S2": 0.24365245597039173
+  },
+  {
+    "model_id": "phi4mini_38b",
+    "C4_accuracy": 0.7103139013452915,
+    "Stage1_Commit_Beta": 0.9595833199177051,
+    "Stage1_Commit_P": 0.17343772857828998,
+    "Stage2_Direction_Beta": 0.06737186047538637,
+    "Stage2_Direction_P": 0.6799500812739232,
+    "Stage2_Boot_CI_Low": 0.04717560943564586,
+    "Stage2_Boot_CI_High": 0.42068453665963235,
+    "Stage2_Boot_Spec": {
+      "n_resamples": 10000,
+      "cluster_var": "dilemma_id",
+      "random_seed": 42,
+      "model_specification": "Y_dominant ~ abs_log_Q + pos_add_first"
+    },
+    "Threshold_Beta": 0.10087800915997955,
+    "Threshold_P": 0.412203273329525,
+    "Pos_Interaction_S2": 0.37940697924311334
+  },
+  {
+    "model_id": "gemma3_4b",
+    "C4_accuracy": 0.9830357142857142,
+    "Stage1_Commit_Beta": 1.6395855614300705,
+    "Stage1_Commit_P": 0.9999463884835064,
+    "Stage2_Direction_Beta": 2.9320966922746994,
+    "Stage2_Direction_P": 0.9999293185586746,
+    "Stage2_Boot_CI_Low": -0.2957659491054972,
+    "Stage2_Boot_CI_High": 22.569304455626728,
+    "Stage2_Boot_Spec": {
+      "n_resamples": 10000,
+      "cluster_var": "dilemma_id",
+      "random_seed": 42,
+      "model_specification": "Y_dominant ~ abs_log_Q + pos_add_first"
+    },
+    "Threshold_Beta": 21.784730064716452,
+    "Threshold_P": 0.998506834614239,
+    "Pos_Interaction_S2": -0.8112874164446306
+  }
+]

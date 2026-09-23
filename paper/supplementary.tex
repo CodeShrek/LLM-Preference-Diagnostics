@@ -1,0 +1,45 @@
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\title{Supplementary Material: Stress-Testing LLM Preference Elicitation}
+
+\author{Author 1, Author 2, Author 3}
+
+\maketitle
+
+\section{Experimental Design Details}
+This section provides complete details of the 20 procedural dilemmas utilized in the M3 v2 framework. 
+[Details of D01-D20 would follow here...]
+
+\section{Complete Regression Tables}
+Due to space constraints in the main manuscript, we present the complete output of the Hurdle Stage 1 (Commitment) and Stage 2 (Directional) models here.
+
+\subsection{Hurdle Stage 1: Commitment Model}
+The model is specified as \texttt{Y\_commit $\sim$ abs\_log\_Q * pos\_add\_first + C(dilemma\_id)}. The dependent variable is 1 if the model selected `Add` or `Subtract`, and 0 if `Indifferent`.
+
+\subsection{Hurdle Stage 2: Primary MLE}
+The primary Stage 2 model is specified as \texttt{Y\_dominant $\sim$ abs\_log\_Q * pos\_add\_first + C(dilemma\_id)}. The dependent variable is 1 if the model selected the mathematically dominant option, and 0 if it selected the dominated option. Trials at parity (1:1) are excluded.
+
+\subsection{Hurdle Stage 2: Sensitivity Bootstrap}
+To address quasi-complete separation, we utilized a stabilized specification: \texttt{Y\_dominant $\sim$ abs\_log\_Q + pos\_add\_first}. We ran a 10,000-resample blocked cluster bootstrap (blocking on \texttt{dilemma\_id}) to estimate the marginal non-parametric confidence interval for the Q-sensitivity parameter.
+
+\section{Parser Rules}
+The operational response category (`Add`, `Subtract`, `Indifferent`) is extracted via a deterministic regex pipeline applied to the model's final string output. Output that fails to match any of the three patterns is marked `INVALID`. In the main experiment, invalid parsing occurred in $<0.5\%$ of trials.
+
+\section{Categorical-Q Robustness Checks}
+We also evaluated Q-sensitivity by treating Q as a categorical factor rather than a continuous log-ratio. The categorical dummy specifications yield consistent results, showing a monotonic increase in conditional dominant choice probability as Q moves from the lowest tier (1:9, 1:5) to the highest (9:1).
+
+\end{document}

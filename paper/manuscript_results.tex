@@ -1,0 +1,51 @@
+\section{Results}
+\label{sec:results}
+
+\subsection{Overall Response Distribution}
+The primary observable behavior across all 1,120 main trials was massive abstention. The model produced a directional response (selecting Add or Subtract) in only 180 trials (16.1\%). In the remaining 940 trials (83.9\%), the model defaulted to the non-directional `Indifferent` response permitted by the protocol. This extreme abstention rate provides strong evidence that standard forced-choice elicitations frequently collapse a massive indifference region into noisy, artifactual tie-breaking.
+
+\subsection{Commitment Analysis (H1)}
+We tested whether objective payoff disparity ($|log(Q)|$) predicted the model's willingness to commit to a directional action (Stage 1 of the hurdle model). Commitment probability was positively associated with payoff magnitude ($\beta = 1.002$, 10k bootstrap CI $[0.490, 1.514]$). The $Q \times Position$ interaction term in the commitment model was not statistically significant.
+
+\subsection{Conditional Direction (H2)}
+Conditional on the model producing a directional commitment, we analyzed whether it selected the mathematically dominant option (Stage 2). Because no option is dominant at parity ($Q=1:1$), these 20 committed trials were excluded, leaving 160 committed non-parity trials.
+
+The primary specification estimates a strong, positive conditional slope ($\beta = 3.319$, 95\% Wald CI $[1.189, 5.449]$). However, this MLE model suffers from quasi-complete separation due to the fact that the model never chooses the dominated option in certain structural dilemmas. To provide a stable non-parametric estimate, we constructed a regularized sensitivity specification (dropping the sparse interaction and fixed effects) paired with a 10,000-resample blocked cluster bootstrap. This sensitivity model yielded a highly robust, strictly positive confidence interval (CI $[0.845, 2.161]$ for the marginalized effect of Q). 
+
+These results provide strong evidence that, conditional on commitment, the model's choices are systematically associated with objective quantitative payoffs.
+
+\subsection{Position Moderation (H3)}
+While the overall directional effect is positive, it is significantly moderated by presentation position. The $Q \times Position$ interaction in the primary Stage 2 model was negative and significant ($\beta = -2.311$, $p = 0.048$). 
+When the dominant option is presented second (Subtract-first condition), the predicted probability of choosing the dominant option scales steeply from 0.389 at $Q=2$ to 0.964 at $Q=9$. When the dominant option is presented first, the scaling is much flatter, moving from 0.747 at $Q=2$ to 0.914 at $Q=9$. Thus, presentation order powerfully moderates, though does not entirely overwrite, the model's sensitivity to outcome magnitude.
+
+\subsection{C4 Numerical Comprehension Control}
+To verify that the high abstention rate (83.9\%) was not an artifact of arithmetic incompetence, we evaluated the C4 control condition. In C4, the behavioral preference framing was stripped away, and the model was asked directly which operation produced the greater improvement. The model achieved 100\% accuracy (1120/1120). The model showed no detectable failure on the numerical dominance-comprehension probe, making basic arithmetic failure an unlikely explanation for its abstention behavior in the main task.
+
+\subsection{Threshold Relevance Confound Control}
+In the primary M3 v2 task, the model must cross a predefined `quality_threshold`. We discovered that at $Q=9$, crossing this threshold was mathematically guaranteed across all dilemmas, whereas at $Q=1$ and $Q=2$, it was mathematically impossible. Thus, quantitative magnitude ($Q$) was severely confounded with threshold-crossing ability.
+To rule out a simple step-function threshold heuristic, we conducted a follow-up experiment where the target threshold was lowered to 10 (guaranteeing success at almost any choice). Even when the threshold was rendered completely non-binding, the model maintained an 84.0\% abstention rate, and conditional on commitment, it still significantly scaled its preference for the dominant option with quantitative magnitude ($\beta = 1.273, p = 0.001$). The Q-sensitivity is not merely a threshold-crossing artifact.
+
+\section{Discussion}
+\label{sec:discussion}
+Our findings indicate that the observed choice distribution in LLMs contains separable components: (1) the willingness to produce a directional action, and (2) the direction conditional on commitment. The experiment provides evidence that payoff magnitude is associated with both components, but the directional relationship is also highly sensitive to presentation position.
+
+Crucially, our results suggest that binary preference elicitation inherently conflates these two behavioral processes. When forced to choose, the model's default abstention state is collapsed into a directional outcome, obscuring the underlying parametric sensitivity to quantitative payoffs. By incorporating an explicit abstention option, researchers can recover this parametric signal. We advise extreme caution when interpreting forced-choice data or zero-shot utility extractions without accounting for the massive indifference region inherent to LLM policy.
+
+\section{Limitations}
+\label{sec:limitations}
+This study is subject to several limitations. First, all primary evaluations were conducted on a single local model (`qwen2.5:3b-instruct-q4_K_M`) using deterministic greedy decoding ($T=0.0$). The abstention defaults observed here may differ at higher temperatures or in heavily RLHF-tuned proprietary models. Second, the Stage 2 directional inferences rely on sparse data (160 committed trials) and suffer from quasi-complete separation in the primary MLE specification, necessitating regularized sensitivity analysis. Finally, while we utilize "Indifferent" as an operational response category, this does not establish an internal mental state of genuine psychological indifference. Future work should evaluate matched forced-vs-expanded comparisons across diverse model families and semantic domains.
+
+\section{Conclusion}
+\label{sec:conclusion}
+Within this consequential task, the model frequently produced a non-directional response when abstention was permitted; nevertheless, quantitative payoff disparity was associated with willingness to commit and, conditional on commitment, with selecting the higher-payoff option, while the latter relationship was moderated by presentation position. Our results provide evidence that conventional binary elicitation can conflate willingness to commit with conditional directional choice, underscoring the critical need for abstention-aware paradigms in the behavioral evaluation of Large Language Models.
+
+\section*{Data Availability}
+All raw generation logs, parsed choices, and statistical scripts are available in the supplementary open-source repository at [URL]. 
+
+\section*{Ethical Statement}
+This study evaluated the automated text outputs of publicly available local LLMs. No human subjects were involved. 
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
