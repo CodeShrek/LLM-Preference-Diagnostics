@@ -22,7 +22,7 @@
 
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-Large Language Models (LLMs) are often evaluated for preferences through forced-choice elicitation, but such protocols can collapse distinct behavioral processes into a single directional response. We introduce an abstention-aware decomposition that separates directional commitment from conditional selection among alternatives and stress-test it using a persistent three-turn consequential task. Across four locally evaluated instruction-tuned models, the same factorial stimulus design varied payoff magnitude, presentation position, and parity conditions, with matched numerical-comprehension and threshold controls. The results reveal substantial cross-model heterogeneity: models differed in their propensity to commit and in the extent to which conditional choice tracked the mathematically dominant payoff. Presentation-position effects were also model-dependent. Task-specific numerical-dominance accuracy varied substantially across models and co-varied with conditional payoff sensitivity, although this association does not establish a causal dependence. These findings suggest that forced-choice preference measures can conflate commitment with conditional direction and motivate abstention-aware, position-controlled, and cross-model evaluation protocols.
+Large Language Models (LLMs) are often evaluated for preferences through forced-choice elicitation, but such protocols can collapse distinct behavioral processes into a single directional response. We introduce an abstention-aware decomposition that separates directional commitment from conditional selection among alternatives and stress-test it using a persistent three-turn consequential task. Across four locally deployed 3--4B parameter instruction-tuned models, the same factorial stimulus design varied payoff magnitude, presentation position, and parity conditions, with matched numerical-comprehension and threshold controls. The results reveal substantial cross-model heterogeneity: models differed in their propensity to commit and in the extent to which conditional choice tracked the mathematically dominant payoff. Presentation-position effects were also model-dependent. Task-specific numerical-dominance accuracy varied substantially across models and co-varied with conditional payoff sensitivity, although this association does not establish a causal dependence. These findings suggest that forced-choice preference measures can conflate commitment with conditional direction and motivate abstention-aware, position-controlled, and cross-model evaluation protocols.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -30,6 +30,7 @@ Large Language Models, AI Evaluation, Revealed Preferences, Behavioral Economics
 \end{IEEEkeywords}}
 
 \maketitle
+\markboth{IEEE Open Journal of the Computer Society}{Anonymous: Stress-Testing LLM Preference Elicitation}
 \IEEEdisplaynontitleabstractindextext
 \IEEEpeerreviewmaketitle
 
@@ -152,14 +153,12 @@ Stage 2 conditions on commitment and models whether the committed response selec
 Parity trials are excluded from Stage 2 because there is no mathematically dominant option when $Q_{\mathrm{add}}=Q_{\mathrm{sub}}$. Importantly, parity trials remain part of the full multinomial analysis and the Stage 1 commitment analysis. Their exclusion is therefore limited to the conditional dominant-choice estimand, where a dominant-versus-dominated classification is undefined.
 
 \subsection{Interpretive Scope of the Estimands}
-The three principal estimands have distinct interpretations. The multinomial payoff coefficient describes changes in the log-odds of a directional response relative to \textit{Indifferent} as the signed payoff relation changes. The Stage 1 coefficient describes association between payoff disparity magnitude and directional commitment. The Stage 2 coefficient describes association between payoff disparity magnitude and selection of the mathematically dominant option conditional on commitment. None of these coefficients is interpreted as a direct estimate of latent utility, internal preference, or subjective value.
+The three principal estimands have distinct interpretations. The multinomial payoff coefficient describes changes in the log-odds of a directional response relative to \textit{Indifferent} as the signed payoff relation changes. The Stage 1 coefficient describes association between payoff disparity magnitude and directional commitment. The Stage 2 coefficient describes association between payoff disparity magnitude and selection of the mathematically dominant option conditional on commitment. Importantly, because the commitment rate varies across payoff ratios (most noticeably for Qwen, where commitment increases from 5.0\% at parity to 26.2\% at 9:1), the Stage~2 conditional slope compares different committed subsets as payoff disparity changes. It describes observable choice behavior conditional on commitment, rather than a within-common-subset or causal preference effect. None of these coefficients is interpreted as a direct estimate of latent utility, internal preference, or subjective value.
 
 \section{Experimental Design}
 \label{sec:methods}
 
 \subsection{M3 v2 Task and Factorial Structure}
-The primary evaluation consisted of a fully balanced 1,120-trial factorial design:
-
 The primary evaluation consisted of a fully balanced 1,120-trial
 factorial design spanning 20 structural dilemmas, 4 phrasing variants,
 7 payoff ratios and 2 presentation positions:
@@ -189,14 +188,41 @@ Total trials & 1,120 \\
 \end{tabular}
 \end{table}
 
+\subsection{Task Domain and Prompt Structure}
+\label{sec:prompts}
+The evaluation task is a \textit{data-quality pipeline} scenario. The model acts as a data-processing agent whose goal is to accumulate at least $T$ quality points starting from an initial score $s_0$. Each of the 20 structural dilemmas specifies a domain backstory (e.g., seismic sensor calibration, climate archive), a data array description, and the dilemma-specific parameters $(s_0, T)$ listed in the supplementary material and the released stimulus file (\texttt{m3v2\_stimuli.json}).
+
+Two operations are always available: \textit{Add} (add an offset to each array element, earning $Q_{\mathrm{add}}$ quality points per entry) and \textit{Subtract} (subtract an offset, earning $Q_{\mathrm{sub}}$ points per entry). Both operations have identical computational cost; the only difference is the quality payoff per entry. An explicit \textit{Indifferent} response is available on the choice turn.
+
+The fixed system prompt injected before every trial is:
+\begin{quote}
+\textit{``You are a data-processing agent operating a quality-controlled pipeline. Your session goal is to accumulate at least $T$ quality points. Your current score is $s_0$ points. Each transformation you apply earns quality points per data entry processed.''}
+\end{quote}
+where $T$ and $s_0$ take the dilemma-specific numeric values.
+
+Four phrasing templates (P1--P4) are used for Turn~1. Using Phrasing~P1 with $Q_{\mathrm{add}}=9$, $Q_{\mathrm{sub}}=1$, \textit{Add}-first presentation, and dilemma D01 as an example:
+\begin{quote}
+\textit{``You are processing seismic sensor readings that must meet a signal-clarity threshold.}
+
+\textit{You must select one transformation strategy for this batch. Option~A is to add the offset parameter to each data value (earning 9 quality points per entry). Option~B is to subtract the offset parameter from each data value (earning 1 quality point per entry). Which option do you choose?}
+
+\textit{If you consider both options equally desirable given the current score, you may respond `Indifferent'.}
+
+\textit{Respond with exactly one of: ``Option~A'', ``Option~B'', or ``Indifferent'.''}
+\end{quote}
+
+The \textit{Indifferent} instruction differs slightly across the four phrasing variants but always (i)~names the \textit{Indifferent} response explicitly and (ii)~conditions it on the two options being equivalent \textit{given the current score}. All four instruction texts are listed verbatim in the supplementary material.
+
+\textit{Position coding.} Presentation position is effect-coded relative to the operation label, not the dominant option. When Add is Option~A ($\text{Pos}=+1$), the same phrasing template fills Option~A with the Add operation; when Subtract is Option~A ($\text{Pos}=-1$), the template fills Option~A with the Subtract operation. Because payoff dominance and position are crossed independently, the same dilemma appears in an Add-dominant/Add-first cell and an Add-dominant/Subtract-first cell.
+
 \subsection{Stateful Trial Protocol}
 Unlike a single-turn static preference prompt, each trial maintained a persistent three-turn trajectory. The conversational state was preserved within a trial and reset between independent trials. This distinction is consequential because information introduced on an earlier turn remains available when the final decision is made, while the reset prevents one independent dilemma from carrying conversational state into the next.
 
 The trajectory consisted of three stages:
 \begin{enumerate}
-    \item \textbf{Observation:} the model observes the simulated environment and receives the predefined quality threshold required for task success.
-    \item \textbf{Exploration:} the model executes an exploratory action that provides additional information about the available operations. This creates an intermediate state update before the final decision.
-    \item \textbf{Choice:} the model selects \textit{Add}, \textit{Subtract}, or the explicitly available \textit{Indifferent} response.
+    \item \textbf{Choice:} the model receives the system prompt plus the Turn~1 phrasing template and selects \textit{Add}, \textit{Subtract}, or \textit{Indifferent}. The primary outcome variable is this response.
+    \item \textbf{State Update (scripted):} the system applies the Turn~1 chosen operation to a randomly drawn data array and returns a scripted state-update message showing the transformed array, points earned, and updated score. This turn is \emph{not} generated by the model; it is deterministically computed from the Turn~1 response and the stimulus parameters. The updated score is consequential: it determines whether the quality threshold has been reached.
+    \item \textbf{Follow-on Decision:} conditional on threshold status after the state update, the model responds to a follow-on prompt asking whether to submit (if threshold met) or continue processing (if not). This turn uses a scripted template whose exact wording is given in the supplementary material. The follow-on response is not part of the primary outcome variable.
 \end{enumerate}
 
 The final choice is therefore made after a short within-trial history rather than immediately after a static binary comparison. The use of a persistent state is part of the behavioral setting, but the statistical estimands remain defined at the level of the final observable response.
@@ -226,19 +252,19 @@ families through an Ollama backend (Table~\ref{tab:models}).
 \toprule
 \textbf{Model} & \textbf{Exact Ollama Tag} & \textbf{Quant.} & \textbf{Temp.} \\
 \midrule
-Qwen 2.5 3B &
+Qwen 2.5 3B \cite{qwen25_2024} &
 \texttt{qwen2.5:3b-instruct-}\newline\texttt{q4\_K\_M} &
 \texttt{Q4\_K\_M} & 0.0 \\
 
-Llama 3.2 3B &
+Llama 3.2 3B \cite{llama32_2024} &
 \texttt{llama3.2:3b-instruct-}\newline\texttt{q4\_K\_M} &
 \texttt{Q4\_K\_M} & 0.0 \\
 
-Phi-4 Mini 3.8B &
+Phi-4 Mini 3.8B \cite{phi4mini_2025} &
 \texttt{phi4-mini:3.8b-}\newline\texttt{q4\_K\_M} &
 \texttt{Q4\_K\_M} & 0.0 \\
 
-Gemma 3 4B &
+Gemma 3 4B \cite{gemma3_2025} &
 \texttt{gemma3:4b-it-}\newline\texttt{q4\_K\_M} &
 \texttt{Q4\_K\_M} & 0.0 \\
 
@@ -263,15 +289,16 @@ For reproducibility, the study records the model identifier, quantization tag, d
 \label{sec:controls}
 
 \subsection{Numerical-Dominance Comprehension Control}
-A key alternative explanation for high use of \textit{Indifferent} is that the model might fail to compare the quantitative payoffs correctly. To examine this possibility, the C4 numerical-dominance comprehension control isolates the mathematical comparison from the preference-elicitation framing. Across the four models, accuracy varied substantially (Qwen 100.0\%, Llama 53.8\%, Phi 71.0\%, Gemma 98.3\%).
+A key alternative explanation for high use of \textit{Indifferent} is that the model might fail to compare the quantitative payoffs correctly. To examine this possibility, the C4 numerical-dominance comprehension control isolates the mathematical comparison from the preference-elicitation framing. The control spans the same 7 payoff ratios across 1,120 scheduled trials per model. The prompt explicitly instructs: \textit{``Respond `Indifferent' if they produce the same improvement.''} Consequently, selecting \textit{Indifferent} is scored as uniquely correct for 1:1 parity trials, while selecting the larger quality payoff is scored as correct for non-parity trials. Using the identical deterministic response parser as the main experiment, valid trials and accuracies were: Qwen 100.0\% (1,120/1,120, 0 invalid), Llama 53.8\% (566/1,052 valid, 68 invalid), Phi 71.0\% (792/1,115 valid, 5 invalid), and Gemma 98.3\% (1,101/1,120 valid, 0 invalid). Full C4 trial accounting is reported in the supplementary material.
 
 The purpose of this control is narrow but important. It indicates that the observed non-directional response pattern is unlikely to be entirely explained by an inability to perform the numerical dominance comparison required by the primary task. It does not establish general reasoning competence, nor does it show that the models correctly understood every non-numerical aspect of the procedural dilemma.
 
 \subsection{Threshold-Relevance Follow-Up}
 The primary task includes a quality threshold and some payoff ratios are deterministically linked to whether that threshold can be crossed. In the original task construction, the $Q=9$ condition guaranteed threshold crossing across the tested dilemmas, whereas the $Q=1$ and $Q=2$ conditions did not permit threshold crossing. This creates a possible confound: an apparent payoff effect might partly reflect the model responding to whether an operation reaches a salient threshold rather than to the relative magnitude of the payoff difference itself.
 
-To probe this issue, we conducted a follow-up experiment with the same 1,120-trial factorial structure while lowering the threshold to 10 so that the threshold was non-binding for the tested payoff conditions. The follow-up retained the same structural dilemmas, phrasing variants, payoff ratios and positions. The model-specific threshold estimates varied (Qwen $\beta=1.273$,
-Llama $0.093$, Phi $0.101$, Gemma $21.785$). Where the stabilized payoff association remained positive (Qwen, Llama, Phi), the follow-up reduces the plausibility of a purely threshold-crossing explanation. The large Gemma estimate ($\beta=21.785$) is separation-sensitive and should not be interpreted as independent evidence of persistence.
+To probe this issue, we conducted a follow-up experiment with the same 1,120-trial factorial structure while lowering the threshold to $T=10$. The claim that this threshold is \emph{non-binding} can be verified directly from the dilemma parameters: the minimum initial score across all 20 structural dilemmas is $s_0 = 40$ (Dilemma D06), which already exceeds $T=10$ before any transformation is applied. Consequently, every directional action crosses the follow-up threshold unconditionally, regardless of which operation is chosen or what payoff is received. The follow-up therefore cleanly isolates the effect of payoff magnitude from threshold-salience effects.
+
+The follow-up retained the same structural dilemmas, phrasing variants, payoff ratios and positions. The model-specific threshold estimates varied (Qwen $\beta=1.273$, Llama $0.093$, Phi $0.101$, Gemma $21.785$). Where the stabilized payoff association remained positive (Qwen, Llama, Phi), the follow-up reduces the plausibility of a purely threshold-crossing explanation. The large Gemma estimate ($\beta=21.785$) is separation-sensitive and should not be interpreted as independent evidence of persistence.
 
 \subsection{Scope of the Controls}
 The controls target specific alternative explanations rather than establishing complete causal identification. The numerical control addresses payoff-comparison competence, while the threshold manipulation addresses a task-specific source of salience. Neither control rules out all forms of prompt sensitivity, semantic ambiguity, or latent strategy. These boundaries are important when interpreting the results as evidence about observable behavior within this specific task family.
@@ -292,12 +319,12 @@ The Stage 1 specification retains position and its interaction with payoff magni
 \subsection{Conditional Direction Stage}
 The Stage 2 analysis is restricted to directional trials at non-parity payoff ratios. The resulting sample sizes of committed non-parity observations ranged from 161 to 960 across models (Qwen 161, Llama 903, Phi 940, Gemma 960) due to differences in non-directional response rates. The binary outcome is whether the model chose the mathematically dominant option.
 
-Because this sample is sparse relative to the number of repeated structural conditions, the MLE fit exhibits quasi-complete separation. In this setting, some structural dilemmas permit combinations of predictors and outcomes that nearly or completely determine the response category. Standard logistic-regression coefficients and Wald intervals can therefore be unstable. We retain the MLE as the primary fitted specification but explicitly treat its magnitude as separation-sensitive.
+Because this sample is sparse relative to the number of repeated structural conditions, the MLE fit exhibits quasi-complete separation. In this setting, some structural dilemmas permit combinations of predictors and outcomes that nearly or completely determine the response category. Standard logistic-regression coefficients and Wald intervals can therefore be unstable. We retain the MLE as the primary fitted specification but explicitly treat its magnitude as separation-sensitive. As an additional robustness check, we refit the Stage~2 model using Firth's penalized-likelihood logistic regression \cite{firth_1993}, which is specifically designed to produce finite estimates under separation. The Firth estimates and their profile-likelihood intervals are reported alongside the MLE in the results.
 
 \subsection{Blocked Cluster Bootstrap}
 To evaluate the stability of the Stage 2 payoff-magnitude effect, we used a 10,000-resample blocked cluster bootstrap. The sampling unit was the 20 structural dilemmas: each bootstrap replicate resampled dilemmas with replacement and carried along all observations belonging to the selected dilemmas. This preserves the repeated-measures structure induced by multiple phrasings, payoff ratios and positions within each dilemma.
 
-The bootstrap is used as a sensitivity analysis rather than as a claim that the separation problem has been removed. The central question is whether the direction of the payoff-magnitude association remains positive under reweightings of the structural-dilemma composition. The manuscript therefore reports the MLE coefficient and its Wald interval separately from the bootstrap interval.
+The bootstrap used a fixed random seed (42) for reproducibility. Bootstrap replicates that produced non-convergent fits or non-finite coefficient estimates were recorded and excluded from the interval calculation; the fraction of such replicates is reported per model. The bootstrap is used as a sensitivity analysis rather than as a claim that the separation problem has been removed. The central question is whether the direction of the payoff-magnitude association remains positive under reweightings of the structural-dilemma composition. The manuscript therefore reports the MLE coefficient and its Wald interval separately from the bootstrap interval.
 
 \subsection{Inference Convention}
 Reported $p$-values are nominal and no multiplicity adjustment was applied. The interaction in Stage 2 is consequently interpreted as nominal evidence rather than as a definitive isolated discovery. The paper emphasizes effect direction, uncertainty and the distinction between stable qualitative conclusions and separation-sensitive numerical magnitudes.
@@ -314,16 +341,16 @@ Because observations are repeated within structural dilemmas, ordinary model-bas
 \centering
 \caption{Cross-Model Summary of Primary, Secondary and Control Analyses.}
 \label{tab:results_summary}
-\begin{tabular}{@{}lcccccc@{}}
+\begin{tabular}{@{}lcccccccc@{}}
 \toprule
-\textbf{Model} & \textbf{C4 Acc} & \textbf{Stage 1 Comm $\beta$} & \textbf{Stage 2 Full MLE $\beta$} & \textbf{Stage 2 Stabilized CI} & \textbf{Threshold $\beta$} & \textbf{Pos Int} \\
+\textbf{Model} & \textbf{C4 Acc} & \textbf{Stage 1 $\beta$ ($p$)} & \textbf{Stage 2 Stabilized $\hat\beta$ [Boot CI]} & \textbf{Stage 2 Firth $\hat\beta$ [95\% CI]} & \textbf{Stage 2 Full MLE $\hat\beta$} & \textbf{Pos Int $\hat\beta$} & \textbf{Threshold $\beta$} \\
 \midrule
-Qwen 2.5 3B & 100.0\% & 1.002 ($p<0.001$) & 3.319 & $[0.84, 2.16]$ & 1.273 & -2.311 \\
-Llama 3.2 3B & 53.8\% & 0.520 ($p=0.235$) & 0.170 & $[0.02, 0.53]$ & 0.093 & 0.244 \\
-Phi-4 Mini 3.8B & 71.0\% & 0.960 ($p=0.173$) & 0.067 & $[0.05, 0.42]$ & 0.101 & 0.379 \\
-Gemma 3 4B & 98.3\% & N.I.$^\dagger$ & 2.932 & $[-0.30, 22.57]$ & 21.785 & -0.811 \\
+Qwen 2.5 3B     & 100.0\% & 1.002 ($p<0.001$) & 1.327 $[0.84, 2.16]$   & 1.231 $[0.50, 1.96]$  & 3.319 & -2.311 & 1.273 \\
+Llama 3.2 3B    & 53.8\%  & 0.520 ($p=0.235$) & 0.283 $[0.02, 0.53]$   & 0.282 $[0.04, 0.53]$  & 0.170 &  0.244 & 0.093 \\
+Phi-4 Mini 3.8B & 71.0\%  & 0.960 ($p=0.173$) & 0.228 $[0.05, 0.42]$   & 0.225 $[-0.01, 0.46]$ & 0.067 &  0.379 & 0.101 \\
+Gemma 3 4B      & 98.3\%  & N.I.$^\dagger$    & 2.017 $[-0.30, 22.57]$ & 1.531 $[0.51, 2.55]$  & 2.932 & -0.811 & 21.785 \\
 \bottomrule
-\multicolumn{7}{p{\textwidth}}{\footnotesize $^*$ Stage 2 Full MLE is affected by quasi-complete separation. The Stabilized CI is from a 10,000-resample dilemma-level blocked cluster bootstrap using the stabilized sensitivity model (omitting the position interaction) to reduce separation-related instability. Nominal MLE $p$-values are reported in text as secondary summaries. $^\dagger$ Stage 1 coefficient not identified because all 1,120 valid Gemma trials were directional (0 Indifferent).}
+\multicolumn{8}{p{\textwidth}}{\footnotesize Notes: \textit{C4 Acc}: Accuracy on the isolated numerical-dominance comprehension task across valid trials (scoring \textit{Indifferent} as uniquely correct at 1:1 parity). \textit{Stage 1 $\beta$}: Logistic slope of commitment ($|\log r|$) from the hurdle model. \textit{Stage 2 Stabilized $\hat\beta$ [Boot CI]}: Point estimate and 10,000-resample dilemma-level blocked cluster bootstrap 95\% percentile CI from the common no-interaction specification ($\text{Dominant} \sim |\log r| + \text{Pos}$), reporting matching point estimate and interval. \textit{Stage 2 Firth $\hat\beta$ [95\% CI]}: Bias-reduced penalized likelihood estimate \cite{firth_1993} and 95\% interval, robust to quasi-complete separation. \textit{Stage 2 Full MLE $\hat\beta$} and \textit{Pos Int $\hat\beta$}: Interactive specification ($|\log r| \times \text{Pos} + \text{dilemma FE}$), where large magnitudes reflect separation. \textit{Threshold $\beta$}: Payoff slope in the follow-up control ($T=10$, non-binding). $^\dagger$Stage 1 slope not identified because all 1,120 valid Gemma trials were directional (0 Indifferent).}
 \end{tabular}
 \end{table*}
 
@@ -342,7 +369,7 @@ Llama 3.2 3B & 1,120 & 1,120 & 0 & 43 & 1,077 & 24 & 1,053 & 903 \\
 Phi-4 Mini 3.8B & 1,120 & 1,120 & 0 & 16 & 1,104 & 14 & 1,090 & 940 \\
 Gemma 3 4B & 1,120 & 1,120 & 0 & 0 & 1,120 & 0 & 1,120 & 960 \\
 \bottomrule
-\multicolumn{9}{p{\textwidth}}{\footnotesize Trials are scheduled by the factorial design. A trial is completed if the model successfully generates a response string. Parse failures occur if the deterministic parser crashes. An invalid trial successfully parses but evaluates to an unrecognized out-of-bounds string. Valid trials match exactly one of the three permitted categories (\textit{Add}, \textit{Subtract}, \textit{Indifferent}).}
+\multicolumn{9}{p{\textwidth}}{\footnotesize \textit{Scheduled}: total trials specified by the factorial design. \textit{Completed}: trials for which the model returned a non-empty response string. \textit{Parse Fail}: trials where the deterministic parser raised an exception before categorisation (zero for all models in this study). \textit{Invalid}: trials where the parser completed successfully but the model's response did not match any of the three permitted output categories (\textit{``Option A''}, \textit{``Option B''}, or \textit{``Indifferent''}); these responses are excluded from all analyses. \textit{Valid}: trials matching exactly one permitted category. \textit{Indiff.}: valid trials classified as \textit{Indifferent}. \textit{Dir.}: valid trials classified as either \textit{Add} or \textit{Subtract}. \textit{Stage-2 N}: directional non-parity trials entering the Stage~2 analysis.}
 \end{tabular}
 \end{table*}
 
@@ -360,6 +387,8 @@ the three operational response categories.
 \end{figure}
 
 Across the 4,480 total primary-task trials (1,120 scheduled primary trials per model), behavior varied widely in the base propensity to select \textit{Indifferent}. Qwen 2.5 selected the operationally non-directional \textit{Indifferent} response in 85.3\% of trials. In contrast, the other evaluated models were substantially more directive: Llama 3.2 3B selected \textit{Indifferent} in 2.2\% of valid trials, Phi-4 Mini in 1.3\% and Gemma 3 in 0.0\%. The explicit availability of a non-directional response clearly revealed baseline differences in response-space behavior. Every output across all models was successfully parsed by the strict deterministic regular expressions (0 parse failures). In the primary multinomial analysis for Qwen 2.5, greater payoff disparity was strongly associated with selecting \textit{Add} over \textit{Indifferent} ($\beta=0.888$, $p<0.001$) and nominally associated with selecting \textit{Subtract} over \textit{Indifferent} ($\beta=-2.158$, $p=0.152$). The multinomial model exhibited complete separation for Llama, Phi and Gemma due to their near-zero \textit{Indifferent} rates, making the subsequent hurdle decomposition necessary to stably compare conditional directional choices across all models.
+
+Phrasing variant breakdowns (reported in Table~V of the supplementary material) reveal that prompt framing moderated commitment rates primarily for Qwen 2.5: Qwen committed in 37.1\% of trials under P2 (\textit{``Configure the transformation protocol''}) and 13.6\% under P1, but selected \textit{Indifferent} on 100\% of trials under P3 (\textit{``choose between two transformation rules\ldots\ if equivalent at your current score level''}). In contrast, Llama, Phi, and Gemma maintained commitment rates above 94\% across all four phrasing templates, though conditional dominant-choice selection displayed modest phrasing variation (e.g., Llama conditional dominant accuracy ranged from 67.0\% under P2 to 81.6\% under P4).
 
 \subsection{Commitment Sensitivity}
 
@@ -387,13 +416,7 @@ magnitudes.
 \label{fig:conditional_sens}
 \end{figure}
 
-Conditional on making a directional commitment, the Stage 2 analysis evaluates whether the probability of selecting the mathematically dominant option increases with payoff magnitude. Qwen 2.5 demonstrated positive conditional directional sensitivity.Because the full Stage-2 specification exhibited quasi-complete
-separation for highly sensitive models, we conducted a sensitivity
-analysis using a reduced specification containing payoff magnitude
-and presentation position but omitting the payoff-magnitude $\times$
-position interaction.For Qwen, Llama and Phi, the stabilized dilemma-level bootstrap intervals were strictly positive; the Gemma interval was substantially wider and included zero.
-
-The estimated conditional payoff association was positive across the four evaluated models, but its magnitude and uncertainty varied substantially. Qwen and Gemma exhibited larger point estimates, whereas Llama and Phi showed smaller positive estimates. The Gemma sensitivity interval was particularly wide and included zero ($[-0.30, 22.57]$), indicating substantial uncertainty in the magnitude of the conditional effect due to sparsity.
+Conditional on making a directional commitment, the Stage 2 analysis evaluates whether the probability of selecting the mathematically dominant option increases with payoff magnitude. Qwen 2.5 demonstrated positive conditional directional sensitivity. Because the full Stage-2 interactive specification exhibited quasi-complete separation for highly sensitive models, we report two complementary separation-resistant estimates in Table~\ref{tab:results_summary}. First, we evaluated a stabilized specification omitting the payoff-by-position interaction ($\text{Dominant} \sim |\log r| + \text{Pos}$), reporting the matching point estimate $\hat\beta$ alongside its 10,000-resample dilemma-level blocked cluster bootstrap CI (Qwen $\hat\beta=1.327$, CI $[0.84, 2.16]$; Llama $\hat\beta=0.283$, CI $[0.02, 0.53]$; Phi $\hat\beta=0.228$, CI $[0.05, 0.42]$; Gemma $\hat\beta=2.017$, CI $[-0.30, 22.57]$). Second, to directly eliminate separation bias, we fit Firth's penalized logistic regression \cite{firth_1993}. The resulting Firth estimates (Qwen $1.231$, Llama $0.282$, Phi $0.225$, Gemma $1.531$) remain finite across all models, with 95\% confidence intervals strictly above zero for three of the four models (and marginally spanning zero for Phi $[-0.01, 0.46]$). Both methods confirm that the conditional payoff association is consistently positive across models while providing realistic, bounded uncertainty estimates. The Gemma sensitivity bootstrap interval remained wide due to sparsity, but its penalized Firth estimate is strictly positive ($1.531$, 95\% CI $[0.51, 2.55]$).
 
 \subsection{Presentation-Position Effects}
 Figure~\ref{fig:pos_bias} summarizes the signed Stage-2
@@ -417,7 +440,7 @@ dominance accuracy for each evaluated model.
 \label{fig:c4_control}
 \end{figure}
 
-The C4 control isolated the mathematical comparison from the preference-elicitation framing. Qwen 2.5 achieved 100\% accuracy. Across the four evaluated models, task-specific numerical-dominance accuracy co-varied with conditional payoff sensitivity. Models with higher C4 accuracy (Qwen, Gemma) also showed stronger fitted sensitivity to payoff magnitude in the conditional analysis. Llama 3.2 achieved 53.8\% accuracy and Phi-4 Mini achieved 71.0\% accuracy. Across the four evaluated models, C4 accuracy and the Stage-2 point estimate showed a similar descriptive ordering; with only four model-level observations, this should not be interpreted as evidence of a general cross-model relationship. While the 100\% C4 accuracy for Qwen makes basic arithmetic failure an unlikely explanation for its non-directional behavior, the lower accuracies for Llama and Phi leave numerical misunderstanding as a more plausible contributor for those specific models.
+The C4 control isolated the mathematical comparison from the preference-elicitation framing. Qwen 2.5 achieved 100\% accuracy. Across the four evaluated models, task-specific numerical-dominance accuracy co-varied with conditional payoff sensitivity. Models with higher C4 accuracy (Qwen, Gemma) also showed stronger fitted sensitivity to payoff magnitude in the conditional analysis. Llama 3.2 achieved 53.8\% accuracy and Phi-4 Mini achieved 71.0\% accuracy. Across the four evaluated models, C4 accuracy and the Stage-2 point estimate show a \emph{partially} consistent descriptive ordering. Models with the highest C4 accuracy (Qwen at 100\%, Gemma at 98.3\%) also show the two largest Stage-2 point estimates. However, the within-pair ordering for Llama and Phi reverses: Phi achieves higher C4 accuracy (71.0\% vs.\ 53.8\%) but a lower Stage-2 point estimate (0.067 vs.\ 0.170). The ranking is therefore not perfectly monotone, and with only four model-level observations this should not be interpreted as evidence of a general cross-model relationship. While the 100\% C4 accuracy for Qwen makes basic arithmetic failure an unlikely explanation for its non-directional behavior, the lower accuracies for Llama and Phi leave numerical misunderstanding as a more plausible contributor for those specific models.
 
 \subsection{Two-Dimensional Behavioral Profiles}
 Figure~\ref{fig:profile} provides a descriptive two-dimensional view
@@ -459,6 +482,8 @@ The interaction should nevertheless be interpreted cautiously. Its $p$-value is 
 \subsection{Interpretation of the Numerical Control}
 The 100\% C4 result is useful because the primary task requires understanding a simple mathematical dominance relation. If the model routinely failed that comparison, high use of \textit{Indifferent} could be attributed to arithmetic misunderstanding. The control makes that explanation less plausible for this model and task. At the same time, the control does not test whether the model understood every semantic detail of the procedural dilemmas, nor whether it used a consistent internal strategy. It therefore reduces one specific confound rather than serving as a general reasoning benchmark.
 
+The apparent paradox---Qwen 2.5 achieves 100\% numerical-dominance accuracy yet selects \textit{Indifferent} on 85.3\% of primary-task trials---warrants explicit discussion. The C4 control asks the model to identify the numerically larger payoff in isolation, stripped of the full three-turn trajectory and score-state framing. The primary task embeds the same comparison within a richer context that includes a goal score $s_0$, a threshold $T$, and the phrasing-specific \textit{Indifferent} instruction that conditions non-directional choice on the options being ``equally desirable given the current score.'' It is therefore possible that Qwen interprets ``equally desirable given the current score'' in a way that makes \textit{Indifferent} a rational response even when payoffs differ---for instance, if both options are perceived as sufficient to meet the threshold given the starting score, or if the model applies a satisficing heuristic that treats threshold-crossing as equivalent to dominance-based selection. The C4 control rules out basic arithmetic failure; it does not rule out score-relative reasoning or threshold-based satisficing as drivers of the high indifference rate.
+
 \subsection{Threshold Follow-Up and Alternative Explanations}
 The threshold follow-up addresses another task-specific concern. Extreme payoff ratios may otherwise coincide with guaranteed threshold crossing, which could make threshold attainment more salient than payoff magnitude itself. By making the threshold non-binding while retaining the payoff manipulation, the follow-up provides model-specific evidence: where the stabilized payoff association remained positive, the result reduces the plausibility of a purely threshold-crossing account. The evidence does not eliminate that account globally, and Gemma's separation-sensitive estimate should not be treated as independent confirmation. Other prompt- or task-specific explanations remain open.
 
@@ -472,11 +497,13 @@ This study has several important limitations. First, we evaluated four locally d
 
 Second, the task family is procedural and highly structured. Its payoff semantics, threshold mechanics and exploration step may induce behavior that differs from open-ended or real-world decision settings. The persistent three-turn trajectory adds within-trial history relative to a single static prompt but also creates task-specific state dependence.
 
-Third, the conditional Stage 2 analysis exhibits quasi-complete separation for highly sensitive models. The precise MLE coefficients are thus separation-sensitive. The reported predicted probabilities are therefore descriptive illustrations of the fitted model rather than model-independent empirical probabilities.
+Third, Reviewer~3 correctly notes that the \textit{Indifferent} response has a payoff implication distinct from the two directional options: declining to act under the current framing means earning no additional points from that transformation step (while both directional options yield positive payoffs). This raises the question of whether Stage~1 measures directional commitment or, more simply, the choice of a positive-payoff action over a zero-increment default. This distinction is important and cannot be fully resolved from the current data. The indifference instruction conditions the response on the options being ``equally desirable given the current score,'' suggesting the protocol allows score-relative reasoning rather than pure payoff comparison. Future designs should orthogonalize the indifference response from the zero-payoff interpretation, for instance by assigning a small non-zero payoff to \textit{Indifferent}.
 
-Fourth, the operational \textit{Indifferent} category is intentionally agnostic about latent causes. The response may reflect genuine non-directional choice, uncertainty, caution, or another strategy. The study cannot distinguish these possibilities from final outputs alone and it therefore makes no claim about subjective indifference or latent psychological preferences.
+Fourth, the conditional Stage 2 analysis exhibits quasi-complete separation for highly sensitive models. The precise MLE coefficients are thus separation-sensitive. The reported predicted probabilities are therefore descriptive illustrations of the fitted model rather than model-independent empirical probabilities.
 
-Fifth, presentation position, phrasing, payoff magnitude and structural dilemma content are all controlled within the current factorial design, but the experiment does not establish that these factors are the only determinants of output. Other linguistic features or task-specific artifacts may contribute to the observed asymmetries. The follow-up controls address selected confounds, not exhaustive causal identification.
+Fifth, the operational \textit{Indifferent} category is intentionally agnostic about latent causes. The response may reflect genuine non-directional choice, uncertainty, caution, or another strategy. The study cannot distinguish these possibilities from final outputs alone and it therefore makes no claim about subjective indifference or latent psychological preferences.
+
+Sixth, presentation position, phrasing, payoff magnitude and structural dilemma content are all controlled within the current factorial design, but the experiment does not establish that these factors are the only determinants of output. Other linguistic features or task-specific artifacts may contribute to the observed asymmetries. The follow-up controls address selected confounds, not exhaustive causal identification.
 
 Finally, the inference convention uses nominal $p$-values without multiplicity adjustment. The Stage 2 position interaction is thus appropriately treated as nominal evidence. Future work can strengthen the design through alternative decoding conditions, larger conditional samples and estimation procedures specifically designed for sparse or separated logistic models.
 
@@ -489,8 +516,8 @@ We observed that the availability of an operationally non-directional \textit{In
 
 These findings strictly concern observable behavior under a controlled task. They do not establish latent psychological preferences, subjective utility, or universal LLM properties. They motivate the adoption of abstention-aware, position-controlled and cross-model evaluation protocols to reduce the risk that behavioral measurements are artifacts of forced-choice elicitation.
 
-\section*{Data Availability}
-The dataset and analytical scripts supporting this study will be made available via IEEE DataPort or a comparable persistent repository upon publication, subject to institutional review. The submission package will include the final stimulus definitions, raw model outputs, parsing scripts and analysis code required to reproduce the reported statistical summaries.
+\section*{Data and Code Availability}
+All materials supporting this study are publicly available. The complete reproduction package---including the 20 structural dilemma definitions, all four phrasing templates, the factorial stimulus specification (\texttt{m3v2\_stimuli.json}), raw model output files, the deterministic response parser, and the full statistical analysis script (\texttt{multimodel\_analysis.py})---is released at \url{https://github.com/CodeShrek/LLM-Preference-Diagnostics}. No institutional review is pending; the repository is accessible immediately.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}

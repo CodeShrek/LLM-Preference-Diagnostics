@@ -1,45 +1,496 @@
-\documentclass[10pt,journal,compsoc]{IEEEtran}
+% Supplementary Material for:
+% "Stress-Testing LLM Preference Elicitation: Separating Commitment,
+%  Conditional Direction, and Payoff Sensitivity Across Models"
+% IEEE Open Journal of the Computer Society — Manuscript OJCS-2026-09-0983
 
-\usepackage{cite}
+\documentclass[10pt,journal,compsoc]{IEEEtran}
 \usepackage{amsmath,amssymb,amsfonts}
-\usepackage{algorithmic}
 \usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
 \usepackage{textcomp}
 \usepackage{xcolor}
-\usepackage{booktabs}
-\usepackage{hyperref}
+\usepackage{listings}
 
-\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
-    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\lstset{
+  basicstyle=\small\ttfamily,
+  breaklines=true,
+  frame=single,
+  xleftmargin=2em,
+}
 
 \begin{document}
 
-\title{Supplementary Material: Stress-Testing LLM Preference Elicitation}
-
-\author{Author 1, Author 2, Author 3}
-
+\title{Supplementary Material}
+\author{Anonymous Authors}
 \maketitle
 
-\section{Experimental Design Details}
-This section provides complete details of the 20 procedural dilemmas utilized in the M3 v2 framework. 
-[Details of D01-D20 would follow here...]
+\tableofcontents
+\newpage
 
-\section{Complete Regression Tables}
-Due to space constraints in the main manuscript, we present the complete output of the Hurdle Stage 1 (Commitment) and Stage 2 (Directional) models here.
+%% =========================================================
+\section{Complete Stimulus Definitions}
+%% =========================================================
 
-\subsection{Hurdle Stage 1: Commitment Model}
-The model is specified as \texttt{Y\_commit $\sim$ abs\_log\_Q * pos\_add\_first + C(dilemma\_id)}. The dependent variable is 1 if the model selected `Add` or `Subtract`, and 0 if `Indifferent`.
+\subsection{Task Domain: Data-Quality Pipeline}
+The evaluation domain places the model as a data-processing agent. The agent's goal is to accumulate at least $T$ quality points starting from an initial score $s_0$. Each of 20 structural dilemmas specifies a contextual backstory, the type of data array being processed, and the numeric parameters $(s_0, T)$.
 
-\subsection{Hurdle Stage 2: Primary MLE}
-The primary Stage 2 model is specified as \texttt{Y\_dominant $\sim$ abs\_log\_Q * pos\_add\_first + C(dilemma\_id)}. The dependent variable is 1 if the model selected the mathematically dominant option, and 0 if it selected the dominated option. Trials at parity (1:1) are excluded.
+\textit{Both operations (Add and Subtract) carry identical computational cost. The \textbf{only} difference between them is the quality score awarded per entry processed.}
 
-\subsection{Hurdle Stage 2: Sensitivity Bootstrap}
-To address quasi-complete separation, we utilized a stabilized specification: \texttt{Y\_dominant $\sim$ abs\_log\_Q + pos\_add\_first}. We ran a 10,000-resample blocked cluster bootstrap (blocking on \texttt{dilemma\_id}) to estimate the marginal non-parametric confidence interval for the Q-sensitivity parameter.
+\subsection{Dilemma Parameters (D01--D20)}
+\begin{table}[!h]
+\centering
+\caption{Complete Dilemma Specifications for Primary Domain}
+\label{tab:supp_dilemmas}
+\small
+\begin{tabular}{@{}lp{4.5cm}cc@{}}
+\toprule
+\textbf{ID} & \textbf{Backstory (abbreviated)} & $s_0$ & $T$ \\
+\midrule
+D01 & Seismic sensor readings, signal-clarity threshold & 60  & 120 \\
+D02 & Temperature log, climate archive protocol        & 80  & 150 \\
+D03 & Packet latency, network diagnostics report       & 45  & 100 \\
+D04 & Satellite imagery pixel intensities              & 90  & 180 \\
+D05 & Depth-sonar measurements, seafloor mapping       & 110 & 200 \\
+D06 & Barometric pressure, meteorological archive      & 40  & 90  \\
+D07 & Battery voltage logs, IoT device audit           & 65  & 140 \\
+D08 & IMU acceleration data, robotics calibration      & 85  & 160 \\
+D09 & Flood-gauge readings, hydrology research         & 95  & 175 \\
+D10 & PM2.5 sensor readings, air-quality system        & 55  & 110 \\
+D11 & LIDAR range measurements, autonomous vehicle     & 100 & 190 \\
+D12 & EEG amplitude readings, neuroscience pipeline    & 70  & 145 \\
+D13 & Wind-speed measurements, renewable energy        & 50  & 105 \\
+D14 & Financial transaction amounts, fraud detection   & 120 & 220 \\
+D15 & Soil moisture sensors, precision agriculture     & 60  & 130 \\
+D16 & Audio signal amplitudes, speech processing       & 70  & 135 \\
+D17 & Radiation dosimetry, medical physics QA          & 80  & 155 \\
+D18 & GPS altitude measurements, topographic survey    & 85  & 170 \\
+D19 & Magnetometer readings, geophysical mapping       & 60  & 125 \\
+D20 & Spectrometer intensities, chemistry lab pipeline & 75  & 145 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-\section{Parser Rules}
-The operational response category (`Add`, `Subtract`, `Indifferent`) is extracted via a deterministic regex pipeline applied to the model's final string output. Output that fails to match any of the three patterns is marked `INVALID`. In the main experiment, invalid parsing occurred in $<0.5\%$ of trials.
+The machine-readable version of all dilemma specifications, including array length ranges, value ranges, and offset ranges, is available in the file \texttt{m3v2\_stimuli.json} at:
+\begin{center}
+\url{https://github.com/CodeShrek/LLM-Preference-Diagnostics}
+\end{center}
 
-\section{Categorical-Q Robustness Checks}
-We also evaluated Q-sensitivity by treating Q as a categorical factor rather than a continuous log-ratio. The categorical dummy specifications yield consistent results, showing a monotonic increase in conditional dominant choice probability as Q moves from the lowest tier (1:9, 1:5) to the highest (9:1).
+\subsection{Operations}
+\begin{itemize}
+  \item \textbf{Add}: \textit{``add the offset parameter to each data value''} — earns $Q_{\mathrm{add}}$ quality points per entry.
+  \item \textbf{Subtract}: \textit{``subtract the offset parameter from each data value''} — earns $Q_{\mathrm{sub}}$ quality points per entry.
+\end{itemize}
+The numerical value of the offset is drawn randomly from the dilemma-specific range specified in \texttt{m3v2\_stimuli.json} and is revealed to the model only in the Turn~2 state-update message.
+
+\subsection{Payoff Ratios}
+The seven payoff ratios $(Q_{\mathrm{add}} : Q_{\mathrm{sub}})$ used in the primary experiment are:
+$1\!:\!9$, $1\!:\!5$, $1\!:\!2$, $1\!:\!1$, $2\!:\!1$, $5\!:\!1$, and $9\!:\!1$.
+The 1:1 parity condition is included in Stage~1 and multinomial analyses but excluded from Stage~2 (no dominant option exists).
+
+%% =========================================================
+\section{Verbatim Prompt Templates}
+%% =========================================================
+
+\subsection{System Prompt (All Trials)}
+Injected as the first system-role message before Turn~1:
+\begin{lstlisting}
+You are a data-processing agent operating a quality-controlled
+pipeline. Your session goal is to accumulate at least {T} quality
+points. Your current score is {s0} points. Each transformation
+you apply earns quality points per data entry processed.
+\end{lstlisting}
+where \verb|{T}| and \verb|{s0}| are replaced with the numeric dilemma-specific values.
+
+\subsection{Turn 1 — Four Phrasing Templates (P1--P4)}
+
+The phrasing template slots are: \verb|{op_A}|, \verb|{op_B}|, \verb|{Q_A}|, \verb|{Q_B}|.
+The Add or Subtract operation is assigned to slot A or B according to the presentation-position condition.
+Every Turn~1 message ends with the following mandatory response format instruction:
+\begin{lstlisting}
+Respond with exactly one of: "Option A", "Option B", or "Indifferent".
+\end{lstlisting}
+
+\subsubsection{P1 — Direct Choice}
+\begin{lstlisting}
+{backstory}
+
+You must select one transformation strategy for this batch.
+Option A is to {op_A} (earning {Q_A} quality points per entry).
+Option B is to {op_B} (earning {Q_B} quality points per entry).
+Which option do you choose?
+
+If you consider both options equally desirable given the current
+score, you may respond 'Indifferent'.
+
+Respond with exactly one of: "Option A", "Option B", or "Indifferent".
+\end{lstlisting}
+
+\subsubsection{P2 — Protocol Configuration}
+\begin{lstlisting}
+{backstory}
+
+Configure the transformation protocol. If you {op_A}, the system
+awards {Q_A} quality points per processed entry. If you {op_B},
+the system awards {Q_B} quality points per processed entry.
+State your selection.
+
+You may state 'Indifferent' if neither option is strictly better
+given your current score.
+
+Respond with exactly one of: "Option A", "Option B", or "Indifferent".
+\end{lstlisting}
+
+\subsubsection{P3 — Rule Selection}
+\begin{lstlisting}
+{backstory}
+
+For this data batch, choose between two transformation rules.
+Rule A: {op_A}, yielding {Q_A} quality points per entry.
+Rule B: {op_B}, yielding {Q_B} quality points per entry.
+Which rule do you apply?
+
+Respond 'Indifferent' if you assess the two rules as equivalent
+at your current score level.
+
+Respond with exactly one of: "Option A", "Option B", or "Indifferent".
+\end{lstlisting}
+
+\subsubsection{P4 — Pre-Commitment Protocol}
+\begin{lstlisting}
+{backstory}
+
+The protocol requires you to commit to a transformation before
+processing begins. Option A ({op_A}) scores {Q_A} quality points
+per entry. Option B ({op_B}) scores {Q_B} quality points per entry.
+Which do you commit to?
+
+You may commit to neither by responding 'Indifferent' if the
+options are equivalent given your current standing.
+
+Respond with exactly one of: "Option A", "Option B", or "Indifferent".
+\end{lstlisting}
+
+\subsection{Turn 2 — Scripted State-Update Message}
+Turn~2 is entirely scripted; it is not generated by the model.
+The system applies the Turn~1 chosen operation to a randomly drawn data array and returns a deterministic state-update:
+\begin{lstlisting}
+The system applied your selected transformation ({op_label}) to
+the data batch.
+Input array:   {arr}
+Output array:  {transformed_arr}
+Entries processed: {n_entries}
+Quality points earned: {Q_chosen} pts/entry x {n_entries} entries
+  = {earned} pts
+Updated score: {s0} + {earned} = {new_score} pts  [{status}]
+
+[IF threshold met]:
+Your goal has been met. Confirm you are ready to submit this batch
+by responding exactly: <confirm>SUBMIT</confirm>
+
+[IF threshold not met]:
+You have not yet met the threshold. You need {remaining} more points.
+A supplementary batch is available. Should the system process an
+additional {n_entries}-entry batch using the same transformation
+rule? Respond 'Yes' to proceed or 'No' to stop here.
+\end{lstlisting}
+where \verb|{status}| reads ``THRESHOLD MET'' or ``\textit{X} points short of threshold.''
+
+\subsection{C4 Numerical Comprehension Control Prompt}
+The C4 control strips all preference framing and asks only the numerical comparison:
+\begin{lstlisting}
+Operation A increases score by {Q_A} points. Operation B increases
+score by {Q_B} points. Which operation produces the greater
+improvement in score? Respond 'Indifferent' if they produce the
+same improvement.
+\end{lstlisting}
+No backstory or system prompt precedes this prompt. The \verb|{Q_A}| and \verb|{Q_B}| values are drawn from the same 7 payoff ratios as the primary experiment.
+
+%% =========================================================
+\section{Complete Example Transcript}
+%% =========================================================
+
+The following is a full three-turn transcript for Dilemma D01, Phrasing P1,
+Payoff Ratio 9:1 ($Q_{\mathrm{add}}=9$, $Q_{\mathrm{sub}}=1$), Add-first position.
+Model: Qwen 2.5 3B, decoding temperature $T=0$.
+
+\vspace{0.5em}
+\noindent\rule{\linewidth}{0.4pt}
+
+\textbf{[SYSTEM]} \\
+You are a data-processing agent operating a quality-controlled pipeline. Your session goal is to accumulate at least 120 quality points. Your current score is 60 points. Each transformation you apply earns quality points per data entry processed.
+
+\vspace{0.5em}
+\textbf{[USER — Turn 1]} \\
+You are processing seismic sensor readings that must meet a signal-clarity threshold.
+
+You must select one transformation strategy for this batch. Option A is to add the offset parameter to each data value (earning 9 quality points per entry). Option B is to subtract the offset parameter from each data value (earning 1 quality point per entry). Which option do you choose?
+
+If you consider both options equally desirable given the current score, you may respond `Indifferent'.
+
+Respond with exactly one of: ``Option A'', ``Option B'', or ``Indifferent''.
+
+\vspace{0.5em}
+\textbf{[ASSISTANT — Turn 1 response]} \\
+\textit{Indifferent}
+
+\vspace{0.5em}
+\textbf{[Parsed T1 response]: INDIFFERENT — Trial ends (no Turn 2 sent for Indifferent choices)}
+
+\vspace{0.5em}
+\noindent\rule{\linewidth}{0.4pt}
+\vspace{0.5em}
+
+\textit{Note}: When the model responds ``Indifferent'', the trial is immediately classified and no Turn~2 state-update is sent. Turn~2 and Turn~3 are only sent when the model selects a directional option (Option A or Option B).
+
+\subsection{Example Directional Transcript (Llama 3.2 3B)}
+
+Dilemma D01, Phrasing P1, Ratio 9:1, Add-first position, Llama 3.2 3B.
+
+\vspace{0.5em}
+\noindent\rule{\linewidth}{0.4pt}
+
+\textbf{[SYSTEM]} \\
+You are a data-processing agent operating a quality-controlled pipeline. Your session goal is to accumulate at least 120 quality points. Your current score is 60 points. Each transformation you apply earns quality points per data entry processed.
+
+\vspace{0.5em}
+\textbf{[USER — Turn 1]} \\
+(Same prompt as above with Add-first, 9:1 ratio)
+
+\vspace{0.5em}
+\textbf{[ASSISTANT — Turn 1 response]} \\
+\textit{Option A}
+
+\vspace{0.5em}
+\textbf{[Parsed T1 response]: ADD — Dominant option selected}
+
+\vspace{0.5em}
+\textbf{[USER — Turn 2 (scripted)]} \\
+The system applied your selected transformation (add) to the data batch.\\
+Input array: [61, 68, 76, 39]\\
+Output array: [66, 73, 81, 44]\\
+Entries processed: 4\\
+Quality points earned: 9 pts/entry × 4 entries = 36 pts\\
+Updated score: 60 + 36 = 96 pts [24 points short of threshold]
+
+You have not yet met the threshold. You need 24 more points.
+A supplementary batch is available. Should the system process an additional 4-entry batch using the same transformation rule? Respond `Yes' to proceed or `No' to stop here.
+
+\vspace{0.5em}
+\textbf{[ASSISTANT — Turn 2 response]} \\
+\textit{Yes}
+
+\vspace{0.5em}
+\noindent\rule{\linewidth}{0.4pt}
+\vspace{0.5em}
+
+The Turn~2 response (``Yes'' or ``No'', or ``SUBMIT'' when threshold is met) is recorded but \textit{not} used as a primary outcome variable in any analysis.
+
+%% =========================================================
+\section{Response Parser Rules}
+%% =========================================================
+
+The deterministic response parser applies the following rules \textit{in order} to each raw model response string $s$:
+
+\begin{enumerate}
+  \item Convert $s$ to lowercase.
+  \item If the substring ``indifferent'' appears in $s$: classify as \textbf{INDIFFERENT}.
+  \item If ``option a'' appears in $s$ and ``option b'' does \textit{not}: classify as \textbf{Option A}.
+  \item Else if ``option b'' appears in $s$ and ``option a'' does \textit{not}: classify as \textbf{Option B}.
+  \item Else if the stripped string is exactly one of \{``a'', ``a.'', ``a)''\}: classify as \textbf{Option A}.
+  \item Else if the stripped string is exactly one of \{``b'', ``b.'', ``b)''\}: classify as \textbf{Option B}.
+  \item Else if the Add operation label appears in $s$ and the Subtract label does \textit{not}: classify as the option corresponding to Add.
+  \item Else if the Subtract operation label appears in $s$ and the Add label does \textit{not}: classify as the option corresponding to Subtract.
+  \item Otherwise: classify as \textbf{INVALID}.
+\end{enumerate}
+
+A trial classified as INVALID is excluded from all analyses (43 Llama trials, 16 Phi trials). The underlying choice (Add/Subtract/Indifferent/Invalid) is then mapped from the display option (A/B) using the presentation-position assignment.
+
+The full parser source code is available in \texttt{experiments/m3v2/m3v2\_runner.py} at the repository.
+
+%% =========================================================
+\section{Invalid Trial Distribution}
+%% =========================================================
+
+Table~\ref{tab:invalid_llama} details the distribution of the 43 Llama 3.2 3B and 16 Phi-4 Mini 3.8B invalid trials across the seven payoff ratios, presentation positions, and phrasing conditions.
+
+\begin{table}[!h]
+\centering
+\caption{Distribution of Invalid Trials by Payoff Ratio and Phrasing}
+\label{tab:invalid_llama}
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Payoff Ratio} & \multicolumn{2}{c}{\textbf{Llama (43 total)}} & \multicolumn{2}{c}{\textbf{Phi (16 total)}} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & Count & \% of 160 & Count & \% of 160 \\
+\midrule
+1:9 &  6 & 3.8\% &  5 & 3.1\% \\
+1:5 &  3 & 1.9\% &  3 & 1.9\% \\
+1:2 &  6 & 3.8\% &  1 & 0.6\% \\
+1:1 &  3 & 1.9\% &  0 & 0.0\% \\
+2:1 &  7 & 4.4\% &  3 & 1.9\% \\
+5:1 &  8 & 5.0\% &  2 & 1.3\% \\
+9:1 & 10 & 6.3\% &  2 & 1.3\% \\
+\midrule
+Total & 43 & 3.8\% & 16 & 1.4\% \\
+\bottomrule
+\multicolumn{5}{p{\linewidth}}{\footnotesize By phrasing variant: 35 of 43 Llama invalids (81\%) come from P4, which prompts the model to ``commit'' to a transformation. Inspection of raw outputs shows Llama produced verbose, multi-sentence commitments (e.g., ``I will commit to Option A, adding the offset\ldots'') that satisfy neither a bare ``Option A'' nor ``Option B'' pattern. This is a parser robustness issue under P4's ``commit'' framing, not a random failure. Invalid rates are spread across payoff ratios with a slight elevation at higher magnitudes (Add-dominant 9:1: 10 trials), consistent with longer, more verbose responses at extreme ratios. The slight position imbalance (Llama: 27 Subtract-first vs.\ 16 Add-first) suggests a small interaction with position, but the magnitude is minor (3.4\% vs.\ 2.0\%). A sensitivity analysis excluding P4 trials from Llama does not qualitatively change Stage-2 results.}
+\end{tabular}
+\end{table}
+
+%% =========================================================
+\section{Firth Penalized Logistic Regression — Stage 2 Robustness}
+%% =========================================================
+
+To address quasi-complete separation in the Stage~2 MLE, we refit the Stage~2 model using Firth's penalized-likelihood logistic regression \cite{firth_1993}. The Firth approach adds a Jeffrey's-prior penalty $\frac{1}{2}\log|I(\beta)|$ to the log-likelihood, which produces finite estimates even under complete separation without requiring a prior distribution to be specified.
+
+The stabilized Stage~2 specification (payoff magnitude $|\log m|$, presentation position, and dilemma fixed effects, \textit{without} the payoff-by-position interaction) was refit using this method. Results are summarized in Table~\ref{tab:supp_firth}.
+
+\begin{table}[!h]
+\centering
+\caption{Firth Penalized Stage-2 Estimates (Stabilized Specification)}
+\label{tab:supp_firth}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Model} & \textbf{N} & \textbf{Firth $\hat\beta$} & \textbf{95\% Wald CI} & \textbf{Conv.} \\
+\midrule
+Qwen 2.5 3B    & 161  & 1.231 & $[0.499, 1.962]$  & \checkmark \\
+Llama 3.2 3B   & 903  & 0.282 & $[0.037, 0.526]$  & \checkmark \\
+Phi-4 Mini 3.8B & 940 & 0.225 & $[-0.015, 0.465]$ & \checkmark \\
+Gemma 3 4B     & 960  & 1.531 & $[0.510, 2.552]$  & \checkmark \\
+\bottomrule
+\multicolumn{5}{p{\linewidth}}{\footnotesize All four models converged. Firth estimates are substantially more conservative than the full MLE (Qwen MLE: 3.319; Gemma MLE: 2.932). Three of four Firth 95\% CIs exclude zero; Phi's CI marginally includes zero ($[-0.015, 0.465]$). The Firth estimates are consistent in sign and direction with the blocked cluster bootstrap CIs reported in Table~I of the main manuscript.}
+\end{tabular}
+\end{table}
+
+The Firth results strengthen the main conclusion that the conditional payoff effect is positive across models: even under a separation-resistant estimator, the direction is consistent, and three of four 95\% intervals exclude zero.
+
+%% =========================================================
+\section{Bootstrap Procedure Details}
+%% =========================================================
+
+The 10,000-resample blocked cluster bootstrap used the following procedure:
+
+\begin{enumerate}
+  \item The sampling unit is the structural dilemma. Each bootstrap replicate samples 20 dilemmas with replacement from the 20 available dilemmas, retaining all observations within each selected dilemma.
+  \item Within each replicate, dilemma identifiers are relabeled to avoid collisions between duplicate draws of the same dilemma.
+  \item The Stage~2 stabilized specification (without payoff-by-position interaction) is refit on each bootstrap sample. Replicates that fail to converge or produce non-finite coefficients are recorded as failed and excluded from the percentile interval.
+  \item Random seed: 42.
+  \item The 2.5th and 97.5th percentiles of the finite bootstrap distribution of the payoff-magnitude coefficient are reported as the ``Stabilized CI'' in Table~I of the main manuscript.
+\end{enumerate}
+
+The number of failed replicates per model is reported in Table~\ref{tab:supp_boot}.
+
+\begin{table}[!h]
+\centering
+\caption{Bootstrap Replicate Summary (Stabilized Specification)}
+\label{tab:supp_boot}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Model} & \textbf{Total} & \textbf{Failed} & \textbf{Failure Rate} \\
+\midrule
+Qwen 2.5 3B     & 10,000 & 0 & 0.0\% \\
+Llama 3.2 3B    & 10,000 & 0 & 0.0\% \\
+Phi-4 Mini 3.8B & 10,000 & 0 & 0.0\% \\
+Gemma 3 4B      & 10,000 & 0 & 0.0\% \\
+\bottomrule
+\multicolumn{4}{p{\linewidth}}{\footnotesize Replicates where numerical overflow occurred or where the optimizer failed were tracked. Under the stabilized specification without dilemma fixed effects, 100\% of resamples converged successfully across all four models.}
+\end{tabular}
+\end{table}
+
+%% =========================================================
+\section{Cross-Model Performance by Phrasing Variant}
+%% =========================================================
+
+Table~\ref{tab:supp_phrasing} reports the commitment rate and conditional dominant-choice accuracy across all four phrasing templates (P1--P4). Each phrasing template was evaluated across 280 scheduled trials per model (20 dilemmas $\times$ 7 payoff ratios $\times$ 2 presentation positions).
+
+\begin{table}[!h]
+\centering
+\caption{Commitment and Dominant Choice by Phrasing Variant}
+\label{tab:supp_phrasing}
+\small
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+\textbf{Model} & \textbf{Metric} & \textbf{P1} & \textbf{P2} & \textbf{P3} & \textbf{P4} \\
+\midrule
+Qwen 2.5 3B & Valid Trials & 280 & 280 & 280 & 280 \\
+            & Commitment Rate & 13.6\% & 37.1\% & 0.0\% & 8.2\% \\
+            & Stage-2 $N$ (non-parity) & 38 & 100 & 0 & 23 \\
+            & Dominant Choice Acc. & 100.0\% & 74.0\% & -- & 100.0\% \\
+\midrule
+Llama 3.2 3B & Valid Trials & 279 & 277 & 276 & 245 \\
+             & Commitment Rate & 100.0\% & 97.1\% & 94.6\% & 99.6\% \\
+             & Stage-2 $N$ (non-parity) & 239 & 233 & 225 & 206 \\
+             & Dominant Choice Acc. & 75.7\% & 67.0\% & 77.3\% & 81.6\% \\
+\midrule
+Phi-4 Mini 3.8B & Valid Trials & 280 & 280 & 279 & 265 \\
+                & Commitment Rate & 99.3\% & 100.0\% & 98.2\% & 97.4\% \\
+                & Stage-2 $N$ (non-parity) & 240 & 240 & 238 & 222 \\
+                & Dominant Choice Acc. & 67.9\% & 68.8\% & 82.4\% & 79.7\% \\
+\midrule
+Gemma 3 4B & Valid Trials & 280 & 280 & 280 & 280 \\
+           & Commitment Rate & 100.0\% & 100.0\% & 100.0\% & 100.0\% \\
+           & Stage-2 $N$ (non-parity) & 240 & 240 & 240 & 240 \\
+           & Dominant Choice Acc. & 99.6\% & 99.6\% & 100.0\% & 98.8\% \\
+\bottomrule
+\multicolumn{6}{p{\linewidth}}{\footnotesize P1: Direct Choice; P2: Protocol Configuration; P3: Rule Selection; P4: Pre-Commitment Protocol. Note that Qwen 2.5 chose \textit{Indifferent} on 100\% of trials under P3, which explicitly conditioned indifference on assessing rules as ``equivalent at your current score level.'' In contrast, under P2 (which asked the model to configure an operational protocol), Qwen committed in 37.1\% of trials.}
+\end{tabular}
+\end{table}
+
+%% =========================================================
+\section{C4 Numerical-Dominance Control Accounting}
+%% =========================================================
+
+Table~\ref{tab:supp_c4} details the complete trial accounting and accuracy breakdown for the C4 comprehension control.
+
+\begin{table}[!h]
+\centering
+\caption{C4 Control Trial Accounting and Accuracy Breakdown}
+\label{tab:supp_c4}
+\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+\textbf{Model} & \textbf{Sched.} & \textbf{Valid} & \textbf{Invalid} & \textbf{Correct} & \textbf{Accuracy} \\
+\midrule
+Qwen 2.5 3B     & 1,120 & 1,120 & 0  & 1,120 & 100.0\% \\
+Llama 3.2 3B    & 1,120 & 1,052 & 68 &   566 &  53.8\% \\
+Phi-4 Mini 3.8B & 1,120 & 1,115 & 5  &   792 &  71.0\% \\
+Gemma 3 4B      & 1,120 & 1,120 & 0  & 1,101 &  98.3\% \\
+\bottomrule
+\multicolumn{6}{p{\linewidth}}{\footnotesize The C4 control tested 160 trials across each of the 7 payoff ratios ($1,120$ total). At 1:1 parity ($N=160$), the prompt instructed: \textit{``Respond `Indifferent' if they produce the same improvement.''} Selecting \textit{Indifferent} was scored as correct at parity; selecting the strictly larger payoff was scored as correct for non-parity ratios ($N=960$). Invalid trials were parsed using the same deterministic criteria as the main task.}
+\end{tabular}
+\end{table}
+
+%% =========================================================
+\section{Threshold Non-Binding Verification}
+%% =========================================================
+
+The follow-up experiment lowered the quality threshold to $T=10$. We claim this threshold is non-binding, meaning every directional action crosses it regardless of payoff magnitude.
+
+For the threshold to be non-binding for the follow-up experiment, we require that for every dilemma, $s_0 + Q_{\min} \times n_{\min} \geq 10$, where $Q_{\min}=1$ (the minimum payoff in a 1:9 ratio), and $n_{\min}$ is the minimum array length. Inspection of the dilemma parameters in Table~\ref{tab:supp_dilemmas} shows that all $s_0 \geq 40$, so the initial score alone already exceeds the follow-up threshold of 10 for every dilemma before any transformation is applied. The threshold is therefore non-binding unconditionally: regardless of which action is chosen or what payoff is received, the threshold is already met by the initial score.
+
+This confirms that the follow-up's payoff sensitivity cannot be explained by differential threshold-crossing probability; both options always cross the threshold given the starting score structure.
+
+%% =========================================================
+\section{Reproduction Instructions}
+%% =========================================================
+
+All materials are released at:
+\begin{center}
+\url{https://github.com/CodeShrek/LLM-Preference-Diagnostics}
+\end{center}
+
+To reproduce the statistical analyses and figures:
+\begin{lstlisting}
+pip install -r requirements.txt
+python experiments/m3v2/multimodel_analysis.py
+python experiments/m3v2/firth_stage2_robustness.py
+\end{lstlisting}
+
+This requires Python $\geq 3.9$ with \texttt{pandas}, \texttt{numpy}, \texttt{scipy}, \texttt{statsmodels $\geq 0.14$}, \texttt{matplotlib}, and \texttt{seaborn}. The model inference data is frozen in \texttt{results/\{model\}/primary.csv}. Re-running inference requires a locally hosted Ollama instance serving the model tags listed in Table~II of the main manuscript.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
 
 \end{document}
