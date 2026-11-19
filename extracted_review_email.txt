@@ -1,0 +1,285 @@
+SHRIYAM BALONI <karanbaloni@ce.du.ac.in>
+OJCS-2026-09-0983 - Decision (Revise and Resubmit as New)
+2 messages
+IEEE Open Journal of the Computer Society <onbehalfof@manuscriptcentral.com> Fri, Nov 6, 2026 at 11:41
+PM
+Reply-To: vincenzo.piuri@unimi.it
+To: achin.mails@gmail.com, karanbaloni@ce.du.ac.in, roydebojyoti16@gmail.com, vanitajain@fot.du.ac.in,
+massimo.donelli@unitn.it
+Cc: soham.basu@ieee.org
+06-Nov-2026
+RE: OJCS-2026-09-0983, "Beyond Forced Choice: Separating Commitment and Payoff Sensitivity in LLM Preference
+Elicitation"
+Manuscript Type: Regular Paper
+Dear Mr. Jain,
+We have completed the review process of the above referenced paper that was submitted to the IEEE Open Journal
+of the Computer Society.  
+I regret to inform you that based on the reviewer feedback, we could not recommend publishing your paper at this
+time. However, you may resubmit your paper after it has been revised according to the Editor and reviewer feedback
+provided below.
+ 
+If you choose to resubmit your paper, it will be treated as a new submission and given a new manuscript ID. Please
+be sure to include this original manuscript ID (OJCS-2026-09-0983) in your cover letter. We will link the two
+submission records and reassign it to the previous Editor and reviewers, if available.
+1. In addition to preparing the revised version of your manuscript, you must also prepare a point-by-point
+response to reviewer feedback. Please be sure to add your response in the designated area and/or upload it
+as a separate document
+2. Please ensure that there is a clean, unmarked version of your manuscript uploaded as the main file. You may
+also upload a version of your manuscript with highlighted changes as a separate document
+3. Once you have submitted your files, you will receive a confirmation email with the new manuscript ID 
+Please note, some reviewers may have recommended that you discuss additional literature when revising your
+manuscript. If you feel that the recommended literature does not contribute to the scholarly content of the article or is
+otherwise irrelevant, please note your concerns in your response to reviewer feedback.
+We hope that you will find the comments from the reviewers to be useful in your future work.  If you have any
+questions, please feel free to contact us.
+ 
+Sincerely,
+Vincenzo Piuri, EIC
+IEEE Open Journal of the Computer Society
+vincenzo.piuri@unimi.it
+ 
+***********************
+Editor's Comments:
+Senior Editor: 1
+Comments to the Author:
+(There are no comments. Please check to see if comments were included as a file attachment with this e-mail or as
+an attachment in your Author Center.)
+Associate Editor: 2
+Comments to the Author:
+Overall, I believe that this research is interesting and useful, but the related work, presentation, and experimental
+results are not mature enough to merit for publication in this journal.  Therefore, I suggest that this paper be revised to
+improve its quality before another review is conducted.
+***********************
+18/11/2026, 20:06 University of Delhi Mail - OJCS-2026-09-0983 - Decision (Revise and Resubmit as New)
+https://mail.google.com/mail/u/0/?ik=7202395a5a&view=pt&search=all&permthid=thread-f%3A1881133457710805387&simpl=msg-f%3A1881133457710805… 1/6
+Reviewers' Comments:
+Please note that some reviewers may have included additional comments in a separate file. If you are having trouble
+locating the comments you may contact Soham Basu at soham.basu@ieee.org for a copy of the file.
+Reviewer: 1
+Comments:
+The authors propose a behavioral framework that separates whether an LLM commits to a directional action from
+which action it selects given commitment.
+Strengths.
+- The question is relevant: forced-choice designs can indeed conflate commitment with direction, and offering an
+explicit non-directional option is a sensible design choice.
+- The factorial design, with payoff ratio and presentation order varied independently, is a reasonable way to separate
+sign, magnitude and order effects.
+Major concerns.
+1. The experimental task is not described, so the findings cannot be evaluated or reproduced. This is my main
+concern. The manuscript never shows or adequately defines the task on which every result depends:
+  - What is the "simulated environment," and what do the Add and Subtract operations act on? The text says only that
+they "have effects that carry quality payoff rewards in some quantitative form."
+  - What happens in the observation and exploration turns? What information does the model receive, are these turns
+scripted, and do the model's earlier replies affect later turns?
+Without this information, a reader cannot tell whether the headline behaviors reflect properties of the models or of this
+particular prompt.
+2. The conclusions are broader than the evidence supports.
+  - The study uses one task template, four small (3-4B) 4-bit-quantized models, and a single deterministic response
+per condition.
+  - Variation across phrasings is not reported at all.
+  - The title and framing refer to "LLM preference elicitation" in general, but the results cannot separate effects of
+model size, architecture, training or quantization
+At minimum:
+  - report results per phrasing variant;
+  - include larger and non-quantized models;
+  - test at least one structurally different task.
+Presentation. The manuscript requires minor editing before it can be assessed as a journal article. Examples:
+- Template leftovers: the running header "Author et al.:", the LaTeX artifact "justification=centering" printed under Fig.
+1
+Recommendation. The question is worthwhile, but in its current form the manuscript does not describe its task well
+enough to be evaluated or reproduced. Its conclusions also extend beyond the narrow evidence. I therefore
+recommend major revision. A substantially revamped experiment study that releases all materials, reports descriptive
+results, uses appropriate methods for separation, and covers a broader set of models and tasks could make a useful
+contribution.
+Additional Questions:
+1. Which category describes this manuscript?: Research
+2. How relevant is this manuscript to the readers? Explain under Public Comments.: Relevant
+1. Please explain how this manuscript advances the field of research and/or contributes something new to the
+literature.: The manuscript argues that forced-choice preference tests for LLMs mix two behaviors:
+- whether a model commits to a directional action at all;
+- which action it selects once it commits.
+It proposes separating the two with an explicit "indifferent" option and a two-stage analysis. The authors evaluate four
+small (3-4B), quantized, instruction-tuned models on a three-turn task.
+The idea is sensible and relevant to LLM evaluation. More importantly, it cannot be verified: the task, prompts,
+dilemmas and payoff values are not described, and no materials are released. The findings are also limited to one
+task and four small models, so they do not support general conclusions about LLM preference elicitation.
+18/11/2026, 20:06 University of Delhi Mail - OJCS-2026-09-0983 - Decision (Revise and Resubmit as New)
+https://mail.google.com/mail/u/0/?ik=7202395a5a&view=pt&search=all&permthid=thread-f%3A1881133457710805387&simpl=msg-f%3A1881133457710805… 2/6
+2.  Is the manuscript technically sound? Please explain your answer under Public Comments below.: Partially
+1. Are the title, abstract, and keywords appropriate? Please explain under Public Comments below.: No
+2. Does the manuscript contain sufficient and appropriate references? Please explain under Public Comments below.:
+References are sufficient and appropriate
+If you are suggesting additional references they must be entered in the text box provided.  All suggestions must
+include full bibliographic information plus a DOI.
+If you are not suggesting any references, please type NA.: NA
+3. Does the introduction state the objectives of the manuscript in terms that encourage the reader to read on? Please
+explain under Public Comments below.: Yes
+4. How would you rate the organization of the manuscript? (Is it focused? Is the length appropriate for the topic?)
+Please explain under Public Comments below.: Satisfactory
+5. Please rate the readability of the manuscript. Please explain under Public Comments below.: Readable - but
+requires some effort to understand
+6. Should the supplemental material be included? (Click on the Supplementary Files icon to view files): Does not
+apply, no supplementary files included
+7. If yes to 6, should it be accepted:
+Please rate the manuscript. Explain your choice: Fair
+Reviewer: 2
+Comments:
+Interesting measurement problem, and relevant to OJCS readers working on LLM eval and agent behavior.
+Separating commitment from conditional choice is useful. Balanced payoff/order design, explicit trial accounting, and
+restraint about latent preferences are positives. Qwen's 955/1120 indifferent responses alongside perfect C4
+performance is especially worth following up. But I'd need substantial methods detail and reanalysis before accepting
+current conclusions.
+1. Task needs to be reproable. Please supply all 20 dilemmas, four phrasing templates, exact system/user prompts for
+each turn, action semantics, exploration/state-update rules, starting scores and thresholds, and definition of success.
+Fig 1 shows both Add and Subtract increasing score, names alone don't explain what these operations mean. Also
+explain whether exploration is scripted or model-generated. If earlier outputs differ by model, final-turn comparison
+includes different trajectories. Include example full transcripts plus prompt generator, raw outputs, parser and analysis
+code in a review-accessible artifact. 'Available on reasonable request' leaves too much of this methods paper
+unverifiable.
+2. Statistical specification needs improvement. Please write out multinomial, Stage 1, full Stage 2 and simplified Stage
+2 models, including all fixed effects and exact order coding. Dilemma fixed effects don't by themselves account for
+residual dependence among variants of a dilemma. Stage 1 also has very few non-directional outcomes for
+Llama/Phi, only 24 and 14 across 20 dilemmas. Report separation/convergence diagnostics there too. Prefer a
+separation-robust fit, eg bias-reduced or suitably regularized logistic analysis, with dilemma-aware uncertainty.
+Describe bootstrap CI construction, seed, convergence criteria, failed/separated replicates and how they were
+handled. 10k resamples alone doesn't establish valid uncertainty with only 20 clusters.
+3. Dropping interaction changes the model, not just numerical stability. Table 3 puts full-MLE slopes beside CIs from a
+different, no-interaction model. Report matching point estimates and intervals for each specification, clearly distinguish
+estimands, and give empirical outcome counts by payoff/order. Fig 5 says 'separation-adjusted' but displayed
+coefficients match full-MLE interactions in text, no adjustment for those interactions is described. Fig 7 also profiles
+models using separation-sensitive coefficients. Refit or label these exploratory, and add uncertainty rather than using
+unstable point estimates to characterize model families. For dominant-choice outcome, clarify whether order means
+Add-first or dominant-option-first, account for payoff sign/action identity so action-label bias isn't mixed with order
+moderation.
+4. Threshold follow-up isn't sufficiently specified. Raising threshold to 10 doesn't automatically make it non-binding. In
+Fig 1 example, final scores are 13 versus 5, a threshold of 10 still separates them if state/payoffs are unchanged.
+Please give starting states and attainable scores for every control condition, define what 'non-binding' means, and
+show threshold can't affect success there. Report control trial accounting, response distributions and uncertainty, not
+just 4 +ve slopes, especially Gemma's 21.785 under separation. A +ve point estimate alone doesn't exclude
+18/11/2026, 20:06 University of Delhi Mail - OJCS-2026-09-0983 - Decision (Revise and Resubmit as New)
+https://mail.google.com/mail/u/0/?ik=7202395a5a&view=pt&search=all&permthid=thread-f%3A1881133457710805387&simpl=msg-f%3A1881133457710805… 3/6
+threshold-related explanations.
+5. C4 control needs its actual prompts and scoring rules. Fig. 6 uses denominators but exclusions aren't accounted for
+as in Table 4. Explain missing/invalid outputs and treatment of 1:1 trials, where no uniquely dominant option exists.
+Qwen's perfect score supports basic numeric comparison in that control; doesn't show full understanding of three-turn
+task. Also correct Sec. V-F's claim that C4 and Stage-2 point estimates have identical rank order: Phi scores above
+Llama on C4, but below it on full-MLE slope in Table 3.
+6. Contribution over forced choice is argued rather than directly tested. Add a matched two-option condition using
+same dilemmas, wording, trajectories and model settings, then show what changes when indifferent is offered. A
+label/position check on indifferent would help distinguish elicitation effects from a particular instruction or response
+token. Explain precisely what's new relative to cited abstention/elicitation work. No need to claim the decomposition is
+a new statistical technique, useful contribution can be a well-validated protocol.
+7. Fix response accounting/interpretation. Table 4 caption defines a valid trial as an 'out-of-bound string', seemingly
+reversed. Provide deterministic parser rules, examples of 43 Llama/16 Phi invalid responses, and their dist across
+payoff/order/dilemma. Excluding them may affect conditional results, add sensitivity analysis. Stage 2 compares
+different committed subsets as payoff changes, especially for Qwen, so its slope describes conditional behavior, not a
+within-common-subset or causal preference effect. Make that distinction explicit.
+Title, abstract and keywords fit scope, introduction motivates problem, but lengthy repeated explanations obscure
+exact methods. For page budget, merge repeated intro/RQ/discussion passages and replace redundant coeff plots
+with compact results table plus uncertainty. Use freed space for protocol and analysis details, full materials in
+supplement. Remove template placeholders, stray 'justification=centering', and terms such as 'four species'/'locally
+trained' unless models were actually trained by authors. No supplementary files were provided to assess.
+Additional Questions:
+1. Which category describes this manuscript?: Research
+2. How relevant is this manuscript to the readers? Explain under Public Comments.: Relevant
+1. Please explain how this manuscript advances the field of research and/or contributes something new to the
+literature.: Useful measurement-oriented contribution: separate whether an LLM gives a directional answer from which
+option it picks once committed. Explicit indifferent response, payoff sweep, order manipulation, and cross-model
+controls make a sensible eval design. Qwen's high non-directional rate despite strong numeric-control performance is
+worth investigating. Novelty is mainly integration of these ideas into one protocol and not a new statistical method.
+Current evidence doesn't yet establish what this adds over matched forced-choice/abstention baselines, and is
+missing task details and unstable inference limit conclusions.
+2.  Is the manuscript technically sound? Please explain your answer under Public Comments below.: Partially
+1. Are the title, abstract, and keywords appropriate? Please explain under Public Comments below.: Yes
+2. Does the manuscript contain sufficient and appropriate references? Please explain under Public Comments below.:
+References are sufficient and appropriate
+If you are suggesting additional references they must be entered in the text box provided.  All suggestions must
+include full bibliographic information plus a DOI.
+If you are not suggesting any references, please type NA.: NA
+3. Does the introduction state the objectives of the manuscript in terms that encourage the reader to read on? Please
+explain under Public Comments below.: Yes
+4. How would you rate the organization of the manuscript? (Is it focused? Is the length appropriate for the topic?)
+Please explain under Public Comments below.: Could be improved
+5. Please rate the readability of the manuscript. Please explain under Public Comments below.: Readable - but
+requires some effort to understand
+6. Should the supplemental material be included? (Click on the Supplementary Files icon to view files): Does not
+apply, no supplementary files included
+7. If yes to 6, should it be accepted:
+Please rate the manuscript. Explain your choice: Fair
+18/11/2026, 20:06 University of Delhi Mail - OJCS-2026-09-0983 - Decision (Revise and Resubmit as New)
+https://mail.google.com/mail/u/0/?ik=7202395a5a&view=pt&search=all&permthid=thread-f%3A1881133457710805387&simpl=msg-f%3A1881133457710805… 4/6
+Reviewer: 3
+Comments:
+The manuscript addresses an important methodological issue in LLM preference elicitation by separating directional
+commitment from payoff sensitivity conditional on commitment. The factorial design and control analyses are valuable.
+However, several concerns require substantial revision.
+Major Comments:
+Construct Validity: The indifferent option yields zero payoff, while both directional actions appear to provide positive
+payoffs, including at parity. This raises questions about whether Stage 1 measures directional commitment or
+selection of a positive-payoff action over a zero-payoff default. Qwen's 85.3% indifferent rate despite 100% C4
+accuracy also deserves further explanation.
+Statistical Reliability: Stage 2 suffers from quasi-complete separation. Qwen's full-MLE coefficient (3.319) and the
+reported stabilized interval [0.84, 2.16] come from different model specifications. The authors should report
+corresponding estimates and intervals together and consider separation-resistant methods, such as Firth's penalized
+likelihood.
+Payoff and Threshold Design: The absolute payoff values, starting scores, and threshold conditions should be
+clarified. For example, a starting score of 4 with Q = 9 would cross a threshold of 10, apparently contradicting the
+description of the follow-up threshold as non-binding.
+Cross-Model Comparisons: Stage 2 includes 161 committed non-parity trials for Qwen compared with 960 for
+Gemma. Such differences introduce selection concerns that limit direct cross-model comparisons. The authors should
+address these limitations or qualify their conclusions.
+Numerical-Comprehension Control: The C4 protocol and differing sample sizes require clarification. The claimed
+consistency between C4 accuracy and Stage 2 coefficient rankings is also inaccurate because Llama and Phi reverse
+positions. This interpretation should be corrected.
+Reproducibility and Reporting: The authors should provide the experimental prompts, dilemma descriptions,
+response-classification rules, and analysis scripts. Table 4's definitions of valid and invalid trials should also be
+reconciled with the reported results.
+Minor Comments:
+1. The "Subtract" label appears to increase the score, potentially introducing semantic bias.
+2. Sample Qwen transcripts would help explain the frequent indifferent responses.
+3. Descriptions suggesting that the evaluated models were locally trained should be corrected.
+4. Language editing and removal of formatting artifacts would improve presentation.
+Overall Assessment:
+The study offers a relevant methodological contribution, but concerns regarding construct validity, statistical reliability,
+and experimental reproducibility should be addressed before publication. Therefore, I recommend Revise and
+Resubmit, as substantial revisions are needed to strengthen the study and support its conclusions.
+Additional Questions:
+1. Which category describes this manuscript?: Research
+2. How relevant is this manuscript to the readers? Explain under Public Comments.: Relevant
+1. Please explain how this manuscript advances the field of research and/or contributes something new to the
+literature.: The manuscript contributes to the field by presenting a useful approach to understanding how large
+language models make decisions. It separates whether a model chooses to take action from how it responds to
+different payoffs. The study uses a well-organized experimental design, includes an option for models to remain
+indifferent, and examines how the order of choices and understanding of numbers affect decisions. The results show
+important differences between the models. However, the authors should address concerns about the experimental
+design, statistical analysis, and comparisons between models to strengthen the study.
+2.  Is the manuscript technically sound? Please explain your answer under Public Comments below.: Partially
+1. Are the title, abstract, and keywords appropriate? Please explain under Public Comments below.: Yes
+2. Does the manuscript contain sufficient and appropriate references? Please explain under Public Comments below.:
+Important references are missing; more references are needed
+If you are suggesting additional references they must be entered in the text box provided.  All suggestions must
+include full bibliographic information plus a DOI.
+18/11/2026, 20:06 University of Delhi Mail - OJCS-2026-09-0983 - Decision (Revise and Resubmit as New)
+https://mail.google.com/mail/u/0/?ik=7202395a5a&view=pt&search=all&permthid=thread-f%3A1881133457710805387&simpl=msg-f%3A1881133457710805… 5/6
+If you are not suggesting any references, please type NA.: NA
+3. Does the introduction state the objectives of the manuscript in terms that encourage the reader to read on? Please
+explain under Public Comments below.: Could be improved
+4. How would you rate the organization of the manuscript? (Is it focused? Is the length appropriate for the topic?)
+Please explain under Public Comments below.: Could be improved
+5. Please rate the readability of the manuscript. Please explain under Public Comments below.: Readable - but
+requires some effort to understand
+6. Should the supplemental material be included? (Click on the Supplementary Files icon to view files): Does not
+apply, no supplementary files included
+7. If yes to 6, should it be accepted:
+Please rate the manuscript. Explain your choice: Fair
+Vanita Jain <vanitajain@fot.du.ac.in> Sat, Nov 7, 2026 at 12:55 PM
+To: karanbaloni@ce.du.ac.in, roydebojyoti16@gmail.com
+Hope we are doing the revision to resubmit.
+Thanks and Regards
+Prof. Vanita Jain
+Head
+Electronics and Communication Engineering
+University of Delhi, Delhi
+[Quoted text hidden]
+18/11/2026, 20:06 University of Delhi Mail - OJCS-2026-09-0983 - Decision (Revise and Resubmit as New)
+https://mail.google.com/mail/u/0/?ik=7202395a5a&view=pt&search=all&permthid=thread-f%3A1881133457710805387&simpl=msg-f%3A1881133457710805… 6/6

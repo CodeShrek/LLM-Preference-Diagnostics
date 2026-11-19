@@ -1,0 +1,71 @@
+trial_id,dilemma_id,ratio,alpha_is_option_1,raw_response,parsed_response,dominant_chosen
+neutral_001,D01,1:9,True,Option 2,Option 2,True
+neutral_002,D01,1:9,False,Indifferent,Indifferent,False
+neutral_003,D01,1:5,True,Option 2,Option 2,True
+neutral_004,D01,1:5,False,Indifferent,Indifferent,False
+neutral_005,D01,1:2,True,Indifferent,Indifferent,False
+neutral_006,D01,1:2,False,Indifferent,Indifferent,False
+neutral_007,D01,1:1,True,Indifferent,Indifferent,True
+neutral_008,D01,1:1,False,Indifferent,Indifferent,True
+neutral_009,D01,2:1,True,Indifferent,Indifferent,False
+neutral_010,D01,2:1,False,Indifferent,Indifferent,False
+neutral_011,D01,5:1,True,Indifferent,Indifferent,False
+neutral_012,D01,5:1,False,Option 2,Option 2,True
+neutral_013,D01,9:1,True,Indifferent,Indifferent,False
+neutral_014,D01,9:1,False,Option 2,Option 2,True
+neutral_015,D02,1:9,True,Option 2,Option 2,True
+neutral_016,D02,1:9,False,Option 1,Option 1,True
+neutral_017,D02,1:5,True,Option 2,Option 2,True
+neutral_018,D02,1:5,False,Option 1,Option 1,True
+neutral_019,D02,1:2,True,Option 2,Option 2,True
+neutral_020,D02,1:2,False,Option 1,Option 1,True
+neutral_021,D02,1:1,True,Indifferent,Indifferent,True
+neutral_022,D02,1:1,False,Indifferent,Indifferent,True
+neutral_023,D02,2:1,True,Option 1,Option 1,True
+neutral_024,D02,2:1,False,Option 2,Option 2,True
+neutral_025,D02,5:1,True,Indifferent,Indifferent,False
+neutral_026,D02,5:1,False,Option 2,Option 2,True
+neutral_027,D02,9:1,True,Option 1,Option 1,True
+neutral_028,D02,9:1,False,Option 2,Option 2,True
+neutral_029,D03,1:9,True,Option 2,Option 2,True
+neutral_030,D03,1:9,False,Option 1,Option 1,True
+neutral_031,D03,1:5,True,Option 2,Option 2,True
+neutral_032,D03,1:5,False,Option 1,Option 1,True
+neutral_033,D03,1:2,True,Option 2,Option 2,True
+neutral_034,D03,1:2,False,Option 1,Option 1,True
+neutral_035,D03,1:1,True,Indifferent,Indifferent,True
+neutral_036,D03,1:1,False,Indifferent,Indifferent,True
+neutral_037,D03,2:1,True,Option 1,Option 1,True
+neutral_038,D03,2:1,False,Option 2,Option 2,True
+neutral_039,D03,5:1,True,Option 1,Option 1,True
+neutral_040,D03,5:1,False,Option 2,Option 2,True
+neutral_041,D03,9:1,True,Option 1,Option 1,True
+neutral_042,D03,9:1,False,Option 2,Option 2,True
+neutral_043,D04,1:9,True,Option 2,Option 2,True
+neutral_044,D04,1:9,False,Option 1,Option 1,True
+neutral_045,D04,1:5,True,Option 2,Option 2,True
+neutral_046,D04,1:5,False,Option 1,Option 1,True
+neutral_047,D04,1:2,True,Option 2,Option 2,True
+neutral_048,D04,1:2,False,Option 1,Option 1,True
+neutral_049,D04,1:1,True,Indifferent,Indifferent,True
+neutral_050,D04,1:1,False,Indifferent,Indifferent,True
+neutral_051,D04,2:1,True,Option 1,Option 1,True
+neutral_052,D04,2:1,False,Option 2,Option 2,True
+neutral_053,D04,5:1,True,Option 1,Option 1,True
+neutral_054,D04,5:1,False,Option 2,Option 2,True
+neutral_055,D04,9:1,True,Option 1,Option 1,True
+neutral_056,D04,9:1,False,Option 2,Option 2,True
+neutral_057,D05,1:9,True,Option 2,Option 2,True
+neutral_058,D05,1:9,False,Option 1,Option 1,True
+neutral_059,D05,1:5,True,Option 2,Option 2,True
+neutral_060,D05,1:5,False,Option 1,Option 1,True
+neutral_061,D05,1:2,True,Option 2,Option 2,True
+neutral_062,D05,1:2,False,Option 1,Option 1,True
+neutral_063,D05,1:1,True,Indifferent,Indifferent,True
+neutral_064,D05,1:1,False,Indifferent,Indifferent,True
+neutral_065,D05,2:1,True,Option 1,Option 1,True
+neutral_066,D05,2:1,False,Option 2,Option 2,True
+neutral_067,D05,5:1,True,Option 1,Option 1,True
+neutral_068,D05,5:1,False,Option 2,Option 2,True
+neutral_069,D05,9:1,True,Option 1,Option 1,True
+neutral_070,D05,9:1,False,Option 2,Option 2,True

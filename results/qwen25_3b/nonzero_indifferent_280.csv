@@ -1,0 +1,281 @@
+trial_id,condition,domain_id,dilemma_id,phrasing_id,Q_ratio_label,Q_add,Q_sub,Q_indiff,log_Q_ratio,add_is_option_a,raw_t1,display_choice,underlying_choice,is_dominant,model,backend,temperature,global_seed,t1_latency
+t0001,nonzero_indifferent,primary,D01,P1,1:9,1,9,1,-2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,2.515
+t0002,nonzero_indifferent,primary,D01,P1,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.426
+t0003,nonzero_indifferent,primary,D01,P1,1:5,1,5,1,-1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.413
+t0004,nonzero_indifferent,primary,D01,P1,1:5,1,5,1,-1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0005,nonzero_indifferent,primary,D01,P1,1:2,1,2,1,-0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0006,nonzero_indifferent,primary,D01,P1,1:2,1,2,1,-0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0007,nonzero_indifferent,primary,D01,P1,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.409
+t0008,nonzero_indifferent,primary,D01,P1,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.429
+t0009,nonzero_indifferent,primary,D01,P1,2:1,2,1,1,0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.417
+t0010,nonzero_indifferent,primary,D01,P1,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0011,nonzero_indifferent,primary,D01,P1,5:1,5,1,1,1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0012,nonzero_indifferent,primary,D01,P1,5:1,5,1,1,1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0013,nonzero_indifferent,primary,D01,P1,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.409
+t0014,nonzero_indifferent,primary,D01,P1,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.402
+t0015,nonzero_indifferent,primary,D01,P2,1:9,1,9,1,-2.1972,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.409
+t0016,nonzero_indifferent,primary,D01,P2,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0017,nonzero_indifferent,primary,D01,P2,1:5,1,5,1,-1.6094,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.409
+t0018,nonzero_indifferent,primary,D01,P2,1:5,1,5,1,-1.6094,False,Option B,B,add,False,qwen2.5:3b,ollama,0.0,20260917,0.405
+t0019,nonzero_indifferent,primary,D01,P2,1:2,1,2,1,-0.6931,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.403
+t0020,nonzero_indifferent,primary,D01,P2,1:2,1,2,1,-0.6931,False,Option B,B,add,False,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0021,nonzero_indifferent,primary,D01,P2,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0022,nonzero_indifferent,primary,D01,P2,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.431
+t0023,nonzero_indifferent,primary,D01,P2,2:1,2,1,1,0.6931,True,Option B,B,subtract,False,qwen2.5:3b,ollama,0.0,20260917,0.423
+t0024,nonzero_indifferent,primary,D01,P2,2:1,2,1,1,0.6931,False,Option B,B,add,True,qwen2.5:3b,ollama,0.0,20260917,0.403
+t0025,nonzero_indifferent,primary,D01,P2,5:1,5,1,1,1.6094,True,Option B,B,subtract,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0026,nonzero_indifferent,primary,D01,P2,5:1,5,1,1,1.6094,False,Option B,B,add,True,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0027,nonzero_indifferent,primary,D01,P2,9:1,9,1,1,2.1972,True,Option B,B,subtract,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0028,nonzero_indifferent,primary,D01,P2,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0029,nonzero_indifferent,primary,D01,P3,1:9,1,9,1,-2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.41
+t0030,nonzero_indifferent,primary,D01,P3,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0031,nonzero_indifferent,primary,D01,P3,1:5,1,5,1,-1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0032,nonzero_indifferent,primary,D01,P3,1:5,1,5,1,-1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.42
+t0033,nonzero_indifferent,primary,D01,P3,1:2,1,2,1,-0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0034,nonzero_indifferent,primary,D01,P3,1:2,1,2,1,-0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0035,nonzero_indifferent,primary,D01,P3,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0036,nonzero_indifferent,primary,D01,P3,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0037,nonzero_indifferent,primary,D01,P3,2:1,2,1,1,0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.402
+t0038,nonzero_indifferent,primary,D01,P3,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.402
+t0039,nonzero_indifferent,primary,D01,P3,5:1,5,1,1,1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0040,nonzero_indifferent,primary,D01,P3,5:1,5,1,1,1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.411
+t0041,nonzero_indifferent,primary,D01,P3,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0042,nonzero_indifferent,primary,D01,P3,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0043,nonzero_indifferent,primary,D01,P4,1:9,1,9,1,-2.1972,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.474
+t0044,nonzero_indifferent,primary,D01,P4,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.409
+t0045,nonzero_indifferent,primary,D01,P4,1:5,1,5,1,-1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.409
+t0046,nonzero_indifferent,primary,D01,P4,1:5,1,5,1,-1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.403
+t0047,nonzero_indifferent,primary,D01,P4,1:2,1,2,1,-0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.402
+t0048,nonzero_indifferent,primary,D01,P4,1:2,1,2,1,-0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.409
+t0049,nonzero_indifferent,primary,D01,P4,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0050,nonzero_indifferent,primary,D01,P4,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0051,nonzero_indifferent,primary,D01,P4,2:1,2,1,1,0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0052,nonzero_indifferent,primary,D01,P4,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.403
+t0053,nonzero_indifferent,primary,D01,P4,5:1,5,1,1,1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.414
+t0054,nonzero_indifferent,primary,D01,P4,5:1,5,1,1,1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.409
+t0055,nonzero_indifferent,primary,D01,P4,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0056,nonzero_indifferent,primary,D01,P4,9:1,9,1,1,2.1972,False,Option B,B,add,True,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0057,nonzero_indifferent,primary,D02,P1,1:9,1,9,1,-2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.572
+t0058,nonzero_indifferent,primary,D02,P1,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0059,nonzero_indifferent,primary,D02,P1,1:5,1,5,1,-1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0060,nonzero_indifferent,primary,D02,P1,1:5,1,5,1,-1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0061,nonzero_indifferent,primary,D02,P1,1:2,1,2,1,-0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.403
+t0062,nonzero_indifferent,primary,D02,P1,1:2,1,2,1,-0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0063,nonzero_indifferent,primary,D02,P1,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.405
+t0064,nonzero_indifferent,primary,D02,P1,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.424
+t0065,nonzero_indifferent,primary,D02,P1,2:1,2,1,1,0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.471
+t0066,nonzero_indifferent,primary,D02,P1,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.473
+t0067,nonzero_indifferent,primary,D02,P1,5:1,5,1,1,1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.436
+t0068,nonzero_indifferent,primary,D02,P1,5:1,5,1,1,1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.438
+t0069,nonzero_indifferent,primary,D02,P1,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.432
+t0070,nonzero_indifferent,primary,D02,P1,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.44
+t0071,nonzero_indifferent,primary,D02,P2,1:9,1,9,1,-2.1972,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.421
+t0072,nonzero_indifferent,primary,D02,P2,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.424
+t0073,nonzero_indifferent,primary,D02,P2,1:5,1,5,1,-1.6094,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.431
+t0074,nonzero_indifferent,primary,D02,P2,1:5,1,5,1,-1.6094,False,Option B,B,add,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0075,nonzero_indifferent,primary,D02,P2,1:2,1,2,1,-0.6931,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.409
+t0076,nonzero_indifferent,primary,D02,P2,1:2,1,2,1,-0.6931,False,Option B,B,add,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0077,nonzero_indifferent,primary,D02,P2,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0078,nonzero_indifferent,primary,D02,P2,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.398
+t0079,nonzero_indifferent,primary,D02,P2,2:1,2,1,1,0.6931,True,Option B,B,subtract,False,qwen2.5:3b,ollama,0.0,20260917,0.405
+t0080,nonzero_indifferent,primary,D02,P2,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0081,nonzero_indifferent,primary,D02,P2,5:1,5,1,1,1.6094,True,Option B,B,subtract,False,qwen2.5:3b,ollama,0.0,20260917,0.409
+t0082,nonzero_indifferent,primary,D02,P2,5:1,5,1,1,1.6094,False,Option B,B,add,True,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0083,nonzero_indifferent,primary,D02,P2,9:1,9,1,1,2.1972,True,Option B,B,subtract,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0084,nonzero_indifferent,primary,D02,P2,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.41
+t0085,nonzero_indifferent,primary,D02,P3,1:9,1,9,1,-2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.417
+t0086,nonzero_indifferent,primary,D02,P3,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.409
+t0087,nonzero_indifferent,primary,D02,P3,1:5,1,5,1,-1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0088,nonzero_indifferent,primary,D02,P3,1:5,1,5,1,-1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.405
+t0089,nonzero_indifferent,primary,D02,P3,1:2,1,2,1,-0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.41
+t0090,nonzero_indifferent,primary,D02,P3,1:2,1,2,1,-0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.411
+t0091,nonzero_indifferent,primary,D02,P3,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0092,nonzero_indifferent,primary,D02,P3,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0093,nonzero_indifferent,primary,D02,P3,2:1,2,1,1,0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0094,nonzero_indifferent,primary,D02,P3,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0095,nonzero_indifferent,primary,D02,P3,5:1,5,1,1,1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0096,nonzero_indifferent,primary,D02,P3,5:1,5,1,1,1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0097,nonzero_indifferent,primary,D02,P3,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0098,nonzero_indifferent,primary,D02,P3,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0099,nonzero_indifferent,primary,D02,P4,1:9,1,9,1,-2.1972,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.477
+t0100,nonzero_indifferent,primary,D02,P4,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.419
+t0101,nonzero_indifferent,primary,D02,P4,1:5,1,5,1,-1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.428
+t0102,nonzero_indifferent,primary,D02,P4,1:5,1,5,1,-1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.411
+t0103,nonzero_indifferent,primary,D02,P4,1:2,1,2,1,-0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.409
+t0104,nonzero_indifferent,primary,D02,P4,1:2,1,2,1,-0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.413
+t0105,nonzero_indifferent,primary,D02,P4,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0106,nonzero_indifferent,primary,D02,P4,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0107,nonzero_indifferent,primary,D02,P4,2:1,2,1,1,0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0108,nonzero_indifferent,primary,D02,P4,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.43
+t0109,nonzero_indifferent,primary,D02,P4,5:1,5,1,1,1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.413
+t0110,nonzero_indifferent,primary,D02,P4,5:1,5,1,1,1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.404
+t0111,nonzero_indifferent,primary,D02,P4,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.402
+t0112,nonzero_indifferent,primary,D02,P4,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.409
+t0113,nonzero_indifferent,primary,D03,P1,1:9,1,9,1,-2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.573
+t0114,nonzero_indifferent,primary,D03,P1,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.403
+t0115,nonzero_indifferent,primary,D03,P1,1:5,1,5,1,-1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0116,nonzero_indifferent,primary,D03,P1,1:5,1,5,1,-1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.413
+t0117,nonzero_indifferent,primary,D03,P1,1:2,1,2,1,-0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.459
+t0118,nonzero_indifferent,primary,D03,P1,1:2,1,2,1,-0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.449
+t0119,nonzero_indifferent,primary,D03,P1,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.411
+t0120,nonzero_indifferent,primary,D03,P1,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.405
+t0121,nonzero_indifferent,primary,D03,P1,2:1,2,1,1,0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.409
+t0122,nonzero_indifferent,primary,D03,P1,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.41
+t0123,nonzero_indifferent,primary,D03,P1,5:1,5,1,1,1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.405
+t0124,nonzero_indifferent,primary,D03,P1,5:1,5,1,1,1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.403
+t0125,nonzero_indifferent,primary,D03,P1,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.416
+t0126,nonzero_indifferent,primary,D03,P1,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.422
+t0127,nonzero_indifferent,primary,D03,P2,1:9,1,9,1,-2.1972,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.41
+t0128,nonzero_indifferent,primary,D03,P2,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.403
+t0129,nonzero_indifferent,primary,D03,P2,1:5,1,5,1,-1.6094,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.403
+t0130,nonzero_indifferent,primary,D03,P2,1:5,1,5,1,-1.6094,False,Option B,B,add,False,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0131,nonzero_indifferent,primary,D03,P2,1:2,1,2,1,-0.6931,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0132,nonzero_indifferent,primary,D03,P2,1:2,1,2,1,-0.6931,False,Option B,B,add,False,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0133,nonzero_indifferent,primary,D03,P2,1:1,1,1,1,0.0,True,Option A,A,add,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0134,nonzero_indifferent,primary,D03,P2,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0135,nonzero_indifferent,primary,D03,P2,2:1,2,1,1,0.6931,True,Option B,B,subtract,False,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0136,nonzero_indifferent,primary,D03,P2,2:1,2,1,1,0.6931,False,Option B,B,add,True,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0137,nonzero_indifferent,primary,D03,P2,5:1,5,1,1,1.6094,True,Option B,B,subtract,False,qwen2.5:3b,ollama,0.0,20260917,0.405
+t0138,nonzero_indifferent,primary,D03,P2,5:1,5,1,1,1.6094,False,Option B,B,add,True,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0139,nonzero_indifferent,primary,D03,P2,9:1,9,1,1,2.1972,True,Option B,B,subtract,False,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0140,nonzero_indifferent,primary,D03,P2,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0141,nonzero_indifferent,primary,D03,P3,1:9,1,9,1,-2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.413
+t0142,nonzero_indifferent,primary,D03,P3,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0143,nonzero_indifferent,primary,D03,P3,1:5,1,5,1,-1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.403
+t0144,nonzero_indifferent,primary,D03,P3,1:5,1,5,1,-1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0145,nonzero_indifferent,primary,D03,P3,1:2,1,2,1,-0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0146,nonzero_indifferent,primary,D03,P3,1:2,1,2,1,-0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.409
+t0147,nonzero_indifferent,primary,D03,P3,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.402
+t0148,nonzero_indifferent,primary,D03,P3,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.427
+t0149,nonzero_indifferent,primary,D03,P3,2:1,2,1,1,0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.41
+t0150,nonzero_indifferent,primary,D03,P3,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0151,nonzero_indifferent,primary,D03,P3,5:1,5,1,1,1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.405
+t0152,nonzero_indifferent,primary,D03,P3,5:1,5,1,1,1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0153,nonzero_indifferent,primary,D03,P3,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0154,nonzero_indifferent,primary,D03,P3,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0155,nonzero_indifferent,primary,D03,P4,1:9,1,9,1,-2.1972,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.479
+t0156,nonzero_indifferent,primary,D03,P4,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.413
+t0157,nonzero_indifferent,primary,D03,P4,1:5,1,5,1,-1.6094,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.432
+t0158,nonzero_indifferent,primary,D03,P4,1:5,1,5,1,-1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.437
+t0159,nonzero_indifferent,primary,D03,P4,1:2,1,2,1,-0.6931,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.432
+t0160,nonzero_indifferent,primary,D03,P4,1:2,1,2,1,-0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.429
+t0161,nonzero_indifferent,primary,D03,P4,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.42
+t0162,nonzero_indifferent,primary,D03,P4,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.433
+t0163,nonzero_indifferent,primary,D03,P4,2:1,2,1,1,0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.429
+t0164,nonzero_indifferent,primary,D03,P4,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.472
+t0165,nonzero_indifferent,primary,D03,P4,5:1,5,1,1,1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.421
+t0166,nonzero_indifferent,primary,D03,P4,5:1,5,1,1,1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0167,nonzero_indifferent,primary,D03,P4,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0168,nonzero_indifferent,primary,D03,P4,9:1,9,1,1,2.1972,False,Option B,B,add,True,qwen2.5:3b,ollama,0.0,20260917,0.404
+t0169,nonzero_indifferent,primary,D04,P1,1:9,1,9,1,-2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.568
+t0170,nonzero_indifferent,primary,D04,P1,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.405
+t0171,nonzero_indifferent,primary,D04,P1,1:5,1,5,1,-1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0172,nonzero_indifferent,primary,D04,P1,1:5,1,5,1,-1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0173,nonzero_indifferent,primary,D04,P1,1:2,1,2,1,-0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0174,nonzero_indifferent,primary,D04,P1,1:2,1,2,1,-0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.41
+t0175,nonzero_indifferent,primary,D04,P1,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.402
+t0176,nonzero_indifferent,primary,D04,P1,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0177,nonzero_indifferent,primary,D04,P1,2:1,2,1,1,0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0178,nonzero_indifferent,primary,D04,P1,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0179,nonzero_indifferent,primary,D04,P1,5:1,5,1,1,1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0180,nonzero_indifferent,primary,D04,P1,5:1,5,1,1,1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0181,nonzero_indifferent,primary,D04,P1,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0182,nonzero_indifferent,primary,D04,P1,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0183,nonzero_indifferent,primary,D04,P2,1:9,1,9,1,-2.1972,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0184,nonzero_indifferent,primary,D04,P2,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0185,nonzero_indifferent,primary,D04,P2,1:5,1,5,1,-1.6094,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.403
+t0186,nonzero_indifferent,primary,D04,P2,1:5,1,5,1,-1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.403
+t0187,nonzero_indifferent,primary,D04,P2,1:2,1,2,1,-0.6931,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.402
+t0188,nonzero_indifferent,primary,D04,P2,1:2,1,2,1,-0.6931,False,Option B,B,add,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0189,nonzero_indifferent,primary,D04,P2,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0190,nonzero_indifferent,primary,D04,P2,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0191,nonzero_indifferent,primary,D04,P2,2:1,2,1,1,0.6931,True,Option B,B,subtract,False,qwen2.5:3b,ollama,0.0,20260917,0.397
+t0192,nonzero_indifferent,primary,D04,P2,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.398
+t0193,nonzero_indifferent,primary,D04,P2,5:1,5,1,1,1.6094,True,Option B,B,subtract,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0194,nonzero_indifferent,primary,D04,P2,5:1,5,1,1,1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.397
+t0195,nonzero_indifferent,primary,D04,P2,9:1,9,1,1,2.1972,True,Option B,B,subtract,False,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0196,nonzero_indifferent,primary,D04,P2,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0197,nonzero_indifferent,primary,D04,P3,1:9,1,9,1,-2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.404
+t0198,nonzero_indifferent,primary,D04,P3,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0199,nonzero_indifferent,primary,D04,P3,1:5,1,5,1,-1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0200,nonzero_indifferent,primary,D04,P3,1:5,1,5,1,-1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0201,nonzero_indifferent,primary,D04,P3,1:2,1,2,1,-0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.402
+t0202,nonzero_indifferent,primary,D04,P3,1:2,1,2,1,-0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0203,nonzero_indifferent,primary,D04,P3,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.398
+t0204,nonzero_indifferent,primary,D04,P3,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0205,nonzero_indifferent,primary,D04,P3,2:1,2,1,1,0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0206,nonzero_indifferent,primary,D04,P3,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0207,nonzero_indifferent,primary,D04,P3,5:1,5,1,1,1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0208,nonzero_indifferent,primary,D04,P3,5:1,5,1,1,1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.402
+t0209,nonzero_indifferent,primary,D04,P3,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0210,nonzero_indifferent,primary,D04,P3,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0211,nonzero_indifferent,primary,D04,P4,1:9,1,9,1,-2.1972,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.471
+t0212,nonzero_indifferent,primary,D04,P4,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0213,nonzero_indifferent,primary,D04,P4,1:5,1,5,1,-1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0214,nonzero_indifferent,primary,D04,P4,1:5,1,5,1,-1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0215,nonzero_indifferent,primary,D04,P4,1:2,1,2,1,-0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0216,nonzero_indifferent,primary,D04,P4,1:2,1,2,1,-0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.398
+t0217,nonzero_indifferent,primary,D04,P4,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.398
+t0218,nonzero_indifferent,primary,D04,P4,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.402
+t0219,nonzero_indifferent,primary,D04,P4,2:1,2,1,1,0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.414
+t0220,nonzero_indifferent,primary,D04,P4,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0221,nonzero_indifferent,primary,D04,P4,5:1,5,1,1,1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.403
+t0222,nonzero_indifferent,primary,D04,P4,5:1,5,1,1,1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.404
+t0223,nonzero_indifferent,primary,D04,P4,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.402
+t0224,nonzero_indifferent,primary,D04,P4,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.407
+t0225,nonzero_indifferent,primary,D05,P1,1:9,1,9,1,-2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.568
+t0226,nonzero_indifferent,primary,D05,P1,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0227,nonzero_indifferent,primary,D05,P1,1:5,1,5,1,-1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0228,nonzero_indifferent,primary,D05,P1,1:5,1,5,1,-1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.398
+t0229,nonzero_indifferent,primary,D05,P1,1:2,1,2,1,-0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0230,nonzero_indifferent,primary,D05,P1,1:2,1,2,1,-0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0231,nonzero_indifferent,primary,D05,P1,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0232,nonzero_indifferent,primary,D05,P1,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0233,nonzero_indifferent,primary,D05,P1,2:1,2,1,1,0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0234,nonzero_indifferent,primary,D05,P1,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0235,nonzero_indifferent,primary,D05,P1,5:1,5,1,1,1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0236,nonzero_indifferent,primary,D05,P1,5:1,5,1,1,1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0237,nonzero_indifferent,primary,D05,P1,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0238,nonzero_indifferent,primary,D05,P1,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0239,nonzero_indifferent,primary,D05,P2,1:9,1,9,1,-2.1972,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.404
+t0240,nonzero_indifferent,primary,D05,P2,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0241,nonzero_indifferent,primary,D05,P2,1:5,1,5,1,-1.6094,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0242,nonzero_indifferent,primary,D05,P2,1:5,1,5,1,-1.6094,False,Option B,B,add,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0243,nonzero_indifferent,primary,D05,P2,1:2,1,2,1,-0.6931,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0244,nonzero_indifferent,primary,D05,P2,1:2,1,2,1,-0.6931,False,Option B,B,add,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0245,nonzero_indifferent,primary,D05,P2,1:1,1,1,1,0.0,True,Option A,A,add,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0246,nonzero_indifferent,primary,D05,P2,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0247,nonzero_indifferent,primary,D05,P2,2:1,2,1,1,0.6931,True,Option B,B,subtract,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0248,nonzero_indifferent,primary,D05,P2,2:1,2,1,1,0.6931,False,Option B,B,add,True,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0249,nonzero_indifferent,primary,D05,P2,5:1,5,1,1,1.6094,True,Option A,A,add,True,qwen2.5:3b,ollama,0.0,20260917,0.403
+t0250,nonzero_indifferent,primary,D05,P2,5:1,5,1,1,1.6094,False,Option B,B,add,True,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0251,nonzero_indifferent,primary,D05,P2,9:1,9,1,1,2.1972,True,Option B,B,subtract,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0252,nonzero_indifferent,primary,D05,P2,9:1,9,1,1,2.1972,False,Option B,B,add,True,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0253,nonzero_indifferent,primary,D05,P3,1:9,1,9,1,-2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.404
+t0254,nonzero_indifferent,primary,D05,P3,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0255,nonzero_indifferent,primary,D05,P3,1:5,1,5,1,-1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.402
+t0256,nonzero_indifferent,primary,D05,P3,1:5,1,5,1,-1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0257,nonzero_indifferent,primary,D05,P3,1:2,1,2,1,-0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0258,nonzero_indifferent,primary,D05,P3,1:2,1,2,1,-0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0259,nonzero_indifferent,primary,D05,P3,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0260,nonzero_indifferent,primary,D05,P3,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0261,nonzero_indifferent,primary,D05,P3,2:1,2,1,1,0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.398
+t0262,nonzero_indifferent,primary,D05,P3,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0263,nonzero_indifferent,primary,D05,P3,5:1,5,1,1,1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.398
+t0264,nonzero_indifferent,primary,D05,P3,5:1,5,1,1,1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0265,nonzero_indifferent,primary,D05,P3,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0266,nonzero_indifferent,primary,D05,P3,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0267,nonzero_indifferent,primary,D05,P4,1:9,1,9,1,-2.1972,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.466
+t0268,nonzero_indifferent,primary,D05,P4,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0269,nonzero_indifferent,primary,D05,P4,1:5,1,5,1,-1.6094,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0270,nonzero_indifferent,primary,D05,P4,1:5,1,5,1,-1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.398
+t0271,nonzero_indifferent,primary,D05,P4,1:2,1,2,1,-0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0272,nonzero_indifferent,primary,D05,P4,1:2,1,2,1,-0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0273,nonzero_indifferent,primary,D05,P4,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.398
+t0274,nonzero_indifferent,primary,D05,P4,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0275,nonzero_indifferent,primary,D05,P4,2:1,2,1,1,0.6931,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0276,nonzero_indifferent,primary,D05,P4,2:1,2,1,1,0.6931,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0277,nonzero_indifferent,primary,D05,P4,5:1,5,1,1,1.6094,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.398
+t0278,nonzero_indifferent,primary,D05,P4,5:1,5,1,1,1.6094,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0279,nonzero_indifferent,primary,D05,P4,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0280,nonzero_indifferent,primary,D05,P4,9:1,9,1,1,2.1972,False,Option B,B,add,True,qwen2.5:3b,ollama,0.0,20260917,0.399

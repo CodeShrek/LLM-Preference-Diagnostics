@@ -1,0 +1,73 @@
+variant,dilemma_id,phrasing_id,ratio,add_is_option_a,raw,parsed
+neither,D01,P1,1:9,True,Neither,ABSTAIN
+neither,D01,P1,1:9,False,Neither,ABSTAIN
+neither,D01,P1,1:1,True,Neither,ABSTAIN
+neither,D01,P1,1:1,False,Neither,ABSTAIN
+neither,D01,P1,9:1,True,Neither,ABSTAIN
+neither,D01,P1,9:1,False,Neither,ABSTAIN
+neither,D01,P2,1:9,True,Option B,B
+neither,D01,P2,1:9,False,Neither,ABSTAIN
+neither,D01,P2,1:1,True,Neither,ABSTAIN
+neither,D01,P2,1:1,False,Neither,ABSTAIN
+neither,D01,P2,9:1,True,Neither,ABSTAIN
+neither,D01,P2,9:1,False,Neither,ABSTAIN
+neither,D01,P3,1:9,True,Neither,ABSTAIN
+neither,D01,P3,1:9,False,Neither,ABSTAIN
+neither,D01,P3,1:1,True,Neither,ABSTAIN
+neither,D01,P3,1:1,False,Neither,ABSTAIN
+neither,D01,P3,9:1,True,Neither,ABSTAIN
+neither,D01,P3,9:1,False,Neither,ABSTAIN
+neither,D01,P4,1:9,True,Option B,B
+neither,D01,P4,1:9,False,Neither,ABSTAIN
+neither,D01,P4,1:1,True,Neither,ABSTAIN
+neither,D01,P4,1:1,False,Neither,ABSTAIN
+neither,D01,P4,9:1,True,Neither,ABSTAIN
+neither,D01,P4,9:1,False,Option B,B
+neither,D02,P1,1:9,True,Option B,B
+neither,D02,P1,1:9,False,Neither,ABSTAIN
+neither,D02,P1,1:1,True,Neither,ABSTAIN
+neither,D02,P1,1:1,False,Neither,ABSTAIN
+neither,D02,P1,9:1,True,Neither,ABSTAIN
+neither,D02,P1,9:1,False,Option B,B
+neither,D02,P2,1:9,True,Option B,B
+neither,D02,P2,1:9,False,Neither,ABSTAIN
+neither,D02,P2,1:1,True,Neither,ABSTAIN
+neither,D02,P2,1:1,False,Neither,ABSTAIN
+neither,D02,P2,9:1,True,Neither,ABSTAIN
+neither,D02,P2,9:1,False,Option B,B
+neither,D02,P3,1:9,True,Neither,ABSTAIN
+neither,D02,P3,1:9,False,Neither,ABSTAIN
+neither,D02,P3,1:1,True,Neither,ABSTAIN
+neither,D02,P3,1:1,False,Neither,ABSTAIN
+neither,D02,P3,9:1,True,Neither,ABSTAIN
+neither,D02,P3,9:1,False,Neither,ABSTAIN
+neither,D02,P4,1:9,True,Option B,B
+neither,D02,P4,1:9,False,Neither,ABSTAIN
+neither,D02,P4,1:1,True,Neither,ABSTAIN
+neither,D02,P4,1:1,False,Neither,ABSTAIN
+neither,D02,P4,9:1,True,Neither,ABSTAIN
+neither,D02,P4,9:1,False,Option B,B
+neither,D03,P1,1:9,True,Option B,B
+neither,D03,P1,1:9,False,Neither,ABSTAIN
+neither,D03,P1,1:1,True,Neither,ABSTAIN
+neither,D03,P1,1:1,False,Neither,ABSTAIN
+neither,D03,P1,9:1,True,Neither,ABSTAIN
+neither,D03,P1,9:1,False,Option B,B
+neither,D03,P2,1:9,True,Option B,B
+neither,D03,P2,1:9,False,Neither,ABSTAIN
+neither,D03,P2,1:1,True,Neither,ABSTAIN
+neither,D03,P2,1:1,False,Neither,ABSTAIN
+neither,D03,P2,9:1,True,Option B,B
+neither,D03,P2,9:1,False,Option B,B
+neither,D03,P3,1:9,True,Neither,ABSTAIN
+neither,D03,P3,1:9,False,Neither,ABSTAIN
+neither,D03,P3,1:1,True,Neither,ABSTAIN
+neither,D03,P3,1:1,False,Neither,ABSTAIN
+neither,D03,P3,9:1,True,Neither,ABSTAIN
+neither,D03,P3,9:1,False,Neither,ABSTAIN
+neither,D03,P4,1:9,True,Option B,B
+neither,D03,P4,1:9,False,Neither,ABSTAIN
+neither,D03,P4,1:1,True,Neither,ABSTAIN
+neither,D03,P4,1:1,False,Neither,ABSTAIN
+neither,D03,P4,9:1,True,Option A,A
+neither,D03,P4,9:1,False,Option B,B

@@ -1,6 +1,8 @@
-# Reproducibility Guide: M3 v2
+# Complete Reproducibility & Traceability Guide: LLM Preference Diagnostics
 
-This document provides exact instructions to reproduce the M3 v2 main experiment, its control conditions, statistical analyses, and follow-up validation experiments.
+This document provides exact, end-to-end instructions to reproduce the primary 4,480-trial factorial experiment across all four models, the full controls and robustness suite, econometric models, and publication figures.
+
+---
 
 ## 1. Environment & Dependencies
 
@@ -12,74 +14,115 @@ This document provides exact instructions to reproduce the M3 v2 main experiment
    ```
 3. **Dependencies**: 
    ```bash
-   pip install pandas numpy statsmodels matplotlib seaborn openai
+   pip install -r requirements.txt
    ```
-4. **Ollama (Local Inference)**:
-   - Install Ollama from [ollama.com](https://ollama.com).
-   - Ensure the server is running (`ollama serve`).
+   Packages: `pandas>=2.0.0`, `numpy>=1.24.0`, `scipy>=1.10.0`, `statsmodels>=0.14.0`, `matplotlib>=3.7.0`, `seaborn>=0.12.0`.
 
-## 2. Model Acquisition
+---
 
-The experiments were run on local quantized models to ensure exact decoding temperature control ($T=0.0$). 
-Run the following commands to pull the necessary models:
+## 2. Model Specifications & Acquisition (Ollama)
+
+All primary experiments were executed locally under deterministic greedy decoding ($T=0.0$) using fixed seeds via Ollama:
 
 ```bash
-ollama pull qwen2.5:3b-instruct-q4_K_M   # Main experiment
+ollama pull qwen2.5:3b-instruct-q4_K_M
+ollama pull llama3.2:3b-instruct-q4_K_M
+ollama pull phi4-mini:3.8b-q4_K_M
+ollama pull gemma3:4b-it-q4_K_M
 ```
 
-## 3. Frozen Experimental Protocol
+Specifications:
+- Qwen 2.5 3B: `qwen2.5:3b-instruct-q4_K_M` (Q4_K_M, $T=0.0$)
+- Llama 3.2 3B: `llama3.2:3b-instruct-q4_K_M` (Q4_K_M, $T=0.0$)
+- Phi-4 Mini 3.8B: `phi4-mini:3.8b-q4_K_M` (Q4_K_M, $T=0.0$)
+- Gemma 3 4B: `gemma3:4b-it-q4_K_M` (Q4_K_M, $T=0.0$)
 
-The M3 v2 protocol is strictly **frozen**. 
-- **Runner**: `experiments/m3v2/m3v2_runner.py`
-- **Stimuli Definition**: `experiments/m3v2/m3v2_stimuli.json`
-- **Analysis Script**: `experiments/m3v2/m3v2_analysis.py`
+---
 
-Any follow-up experiments (Threshold Relevance, Held-out Domain, etc.) are executed as separate extensions located in `experiments/followups/`.
+## 3. Frozen Data Directory Structure
 
-## 4. Reproducing the Main Experiment
+All raw trial records are strictly frozen in `results/`:
+- `results/qwen25_3b/primary.csv`: 1,120 balanced factorial trials on Qwen 2.5 3B
+- `results/llama32_3b/primary.csv`: 1,120 balanced factorial trials on Llama 3.2 3B
+- `results/phi4mini_38b/primary.csv`: 1,120 balanced factorial trials on Phi-4 Mini 3.8B
+- `results/gemma3_4b/primary.csv`: 1,120 balanced factorial trials on Gemma 3 4B
+- `results/*/c4.csv`: 1,120 C4 numerical comprehension trials per model
+- `results/*/threshold.csv`: 1,120 non-binding threshold ($T=10$) trials per model
+- `results/qwen25_3b/forced_choice.csv`: 1,120 matched 2AFC trials on Qwen 2.5 3B
+- `results/qwen25_3b/nonzero_indifferent_280.csv`: 280 trials with non-zero indifferent payoff
+- `results/qwen25_3b/variant_first_slot.csv`, `variant_neither.csv`, `variant_no_preference.csv`: Menu-slot and label ablations ($N=72$ each)
+- `results/qwen25_3b/variant_p3_no_score_level.csv`: P3 phrasing wording ablation ($N=70$)
+- `results/qwen25_3b/variant_neutral_labels.csv`: Neutral-label counterbalancing ($N=70$)
+- `results/qwen25_3b/temperature_sampling_t07.csv`: Stochastic decoding at $T=0.7$ across 3 seeds ($N=168$)
+- `experiments/followups/heldout_resource/m3v2_holdout_main.csv`: Second domain (Resource Scheduling) on Qwen ($N=280$)
+- `experiments/followups/heldout_resource/m3v2_holdout_llama.csv`: Second domain on Llama ($N=280$)
+- `results/domain3_m1_neutral.csv`: Early exploratory M1 2AFC pilot ($N=80$)
 
-To reproduce the exact $N=1120$ main trial dataset (20 dilemmas $\times$ 4 phrasings $\times$ 7 Q-ratios $\times$ 2 positions):
+---
+
+## 4. Reproducing All Econometric Models and Figures
+
+To reproduce all publication tables and figures directly from the frozen data:
 
 ```bash
-python experiments/m3v2/m3v2_runner.py --condition main --output results/m3v2_main.csv
+# 1. Main Hurdle models, phrasing breakdowns, and Figures A-F:
+python experiments/m3v2/multimodel_analysis.py
+
+# 2. Firth Penalized Likelihood estimation (Stage-2 separation resolution):
+python experiments/m3v2/firth_stage2_robustness.py
+
+# 3. Matched 2AFC Forced-Choice Comparison (Figure G):
+python experiments/m3v2/compare_forced_choice.py
 ```
 
-**Control Conditions (C1, C2, C3+, C3-, C4)**:
-```bash
-python experiments/m3v2/m3v2_runner.py --condition C1 --output results/m3v2_C1.csv
-python experiments/m3v2/m3v2_runner.py --condition C2 --output results/m3v2_C2.csv
-python experiments/m3v2/m3v2_runner.py --condition C3_plus --output results/m3v2_C3_plus.csv
-python experiments/m3v2/m3v2_runner.py --condition C3_minus --output results/m3v2_C3_minus.csv
-python experiments/m3v2/m3v2_runner.py --condition C4 --output results/m3v2_C4.csv
-```
+Generated publication figures are written to `paper/figures/`.
 
-## 5. Statistical Analysis & Inference
+---
 
-The primary analysis pipeline parses the choices, computes Multinomial and Hurdle models, and generates margin predictions.
+## 5. Re-Running Model Inference from Scratch
 
 ```bash
-python experiments/m3v2/m3v2_analysis.py
-```
+# Run primary 1,120-trial factorial evaluation across all four models:
+python experiments/m3v2/run_all_models.py
 
-### Advanced Inference (Bootstrap & Permutation)
-Due to quasi-complete separation in the primary Stage 2 Maximum Likelihood Estimates (MLE), we run 10,000-resample blocked cluster bootstrap and blocked permutation tests.
+# Run C4 numerical-dominance comprehension control:
+python experiments/m3v2/run_controls.py --condition C4
 
-```bash
-python experiments/m3v2/run_bootstrap.py
-python experiments/m3v2/run_permutation.py
-```
-*Note: These tests require several minutes to execute. They block strictly on `dilemma_id` to respect the hierarchical nature of the experimental design.*
-
-## 6. Follow-up Validations
-
-The follow-up experiments used to validate the main claims against threshold confounding:
-
-```bash
+# Run non-binding threshold follow-up (T=10):
 python experiments/followups/threshold_relevance/run_threshold_experiment.py
-python experiments/followups/threshold_relevance/analyze_threshold.py
+
+# Run matched 2AFC baseline on Qwen 2.5 3B:
+python experiments/m3v2/forced_choice_runner.py
+
+# Run robustness checks:
+python experiments/m3v2/run_nonzero_indifferent.py
+python experiments/m3v2/run_label_slot_checks.py
+python experiments/m3v2/run_p3_wording_ablation.py
+python experiments/m3v2/run_neutral_labels_counterbalancing.py
+python experiments/m3v2/run_temperature_seeds.py
 ```
 
-## 7. Configuration Details
-- **Random Seed**: Fixed at `42` in the runner script to ensure array values (which are dynamically sampled based on the value range) are identical across runs.
-- **Decoding**: Greedy decoding (`temperature=0.0`).
-- **Data Exclusion**: Any response parsing as `INVALID` is dropped prior to modeling (typically < 0.5% of trials). Parity trials ($1:1$) are excluded from Stage 2 (Directional) models since no dominant option exists.
+---
+
+## 6. Cloud GPU Benchmark Suite (FP16 & Larger 7B Models)
+
+To evaluate unquantized 16-bit floating-point checkpoints and larger 7B/8B models without single-machine hardware limitations:
+- Run `experiments/cloud_eval/OJCS_FP16_and_7B_Benchmarks.ipynb` in Google Colab / Kaggle.
+- Or execute:
+  ```bash
+  python experiments/cloud_eval/run_cloud_benchmarks.py --model Qwen/Qwen2.5-3B-Instruct --precision fp16
+  ```
+
+---
+
+## 7. Deterministic Response Parser
+
+The deterministic parser in `experiments/m3v2/m3v2_runner.py` applies ordered matching rules:
+1. Identifying `"indifferent"` $\to$ `INDIFFERENT`.
+2. Exclusive substring match for `"option a"` (and not `"option b"`) $\to$ `Option A`.
+3. Exclusive substring match for `"option b"` (and not `"option a"`) $\to$ `Option B`.
+4. Exact single-character token match: `{"a", "a.", "a)"}` $\to$ `Option A`; `{"b", "b.", "b)"}` $\to$ `Option B`.
+5. Exclusive operation-name matching.
+6. Otherwise $\to$ `INVALID`.
+
+Exclusions (43 Llama, 16 Phi) were bounded and tested via lenient re-parsing; conditional accuracy swings were $\le 3.2$ percentage points.

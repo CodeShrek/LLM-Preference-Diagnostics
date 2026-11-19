@@ -1,0 +1,9 @@
+{
+  "model_key": "qwen25_3b",
+  "ollama_tag": "llama3.2:3b",
+  "experiment_type": "main",
+  "total_trials_in_file": 280,
+  "new_trials_run": 280,
+  "seed": 20260917,
+  "temperature": 0.0
+}

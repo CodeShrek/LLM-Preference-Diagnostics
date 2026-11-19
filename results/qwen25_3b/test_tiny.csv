@@ -1,0 +1,25 @@
+trial_id,condition,domain_id,dilemma_id,phrasing_id,Q_ratio_label,Q_add,Q_sub,Q_indiff,log_Q_ratio,add_is_option_a,raw_t1,display_choice,underlying_choice,is_dominant,model,backend,temperature,global_seed,t1_latency
+t0001,nonzero_indifferent,primary,D01,P1,1:9,1,9,1,-2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,9.214
+t0002,nonzero_indifferent,primary,D01,P1,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.465
+t0003,nonzero_indifferent,primary,D01,P1,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.41
+t0004,nonzero_indifferent,primary,D01,P1,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.41
+t0005,nonzero_indifferent,primary,D01,P1,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0006,nonzero_indifferent,primary,D01,P1,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.426
+t0007,nonzero_indifferent,primary,D01,P2,1:9,1,9,1,-2.1972,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.425
+t0008,nonzero_indifferent,primary,D01,P2,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.422
+t0009,nonzero_indifferent,primary,D01,P2,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.425
+t0010,nonzero_indifferent,primary,D01,P2,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.414
+t0011,nonzero_indifferent,primary,D01,P2,9:1,9,1,1,2.1972,True,Option B,B,subtract,False,qwen2.5:3b,ollama,0.0,20260917,0.427
+t0012,nonzero_indifferent,primary,D01,P2,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.421
+t0013,nonzero_indifferent,primary,D02,P1,1:9,1,9,1,-2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.565
+t0014,nonzero_indifferent,primary,D02,P1,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.404
+t0015,nonzero_indifferent,primary,D02,P1,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0016,nonzero_indifferent,primary,D02,P1,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0017,nonzero_indifferent,primary,D02,P1,9:1,9,1,1,2.1972,True,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.405
+t0018,nonzero_indifferent,primary,D02,P1,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.4
+t0019,nonzero_indifferent,primary,D02,P2,1:9,1,9,1,-2.1972,True,Option B,B,subtract,True,qwen2.5:3b,ollama,0.0,20260917,0.408
+t0020,nonzero_indifferent,primary,D02,P2,1:9,1,9,1,-2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.406
+t0021,nonzero_indifferent,primary,D02,P2,1:1,1,1,1,0.0,True,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.409
+t0022,nonzero_indifferent,primary,D02,P2,1:1,1,1,1,0.0,False,Indifferent,INDIFFERENT,INDIFFERENT,True,qwen2.5:3b,ollama,0.0,20260917,0.401
+t0023,nonzero_indifferent,primary,D02,P2,9:1,9,1,1,2.1972,True,Option B,B,subtract,False,qwen2.5:3b,ollama,0.0,20260917,0.399
+t0024,nonzero_indifferent,primary,D02,P2,9:1,9,1,1,2.1972,False,Indifferent,INDIFFERENT,INDIFFERENT,False,qwen2.5:3b,ollama,0.0,20260917,0.41
