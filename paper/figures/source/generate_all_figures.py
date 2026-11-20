@@ -115,7 +115,7 @@ def load_c4(model_key):
 # FIG A — Cross-model stacked response distribution
 # ══════════════════════════════════════════════════════════════════════════════
 def fig_a():
-    fig, ax = plt.subplots(figsize=(6.5, 3.6))
+    fig, ax = plt.subplots(figsize=(6.5, 3.8))
 
     model_labels  = [m["label"] for m in MODELS]
     add_pcts      = []
@@ -145,8 +145,8 @@ def fig_a():
     ax.set_xticks(x)
     ax.set_xticklabels(model_labels, fontsize=9)
     ax.set_ylabel("Percentage of Valid Trials (%)")
-    ax.set_ylim(0, 105)
-    ax.legend(loc="upper right", fontsize=8.5, framealpha=0.9)
+    ax.set_ylim(0, 126)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, 0.98), ncol=3, fontsize=8.0, framealpha=0.95, edgecolor="#ccc")
     ax.set_axisbelow(True)
 
     fig.tight_layout()
@@ -262,12 +262,18 @@ def fig_d():
         "Phi-4 Mini 3.8B": [-0.015, 0.464],
         "Gemma 3 4B":      [0.510, 2.552],
     }
-    # Interactive MLE position interaction coefficients from Table I
+    # Interactive MLE position interaction coefficients and 95% CIs from Table IV
     pos_interaction = {
         "Qwen 2.5 3B":     -2.311,
         "Llama 3.2 3B":     0.244,
         "Phi-4 Mini 3.8B":  0.379,
         "Gemma 3 4B":      -0.811,
+    }
+    pos_interaction_ci = {
+        "Qwen 2.5 3B":     [-4.60, -0.02],
+        "Llama 3.2 3B":    [-0.25,  0.74],
+        "Phi-4 Mini 3.8B": [-0.11,  0.87],
+        "Gemma 3 4B":      [-2.40,  0.78],
     }
 
     fig, axes = plt.subplots(1, 2, figsize=(8.5, 3.6))
@@ -293,21 +299,24 @@ def fig_d():
     for i, (b, lo, hi) in enumerate(zip(betas, ci_lo, ci_hi)):
         ax.text(i, b + hi + 0.08, f"{b:.3f}", ha="center", va="bottom", fontsize=8)
 
-    # Right panel: Signed Interaction (|log r| × Pos)
+    # Right panel: Signed Interaction (|log r| × Pos) with 95% CIs
     ax2 = axes[1]
     int_betas = [pos_interaction[l] for l in model_labels]
+    int_ci_lo = [pos_interaction[l] - pos_interaction_ci[l][0] for l in model_labels]
+    int_ci_hi = [pos_interaction_ci[l][1] - pos_interaction[l] for l in model_labels]
     bar_colors = [("tomato" if pb < 0 else "steelblue") for pb in int_betas]
     ax2.bar(x, int_betas, w, color=bar_colors, zorder=3, alpha=0.85)
+    ax2.errorbar(x, int_betas, yerr=[int_ci_lo, int_ci_hi],
+                 fmt="none", ecolor="black", elinewidth=1.5, capsize=4, zorder=4)
     ax2.axhline(0, color="black", linewidth=0.8)
     ax2.set_xticks(x)
     ax2.set_xticklabels(model_labels, fontsize=8.5, rotation=12, ha="right")
-    ax2.set_ylabel(r"MLE Interaction $\hat{\beta}_{|\log r| \times \mathrm{Pos}}$")
+    ax2.set_ylabel(r"MLE Interaction $\hat{\beta}_{|\log r| \times \mathrm{Pos}}$ [95% CI]")
     ax2.set_title("Stage-2 Payoff $\\times$ Position Interaction", fontsize=10)
-    ax2.set_ylim(-3.0, 1.0)
-    for i, pb in enumerate(int_betas):
-        offset = 0.08 if pb >= 0 else -0.15
-        va = "bottom" if pb >= 0 else "top"
-        ax2.text(i, pb + offset, f"{pb:.3f}", ha="center", va=va, fontsize=8)
+    ax2.set_ylim(-5.2, 2.0)
+    for i, (pb, hi) in enumerate(zip(int_betas, int_ci_hi)):
+        pos_y = pb + hi + 0.15 if pb >= 0 else pb + hi + 0.12
+        ax2.text(i, max(pos_y, 0.15), f"{pb:.3f}", ha="center", va="bottom", fontsize=8)
 
     fig.tight_layout()
     _save(fig, "FigD_PositionBias")

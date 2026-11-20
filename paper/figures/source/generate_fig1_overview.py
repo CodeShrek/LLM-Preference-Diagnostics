@@ -120,7 +120,7 @@ def create_overview_diagram():
         "• Prompts: Submit batch vs. Process more\n"
         "• Result: 100% 'Yes' (continue) across models\n"
         "• Zero empirical variance on Turn 3\n"
-        "• Confirms Turn 1 as decisive choice point"
+        "• Evaluates Turn 1 as primary choice point"
     )
     ax.text(11.85, 6.8, t3_str, fontsize=7.7, va='top', ha='left', color='#37474f', linespacing=1.25)
 
@@ -180,7 +180,7 @@ def create_overview_diagram():
         "• Both choices cross goal before acting\n"
         "• Qwen payoff slope persists: β = 1.273\n"
         "• Gemma ceiling persists: 99.6% dominant\n"
-        "• Refutes threshold-crossing artifact"
+        "• Tests threshold-insensitivity"
     )
     ax.text(11.85, 3.65, th_str, fontsize=7.7, va='top', ha='left', color='#263238', linespacing=1.25)
 
@@ -193,7 +193,7 @@ def create_overview_diagram():
         "• At Parity (1:1): Compelled 79.4% B vs. 20.6% A\n"
         "• Non-Parity: 86.5% latent dominant accuracy\n"
         "• Severe Slot Bias: 99.6% (B) vs. 72.9% (A)\n"
-        "• Proves forced choice manufactures bias"
+        "• Shows forced choice induces position bias"
     )
     ax.text(8.05, 1.85, fc_str, fontsize=7.7, va='top', ha='left', color='#263238', linespacing=1.25)
 

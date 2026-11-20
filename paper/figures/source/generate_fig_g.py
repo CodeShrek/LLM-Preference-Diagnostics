@@ -11,7 +11,6 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
-import pandas as pd
 
 OUT_DIR = "/Users/karan/Desktop/APART/paper/figures"
 os.makedirs(OUT_DIR, exist_ok=True)
@@ -55,17 +54,17 @@ def make_fig():
     ax1.bar(x, opt_a_vals,  w, bottom=indiff_vals, label="Option A", color="#4878CF", zorder=3)
     ax1.bar(x, opt_b_vals,  w, bottom=[i+a for i,a in zip(indiff_vals, opt_a_vals)], label="Option B", color="#EE854A", zorder=3)
 
-    # Add text labels
+    # Add text labels inside bars cleanly without any clipping
     ax1.text(0, 48, "97.5%\n(Indifferent)", ha="center", va="center", color="#222", fontweight="bold", fontsize=8.5)
     ax1.text(1, 10, "20.6% (A)", ha="center", va="center", color="white", fontweight="bold", fontsize=8)
-    ax1.text(1, 60, "79.4% (Option B)\n[Directional Imbalance]", ha="center", va="center", color="white", fontweight="bold", fontsize=8.5)
+    ax1.text(1, 60, "79.4% (Option B)\n(79:21 Skew)", ha="center", va="center", color="white", fontweight="bold", fontsize=8.0)
 
     ax1.set_xticks(x)
     ax1.set_xticklabels(categories, fontsize=9.5)
     ax1.set_ylabel("Response Percentage at 1:1 Parity (%)", fontsize=10)
-    ax1.set_ylim(0, 108)
+    ax1.set_ylim(0, 130)
     ax1.set_title("(a) Choice at 1:1 Payoff Parity (N=160)", fontsize=10.5, pad=6)
-    ax1.legend(loc="upper left", fontsize=8.0, framealpha=0.9)
+    ax1.legend(loc="upper center", bbox_to_anchor=(0.5, 0.98), ncol=3, fontsize=7.2, framealpha=0.95, edgecolor="#ccc")
 
     # -------------------------------------------------------------
     # Panel B: Dominant Choice Accuracy across Disparity Ratios
@@ -87,9 +86,9 @@ def make_fig():
     ax2.set_xticklabels(ratio_labels, fontsize=8.0)
     ax2.set_xlabel("Payoff Disparity Ratio", fontsize=10)
     ax2.set_ylabel("Dominant Option Selection (%)", fontsize=10)
-    ax2.set_ylim(45, 105)
+    ax2.set_ylim(42, 108)
     ax2.set_title("(b) Dominant Choice by Payoff Disparity", fontsize=10.5, pad=6)
-    ax2.legend(loc="lower right", fontsize=8.0, framealpha=0.9)
+    ax2.legend(loc="lower left", fontsize=7.8, framealpha=0.92, edgecolor="#ccc")
 
     fig.tight_layout()
     for ext in ("png", "pdf"):

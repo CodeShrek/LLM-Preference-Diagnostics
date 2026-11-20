@@ -1,0 +1,1121 @@
+trial_id,model,backend,dilemma_id,phrasing_id,ratio,Q_alpha,Q_beta,log_ratio,alpha_is_option_1,display_choice,underlying_choice,is_valid,is_committed,is_parity,dominant_chosen,latency_sec,raw_response
+neutral_t0001,qwen25_3b,ollama,D01,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,9.112,Option 2
+neutral_t0002,qwen25_3b,ollama,D01,P1,1:9,1,9,-2.1972,False,Indifferent,Indifferent,True,False,False,False,0.431,Indifferent
+neutral_t0003,qwen25_3b,ollama,D01,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.374,Option 2
+neutral_t0004,qwen25_3b,ollama,D01,P1,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.357,Indifferent
+neutral_t0005,qwen25_3b,ollama,D01,P1,1:2,1,2,-0.6931,True,Indifferent,Indifferent,True,False,False,False,0.35,Indifferent
+neutral_t0006,qwen25_3b,ollama,D01,P1,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.351,Indifferent
+neutral_t0007,qwen25_3b,ollama,D01,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.361,Indifferent
+neutral_t0008,qwen25_3b,ollama,D01,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.365,Indifferent
+neutral_t0009,qwen25_3b,ollama,D01,P1,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.357,Indifferent
+neutral_t0010,qwen25_3b,ollama,D01,P1,2:1,2,1,0.6931,False,Indifferent,Indifferent,True,False,False,False,0.364,Indifferent
+neutral_t0011,qwen25_3b,ollama,D01,P1,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.352,Indifferent
+neutral_t0012,qwen25_3b,ollama,D01,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.38,Option 2
+neutral_t0013,qwen25_3b,ollama,D01,P1,9:1,9,1,2.1972,True,Indifferent,Indifferent,True,False,False,False,0.363,Indifferent
+neutral_t0014,qwen25_3b,ollama,D01,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.403,Option 2
+neutral_t0015,qwen25_3b,ollama,D01,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.489,Option 2
+neutral_t0016,qwen25_3b,ollama,D01,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.387,Option 1
+neutral_t0017,qwen25_3b,ollama,D01,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.389,Option 2
+neutral_t0018,qwen25_3b,ollama,D01,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.389,Option 1
+neutral_t0019,qwen25_3b,ollama,D01,P2,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.381,Option 2
+neutral_t0020,qwen25_3b,ollama,D01,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.383,Option 1
+neutral_t0021,qwen25_3b,ollama,D01,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.388,Option 1
+neutral_t0022,qwen25_3b,ollama,D01,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.405,Option 1
+neutral_t0023,qwen25_3b,ollama,D01,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.406,Option 1
+neutral_t0024,qwen25_3b,ollama,D01,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.416,Option 2
+neutral_t0025,qwen25_3b,ollama,D01,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.396,Option 1
+neutral_t0026,qwen25_3b,ollama,D01,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.401,Option 2
+neutral_t0027,qwen25_3b,ollama,D01,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.397,Option 1
+neutral_t0028,qwen25_3b,ollama,D01,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.412,Option 2
+neutral_t0029,qwen25_3b,ollama,D01,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.478,Option 2
+neutral_t0030,qwen25_3b,ollama,D01,P3,1:9,1,9,-2.1972,False,Indifferent,Indifferent,True,False,False,False,0.374,Indifferent
+neutral_t0031,qwen25_3b,ollama,D01,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.382,Option 2
+neutral_t0032,qwen25_3b,ollama,D01,P3,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.352,Indifferent
+neutral_t0033,qwen25_3b,ollama,D01,P3,1:2,1,2,-0.6931,True,Indifferent,Indifferent,True,False,False,False,0.352,Indifferent
+neutral_t0034,qwen25_3b,ollama,D01,P3,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.35,Indifferent
+neutral_t0035,qwen25_3b,ollama,D01,P3,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.402,Indifferent
+neutral_t0036,qwen25_3b,ollama,D01,P3,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.379,Indifferent
+neutral_t0037,qwen25_3b,ollama,D01,P3,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.365,Indifferent
+neutral_t0038,qwen25_3b,ollama,D01,P3,2:1,2,1,0.6931,False,Indifferent,Indifferent,True,False,False,False,0.395,Indifferent
+neutral_t0039,qwen25_3b,ollama,D01,P3,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.369,Indifferent
+neutral_t0040,qwen25_3b,ollama,D01,P3,5:1,5,1,1.6094,False,Indifferent,Indifferent,True,False,False,False,0.372,Indifferent
+neutral_t0041,qwen25_3b,ollama,D01,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.387,Option 1
+neutral_t0042,qwen25_3b,ollama,D01,P3,9:1,9,1,2.1972,False,Indifferent,Indifferent,True,False,False,False,0.366,Indifferent
+neutral_t0043,qwen25_3b,ollama,D01,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.472,Option 2
+neutral_t0044,qwen25_3b,ollama,D01,P4,1:9,1,9,-2.1972,False,Indifferent,Indifferent,True,False,False,False,0.355,Indifferent
+neutral_t0045,qwen25_3b,ollama,D01,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.394,Option 2
+neutral_t0046,qwen25_3b,ollama,D01,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.353,Indifferent
+neutral_t0047,qwen25_3b,ollama,D01,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.383,Option 2
+neutral_t0048,qwen25_3b,ollama,D01,P4,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.361,Indifferent
+neutral_t0049,qwen25_3b,ollama,D01,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.354,Indifferent
+neutral_t0050,qwen25_3b,ollama,D01,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.359,Indifferent
+neutral_t0051,qwen25_3b,ollama,D01,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.361,Indifferent
+neutral_t0052,qwen25_3b,ollama,D01,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.412,Option 2
+neutral_t0053,qwen25_3b,ollama,D01,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.353,Indifferent
+neutral_t0054,qwen25_3b,ollama,D01,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.379,Option 2
+neutral_t0055,qwen25_3b,ollama,D01,P4,9:1,9,1,2.1972,True,Indifferent,Indifferent,True,False,False,False,0.353,Indifferent
+neutral_t0056,qwen25_3b,ollama,D01,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.381,Option 2
+neutral_t0057,qwen25_3b,ollama,D02,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.554,Option 2
+neutral_t0058,qwen25_3b,ollama,D02,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.395,Option 1
+neutral_t0059,qwen25_3b,ollama,D02,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.384,Option 2
+neutral_t0060,qwen25_3b,ollama,D02,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.379,Option 1
+neutral_t0061,qwen25_3b,ollama,D02,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.396,Option 2
+neutral_t0062,qwen25_3b,ollama,D02,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.401,Option 1
+neutral_t0063,qwen25_3b,ollama,D02,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.349,Indifferent
+neutral_t0064,qwen25_3b,ollama,D02,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.351,Indifferent
+neutral_t0065,qwen25_3b,ollama,D02,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.385,Option 1
+neutral_t0066,qwen25_3b,ollama,D02,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.398,Option 2
+neutral_t0067,qwen25_3b,ollama,D02,P1,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.361,Indifferent
+neutral_t0068,qwen25_3b,ollama,D02,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.4,Option 2
+neutral_t0069,qwen25_3b,ollama,D02,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.408,Option 1
+neutral_t0070,qwen25_3b,ollama,D02,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.386,Option 2
+neutral_t0071,qwen25_3b,ollama,D02,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.48,Option 2
+neutral_t0072,qwen25_3b,ollama,D02,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.395,Option 1
+neutral_t0073,qwen25_3b,ollama,D02,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.39,Option 2
+neutral_t0074,qwen25_3b,ollama,D02,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.382,Option 1
+neutral_t0075,qwen25_3b,ollama,D02,P2,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.382,Option 2
+neutral_t0076,qwen25_3b,ollama,D02,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.383,Option 1
+neutral_t0077,qwen25_3b,ollama,D02,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.394,Option 1
+neutral_t0078,qwen25_3b,ollama,D02,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.389,Option 1
+neutral_t0079,qwen25_3b,ollama,D02,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.383,Option 1
+neutral_t0080,qwen25_3b,ollama,D02,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.386,Option 2
+neutral_t0081,qwen25_3b,ollama,D02,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.39,Option 1
+neutral_t0082,qwen25_3b,ollama,D02,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.395,Option 2
+neutral_t0083,qwen25_3b,ollama,D02,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.385,Option 1
+neutral_t0084,qwen25_3b,ollama,D02,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.387,Option 2
+neutral_t0085,qwen25_3b,ollama,D02,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.463,Option 2
+neutral_t0086,qwen25_3b,ollama,D02,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.384,Option 1
+neutral_t0087,qwen25_3b,ollama,D02,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.387,Option 2
+neutral_t0088,qwen25_3b,ollama,D02,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.382,Option 1
+neutral_t0089,qwen25_3b,ollama,D02,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.391,Option 2
+neutral_t0090,qwen25_3b,ollama,D02,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.384,Option 1
+neutral_t0091,qwen25_3b,ollama,D02,P3,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.365,Indifferent
+neutral_t0092,qwen25_3b,ollama,D02,P3,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.364,Indifferent
+neutral_t0093,qwen25_3b,ollama,D02,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.385,Option 1
+neutral_t0094,qwen25_3b,ollama,D02,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.382,Option 2
+neutral_t0095,qwen25_3b,ollama,D02,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.392,Option 1
+neutral_t0096,qwen25_3b,ollama,D02,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.38,Option 2
+neutral_t0097,qwen25_3b,ollama,D02,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.384,Option 1
+neutral_t0098,qwen25_3b,ollama,D02,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.379,Option 2
+neutral_t0099,qwen25_3b,ollama,D02,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.462,Option 2
+neutral_t0100,qwen25_3b,ollama,D02,P4,1:9,1,9,-2.1972,False,Indifferent,Indifferent,True,False,False,False,0.347,Indifferent
+neutral_t0101,qwen25_3b,ollama,D02,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.39,Option 2
+neutral_t0102,qwen25_3b,ollama,D02,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.359,Indifferent
+neutral_t0103,qwen25_3b,ollama,D02,P4,1:2,1,2,-0.6931,True,Indifferent,Indifferent,True,False,False,False,0.349,Indifferent
+neutral_t0104,qwen25_3b,ollama,D02,P4,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.353,Indifferent
+neutral_t0105,qwen25_3b,ollama,D02,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.355,Indifferent
+neutral_t0106,qwen25_3b,ollama,D02,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.356,Indifferent
+neutral_t0107,qwen25_3b,ollama,D02,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.354,Indifferent
+neutral_t0108,qwen25_3b,ollama,D02,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.393,Option 2
+neutral_t0109,qwen25_3b,ollama,D02,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.35,Indifferent
+neutral_t0110,qwen25_3b,ollama,D02,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.376,Option 2
+neutral_t0111,qwen25_3b,ollama,D02,P4,9:1,9,1,2.1972,True,Indifferent,Indifferent,True,False,False,False,0.353,Indifferent
+neutral_t0112,qwen25_3b,ollama,D02,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.386,Option 2
+neutral_t0113,qwen25_3b,ollama,D03,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.559,Option 2
+neutral_t0114,qwen25_3b,ollama,D03,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.375,Option 1
+neutral_t0115,qwen25_3b,ollama,D03,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.375,Option 2
+neutral_t0116,qwen25_3b,ollama,D03,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.376,Option 1
+neutral_t0117,qwen25_3b,ollama,D03,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.378,Option 2
+neutral_t0118,qwen25_3b,ollama,D03,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.385,Option 1
+neutral_t0119,qwen25_3b,ollama,D03,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.363,Indifferent
+neutral_t0120,qwen25_3b,ollama,D03,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.357,Indifferent
+neutral_t0121,qwen25_3b,ollama,D03,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.385,Option 1
+neutral_t0122,qwen25_3b,ollama,D03,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.399,Option 2
+neutral_t0123,qwen25_3b,ollama,D03,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.393,Option 1
+neutral_t0124,qwen25_3b,ollama,D03,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.391,Option 2
+neutral_t0125,qwen25_3b,ollama,D03,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.39,Option 1
+neutral_t0126,qwen25_3b,ollama,D03,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.379,Option 2
+neutral_t0127,qwen25_3b,ollama,D03,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.462,Option 2
+neutral_t0128,qwen25_3b,ollama,D03,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.377,Option 1
+neutral_t0129,qwen25_3b,ollama,D03,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.376,Option 2
+neutral_t0130,qwen25_3b,ollama,D03,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.391,Option 1
+neutral_t0131,qwen25_3b,ollama,D03,P2,1:2,1,2,-0.6931,True,Option 1,Alpha,True,True,False,False,0.392,Option 1
+neutral_t0132,qwen25_3b,ollama,D03,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.379,Option 1
+neutral_t0133,qwen25_3b,ollama,D03,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.382,Option 1
+neutral_t0134,qwen25_3b,ollama,D03,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.376,Option 1
+neutral_t0135,qwen25_3b,ollama,D03,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.379,Option 1
+neutral_t0136,qwen25_3b,ollama,D03,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.386,Option 2
+neutral_t0137,qwen25_3b,ollama,D03,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.388,Option 1
+neutral_t0138,qwen25_3b,ollama,D03,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.387,Option 2
+neutral_t0139,qwen25_3b,ollama,D03,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.394,Option 1
+neutral_t0140,qwen25_3b,ollama,D03,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.397,Option 2
+neutral_t0141,qwen25_3b,ollama,D03,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.488,Option 2
+neutral_t0142,qwen25_3b,ollama,D03,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.388,Option 1
+neutral_t0143,qwen25_3b,ollama,D03,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.385,Option 2
+neutral_t0144,qwen25_3b,ollama,D03,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.387,Option 1
+neutral_t0145,qwen25_3b,ollama,D03,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.382,Option 2
+neutral_t0146,qwen25_3b,ollama,D03,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.388,Option 1
+neutral_t0147,qwen25_3b,ollama,D03,P3,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.377,Option 1
+neutral_t0148,qwen25_3b,ollama,D03,P3,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.372,Option 1
+neutral_t0149,qwen25_3b,ollama,D03,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.378,Option 1
+neutral_t0150,qwen25_3b,ollama,D03,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.385,Option 2
+neutral_t0151,qwen25_3b,ollama,D03,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.397,Option 1
+neutral_t0152,qwen25_3b,ollama,D03,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.382,Option 2
+neutral_t0153,qwen25_3b,ollama,D03,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.383,Option 1
+neutral_t0154,qwen25_3b,ollama,D03,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.378,Option 2
+neutral_t0155,qwen25_3b,ollama,D03,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.466,Option 2
+neutral_t0156,qwen25_3b,ollama,D03,P4,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.385,Option 1
+neutral_t0157,qwen25_3b,ollama,D03,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.379,Option 2
+neutral_t0158,qwen25_3b,ollama,D03,P4,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.38,Option 1
+neutral_t0159,qwen25_3b,ollama,D03,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.376,Option 2
+neutral_t0160,qwen25_3b,ollama,D03,P4,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.386,Option 1
+neutral_t0161,qwen25_3b,ollama,D03,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.362,Indifferent
+neutral_t0162,qwen25_3b,ollama,D03,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.349,Indifferent
+neutral_t0163,qwen25_3b,ollama,D03,P4,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.361,Option 1
+neutral_t0164,qwen25_3b,ollama,D03,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.406,Option 2
+neutral_t0165,qwen25_3b,ollama,D03,P4,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.399,Option 1
+neutral_t0166,qwen25_3b,ollama,D03,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.542,Option 2
+neutral_t0167,qwen25_3b,ollama,D03,P4,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.414,Option 1
+neutral_t0168,qwen25_3b,ollama,D03,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.386,Option 2
+neutral_t0169,qwen25_3b,ollama,D04,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.553,Option 2
+neutral_t0170,qwen25_3b,ollama,D04,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.375,Option 1
+neutral_t0171,qwen25_3b,ollama,D04,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.374,Option 2
+neutral_t0172,qwen25_3b,ollama,D04,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.379,Option 1
+neutral_t0173,qwen25_3b,ollama,D04,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.383,Option 2
+neutral_t0174,qwen25_3b,ollama,D04,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.378,Option 1
+neutral_t0175,qwen25_3b,ollama,D04,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.351,Indifferent
+neutral_t0176,qwen25_3b,ollama,D04,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.363,Indifferent
+neutral_t0177,qwen25_3b,ollama,D04,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.412,Option 1
+neutral_t0178,qwen25_3b,ollama,D04,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.37,Option 2
+neutral_t0179,qwen25_3b,ollama,D04,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.361,Option 1
+neutral_t0180,qwen25_3b,ollama,D04,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.385,Option 2
+neutral_t0181,qwen25_3b,ollama,D04,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.37,Option 1
+neutral_t0182,qwen25_3b,ollama,D04,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.371,Option 2
+neutral_t0183,qwen25_3b,ollama,D04,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.468,Option 2
+neutral_t0184,qwen25_3b,ollama,D04,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.384,Option 1
+neutral_t0185,qwen25_3b,ollama,D04,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.38,Option 2
+neutral_t0186,qwen25_3b,ollama,D04,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.387,Option 1
+neutral_t0187,qwen25_3b,ollama,D04,P2,1:2,1,2,-0.6931,True,Option 1,Alpha,True,True,False,False,0.374,Option 1
+neutral_t0188,qwen25_3b,ollama,D04,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.377,Option 1
+neutral_t0189,qwen25_3b,ollama,D04,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.379,Option 1
+neutral_t0190,qwen25_3b,ollama,D04,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.384,Option 1
+neutral_t0191,qwen25_3b,ollama,D04,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.369,Option 1
+neutral_t0192,qwen25_3b,ollama,D04,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.36,Option 2
+neutral_t0193,qwen25_3b,ollama,D04,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.369,Option 1
+neutral_t0194,qwen25_3b,ollama,D04,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.385,Option 2
+neutral_t0195,qwen25_3b,ollama,D04,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.377,Option 1
+neutral_t0196,qwen25_3b,ollama,D04,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.368,Option 2
+neutral_t0197,qwen25_3b,ollama,D04,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.444,Option 2
+neutral_t0198,qwen25_3b,ollama,D04,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.376,Option 1
+neutral_t0199,qwen25_3b,ollama,D04,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.374,Option 2
+neutral_t0200,qwen25_3b,ollama,D04,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.372,Option 1
+neutral_t0201,qwen25_3b,ollama,D04,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.362,Option 2
+neutral_t0202,qwen25_3b,ollama,D04,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.366,Option 1
+neutral_t0203,qwen25_3b,ollama,D04,P3,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.345,Indifferent
+neutral_t0204,qwen25_3b,ollama,D04,P3,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.333,Indifferent
+neutral_t0205,qwen25_3b,ollama,D04,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.384,Option 1
+neutral_t0206,qwen25_3b,ollama,D04,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.446,Option 2
+neutral_t0207,qwen25_3b,ollama,D04,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.362,Option 1
+neutral_t0208,qwen25_3b,ollama,D04,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.372,Option 2
+neutral_t0209,qwen25_3b,ollama,D04,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.362,Option 1
+neutral_t0210,qwen25_3b,ollama,D04,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.367,Option 2
+neutral_t0211,qwen25_3b,ollama,D04,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.435,Option 2
+neutral_t0212,qwen25_3b,ollama,D04,P4,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.433,Option 1
+neutral_t0213,qwen25_3b,ollama,D04,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.373,Option 2
+neutral_t0214,qwen25_3b,ollama,D04,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.342,Indifferent
+neutral_t0215,qwen25_3b,ollama,D04,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.372,Option 2
+neutral_t0216,qwen25_3b,ollama,D04,P4,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.362,Option 1
+neutral_t0217,qwen25_3b,ollama,D04,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.359,Indifferent
+neutral_t0218,qwen25_3b,ollama,D04,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.392,Indifferent
+neutral_t0219,qwen25_3b,ollama,D04,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.376,Indifferent
+neutral_t0220,qwen25_3b,ollama,D04,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.429,Option 2
+neutral_t0221,qwen25_3b,ollama,D04,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.368,Indifferent
+neutral_t0222,qwen25_3b,ollama,D04,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.433,Option 2
+neutral_t0223,qwen25_3b,ollama,D04,P4,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.398,Option 1
+neutral_t0224,qwen25_3b,ollama,D04,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.399,Option 2
+neutral_t0225,qwen25_3b,ollama,D05,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.619,Option 2
+neutral_t0226,qwen25_3b,ollama,D05,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.394,Option 1
+neutral_t0227,qwen25_3b,ollama,D05,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.403,Option 2
+neutral_t0228,qwen25_3b,ollama,D05,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.385,Option 1
+neutral_t0229,qwen25_3b,ollama,D05,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.408,Option 2
+neutral_t0230,qwen25_3b,ollama,D05,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.399,Option 1
+neutral_t0231,qwen25_3b,ollama,D05,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.371,Indifferent
+neutral_t0232,qwen25_3b,ollama,D05,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.358,Indifferent
+neutral_t0233,qwen25_3b,ollama,D05,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.388,Option 1
+neutral_t0234,qwen25_3b,ollama,D05,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.388,Option 2
+neutral_t0235,qwen25_3b,ollama,D05,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.388,Option 1
+neutral_t0236,qwen25_3b,ollama,D05,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.381,Option 2
+neutral_t0237,qwen25_3b,ollama,D05,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.391,Option 1
+neutral_t0238,qwen25_3b,ollama,D05,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.388,Option 2
+neutral_t0239,qwen25_3b,ollama,D05,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.472,Option 2
+neutral_t0240,qwen25_3b,ollama,D05,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.407,Option 1
+neutral_t0241,qwen25_3b,ollama,D05,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.392,Option 2
+neutral_t0242,qwen25_3b,ollama,D05,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.42,Option 1
+neutral_t0243,qwen25_3b,ollama,D05,P2,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.391,Option 2
+neutral_t0244,qwen25_3b,ollama,D05,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.392,Option 1
+neutral_t0245,qwen25_3b,ollama,D05,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.39,Option 1
+neutral_t0246,qwen25_3b,ollama,D05,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.391,Option 1
+neutral_t0247,qwen25_3b,ollama,D05,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.398,Option 1
+neutral_t0248,qwen25_3b,ollama,D05,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.411,Option 2
+neutral_t0249,qwen25_3b,ollama,D05,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.395,Option 1
+neutral_t0250,qwen25_3b,ollama,D05,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.423,Option 2
+neutral_t0251,qwen25_3b,ollama,D05,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.404,Option 1
+neutral_t0252,qwen25_3b,ollama,D05,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.387,Option 2
+neutral_t0253,qwen25_3b,ollama,D05,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.471,Option 2
+neutral_t0254,qwen25_3b,ollama,D05,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.395,Option 1
+neutral_t0255,qwen25_3b,ollama,D05,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.388,Option 2
+neutral_t0256,qwen25_3b,ollama,D05,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.391,Option 1
+neutral_t0257,qwen25_3b,ollama,D05,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.386,Option 2
+neutral_t0258,qwen25_3b,ollama,D05,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.398,Option 1
+neutral_t0259,qwen25_3b,ollama,D05,P3,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.367,Indifferent
+neutral_t0260,qwen25_3b,ollama,D05,P3,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.388,Option 1
+neutral_t0261,qwen25_3b,ollama,D05,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.391,Option 1
+neutral_t0262,qwen25_3b,ollama,D05,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.378,Option 2
+neutral_t0263,qwen25_3b,ollama,D05,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.377,Option 1
+neutral_t0264,qwen25_3b,ollama,D05,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.377,Option 2
+neutral_t0265,qwen25_3b,ollama,D05,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.384,Option 1
+neutral_t0266,qwen25_3b,ollama,D05,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.383,Option 2
+neutral_t0267,qwen25_3b,ollama,D05,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.48,Option 2
+neutral_t0268,qwen25_3b,ollama,D05,P4,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.408,Option 1
+neutral_t0269,qwen25_3b,ollama,D05,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.385,Option 2
+neutral_t0270,qwen25_3b,ollama,D05,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.349,Indifferent
+neutral_t0271,qwen25_3b,ollama,D05,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.378,Option 2
+neutral_t0272,qwen25_3b,ollama,D05,P4,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.345,Indifferent
+neutral_t0273,qwen25_3b,ollama,D05,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.346,Indifferent
+neutral_t0274,qwen25_3b,ollama,D05,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.347,Indifferent
+neutral_t0275,qwen25_3b,ollama,D05,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.359,Indifferent
+neutral_t0276,qwen25_3b,ollama,D05,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.391,Option 2
+neutral_t0277,qwen25_3b,ollama,D05,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.352,Indifferent
+neutral_t0278,qwen25_3b,ollama,D05,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.383,Option 2
+neutral_t0279,qwen25_3b,ollama,D05,P4,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.381,Option 1
+neutral_t0280,qwen25_3b,ollama,D05,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.38,Option 2
+neutral_t0281,qwen25_3b,ollama,D06,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.582,Option 2
+neutral_t0282,qwen25_3b,ollama,D06,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.382,Option 1
+neutral_t0283,qwen25_3b,ollama,D06,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.366,Option 2
+neutral_t0284,qwen25_3b,ollama,D06,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.374,Option 1
+neutral_t0285,qwen25_3b,ollama,D06,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.359,Option 2
+neutral_t0286,qwen25_3b,ollama,D06,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.353,Option 1
+neutral_t0287,qwen25_3b,ollama,D06,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.322,Indifferent
+neutral_t0288,qwen25_3b,ollama,D06,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.323,Indifferent
+neutral_t0289,qwen25_3b,ollama,D06,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.352,Option 1
+neutral_t0290,qwen25_3b,ollama,D06,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.392,Option 2
+neutral_t0291,qwen25_3b,ollama,D06,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.392,Option 1
+neutral_t0292,qwen25_3b,ollama,D06,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.385,Option 2
+neutral_t0293,qwen25_3b,ollama,D06,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.388,Option 1
+neutral_t0294,qwen25_3b,ollama,D06,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.414,Option 2
+neutral_t0295,qwen25_3b,ollama,D06,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.429,Option 2
+neutral_t0296,qwen25_3b,ollama,D06,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.351,Option 1
+neutral_t0297,qwen25_3b,ollama,D06,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.35,Option 2
+neutral_t0298,qwen25_3b,ollama,D06,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.351,Option 1
+neutral_t0299,qwen25_3b,ollama,D06,P2,1:2,1,2,-0.6931,True,Option 1,Alpha,True,True,False,False,0.379,Option 1
+neutral_t0300,qwen25_3b,ollama,D06,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.394,Option 1
+neutral_t0301,qwen25_3b,ollama,D06,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.387,Option 1
+neutral_t0302,qwen25_3b,ollama,D06,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.39,Option 1
+neutral_t0303,qwen25_3b,ollama,D06,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.383,Option 1
+neutral_t0304,qwen25_3b,ollama,D06,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.378,Option 2
+neutral_t0305,qwen25_3b,ollama,D06,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.383,Option 1
+neutral_t0306,qwen25_3b,ollama,D06,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.376,Option 2
+neutral_t0307,qwen25_3b,ollama,D06,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.387,Option 1
+neutral_t0308,qwen25_3b,ollama,D06,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.384,Option 2
+neutral_t0309,qwen25_3b,ollama,D06,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.458,Option 2
+neutral_t0310,qwen25_3b,ollama,D06,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.384,Option 1
+neutral_t0311,qwen25_3b,ollama,D06,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.409,Option 2
+neutral_t0312,qwen25_3b,ollama,D06,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.381,Option 1
+neutral_t0313,qwen25_3b,ollama,D06,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.376,Option 2
+neutral_t0314,qwen25_3b,ollama,D06,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.376,Option 1
+neutral_t0315,qwen25_3b,ollama,D06,P3,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.375,Option 1
+neutral_t0316,qwen25_3b,ollama,D06,P3,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.38,Option 1
+neutral_t0317,qwen25_3b,ollama,D06,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.392,Option 1
+neutral_t0318,qwen25_3b,ollama,D06,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.384,Option 2
+neutral_t0319,qwen25_3b,ollama,D06,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.391,Option 1
+neutral_t0320,qwen25_3b,ollama,D06,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.397,Option 2
+neutral_t0321,qwen25_3b,ollama,D06,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.379,Option 1
+neutral_t0322,qwen25_3b,ollama,D06,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.377,Option 2
+neutral_t0323,qwen25_3b,ollama,D06,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.462,Option 2
+neutral_t0324,qwen25_3b,ollama,D06,P4,1:9,1,9,-2.1972,False,Indifferent,Indifferent,True,False,False,False,0.351,Indifferent
+neutral_t0325,qwen25_3b,ollama,D06,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.376,Option 2
+neutral_t0326,qwen25_3b,ollama,D06,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.351,Indifferent
+neutral_t0327,qwen25_3b,ollama,D06,P4,1:2,1,2,-0.6931,True,Indifferent,Indifferent,True,False,False,False,0.349,Indifferent
+neutral_t0328,qwen25_3b,ollama,D06,P4,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.355,Indifferent
+neutral_t0329,qwen25_3b,ollama,D06,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.363,Indifferent
+neutral_t0330,qwen25_3b,ollama,D06,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.352,Indifferent
+neutral_t0331,qwen25_3b,ollama,D06,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.347,Indifferent
+neutral_t0332,qwen25_3b,ollama,D06,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.382,Option 2
+neutral_t0333,qwen25_3b,ollama,D06,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.349,Indifferent
+neutral_t0334,qwen25_3b,ollama,D06,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.381,Option 2
+neutral_t0335,qwen25_3b,ollama,D06,P4,9:1,9,1,2.1972,True,Indifferent,Indifferent,True,False,False,False,0.35,Indifferent
+neutral_t0336,qwen25_3b,ollama,D06,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.381,Option 2
+neutral_t0337,qwen25_3b,ollama,D07,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.558,Option 2
+neutral_t0338,qwen25_3b,ollama,D07,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.389,Option 1
+neutral_t0339,qwen25_3b,ollama,D07,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.378,Option 2
+neutral_t0340,qwen25_3b,ollama,D07,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.376,Option 1
+neutral_t0341,qwen25_3b,ollama,D07,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.38,Option 2
+neutral_t0342,qwen25_3b,ollama,D07,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.381,Option 1
+neutral_t0343,qwen25_3b,ollama,D07,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.358,Indifferent
+neutral_t0344,qwen25_3b,ollama,D07,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.348,Indifferent
+neutral_t0345,qwen25_3b,ollama,D07,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.379,Option 1
+neutral_t0346,qwen25_3b,ollama,D07,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.384,Option 2
+neutral_t0347,qwen25_3b,ollama,D07,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.397,Option 1
+neutral_t0348,qwen25_3b,ollama,D07,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.376,Option 2
+neutral_t0349,qwen25_3b,ollama,D07,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.376,Option 1
+neutral_t0350,qwen25_3b,ollama,D07,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.376,Option 2
+neutral_t0351,qwen25_3b,ollama,D07,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.458,Option 2
+neutral_t0352,qwen25_3b,ollama,D07,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.381,Option 1
+neutral_t0353,qwen25_3b,ollama,D07,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.377,Option 2
+neutral_t0354,qwen25_3b,ollama,D07,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.388,Option 1
+neutral_t0355,qwen25_3b,ollama,D07,P2,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.401,Option 2
+neutral_t0356,qwen25_3b,ollama,D07,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.379,Option 1
+neutral_t0357,qwen25_3b,ollama,D07,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.385,Option 1
+neutral_t0358,qwen25_3b,ollama,D07,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.375,Option 1
+neutral_t0359,qwen25_3b,ollama,D07,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.375,Option 1
+neutral_t0360,qwen25_3b,ollama,D07,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.377,Option 2
+neutral_t0361,qwen25_3b,ollama,D07,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.378,Option 1
+neutral_t0362,qwen25_3b,ollama,D07,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.38,Option 2
+neutral_t0363,qwen25_3b,ollama,D07,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.382,Option 1
+neutral_t0364,qwen25_3b,ollama,D07,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.39,Option 2
+neutral_t0365,qwen25_3b,ollama,D07,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.461,Option 2
+neutral_t0366,qwen25_3b,ollama,D07,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.382,Option 1
+neutral_t0367,qwen25_3b,ollama,D07,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.376,Option 2
+neutral_t0368,qwen25_3b,ollama,D07,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.376,Option 1
+neutral_t0369,qwen25_3b,ollama,D07,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.376,Option 2
+neutral_t0370,qwen25_3b,ollama,D07,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.374,Option 1
+neutral_t0371,qwen25_3b,ollama,D07,P3,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.375,Option 1
+neutral_t0372,qwen25_3b,ollama,D07,P3,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.379,Option 1
+neutral_t0373,qwen25_3b,ollama,D07,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.409,Option 1
+neutral_t0374,qwen25_3b,ollama,D07,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.399,Option 2
+neutral_t0375,qwen25_3b,ollama,D07,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.383,Option 1
+neutral_t0376,qwen25_3b,ollama,D07,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.382,Option 2
+neutral_t0377,qwen25_3b,ollama,D07,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.373,Option 1
+neutral_t0378,qwen25_3b,ollama,D07,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.378,Option 2
+neutral_t0379,qwen25_3b,ollama,D07,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.456,Option 2
+neutral_t0380,qwen25_3b,ollama,D07,P4,1:9,1,9,-2.1972,False,Indifferent,Indifferent,True,False,False,False,0.358,Indifferent
+neutral_t0381,qwen25_3b,ollama,D07,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.391,Option 2
+neutral_t0382,qwen25_3b,ollama,D07,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.38,Indifferent
+neutral_t0383,qwen25_3b,ollama,D07,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.374,Option 2
+neutral_t0384,qwen25_3b,ollama,D07,P4,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.349,Indifferent
+neutral_t0385,qwen25_3b,ollama,D07,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.347,Indifferent
+neutral_t0386,qwen25_3b,ollama,D07,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.345,Indifferent
+neutral_t0387,qwen25_3b,ollama,D07,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.345,Indifferent
+neutral_t0388,qwen25_3b,ollama,D07,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.375,Option 2
+neutral_t0389,qwen25_3b,ollama,D07,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.345,Indifferent
+neutral_t0390,qwen25_3b,ollama,D07,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.386,Option 2
+neutral_t0391,qwen25_3b,ollama,D07,P4,9:1,9,1,2.1972,True,Indifferent,Indifferent,True,False,False,False,0.376,Indifferent
+neutral_t0392,qwen25_3b,ollama,D07,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.381,Option 2
+neutral_t0393,qwen25_3b,ollama,D08,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.575,Option 2
+neutral_t0394,qwen25_3b,ollama,D08,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.377,Option 1
+neutral_t0395,qwen25_3b,ollama,D08,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.394,Option 2
+neutral_t0396,qwen25_3b,ollama,D08,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.396,Option 1
+neutral_t0397,qwen25_3b,ollama,D08,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.376,Option 2
+neutral_t0398,qwen25_3b,ollama,D08,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.375,Option 1
+neutral_t0399,qwen25_3b,ollama,D08,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.35,Indifferent
+neutral_t0400,qwen25_3b,ollama,D08,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.354,Indifferent
+neutral_t0401,qwen25_3b,ollama,D08,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.376,Option 1
+neutral_t0402,qwen25_3b,ollama,D08,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.379,Option 2
+neutral_t0403,qwen25_3b,ollama,D08,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.375,Option 1
+neutral_t0404,qwen25_3b,ollama,D08,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.381,Option 2
+neutral_t0405,qwen25_3b,ollama,D08,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.379,Option 1
+neutral_t0406,qwen25_3b,ollama,D08,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.379,Option 2
+neutral_t0407,qwen25_3b,ollama,D08,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.49,Option 2
+neutral_t0408,qwen25_3b,ollama,D08,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.396,Option 1
+neutral_t0409,qwen25_3b,ollama,D08,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.389,Option 2
+neutral_t0410,qwen25_3b,ollama,D08,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.381,Option 1
+neutral_t0411,qwen25_3b,ollama,D08,P2,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.381,Option 2
+neutral_t0412,qwen25_3b,ollama,D08,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.381,Option 1
+neutral_t0413,qwen25_3b,ollama,D08,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.38,Option 1
+neutral_t0414,qwen25_3b,ollama,D08,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.376,Option 1
+neutral_t0415,qwen25_3b,ollama,D08,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.376,Option 1
+neutral_t0416,qwen25_3b,ollama,D08,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.38,Option 2
+neutral_t0417,qwen25_3b,ollama,D08,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.389,Option 1
+neutral_t0418,qwen25_3b,ollama,D08,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.378,Option 2
+neutral_t0419,qwen25_3b,ollama,D08,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.38,Option 1
+neutral_t0420,qwen25_3b,ollama,D08,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.379,Option 2
+neutral_t0421,qwen25_3b,ollama,D08,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.457,Option 2
+neutral_t0422,qwen25_3b,ollama,D08,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.375,Option 1
+neutral_t0423,qwen25_3b,ollama,D08,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.374,Option 2
+neutral_t0424,qwen25_3b,ollama,D08,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.384,Option 1
+neutral_t0425,qwen25_3b,ollama,D08,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.392,Option 2
+neutral_t0426,qwen25_3b,ollama,D08,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.411,Option 1
+neutral_t0427,qwen25_3b,ollama,D08,P3,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.347,Indifferent
+neutral_t0428,qwen25_3b,ollama,D08,P3,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.379,Option 1
+neutral_t0429,qwen25_3b,ollama,D08,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.378,Option 1
+neutral_t0430,qwen25_3b,ollama,D08,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.379,Option 2
+neutral_t0431,qwen25_3b,ollama,D08,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.375,Option 1
+neutral_t0432,qwen25_3b,ollama,D08,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.377,Option 2
+neutral_t0433,qwen25_3b,ollama,D08,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.376,Option 1
+neutral_t0434,qwen25_3b,ollama,D08,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.381,Option 2
+neutral_t0435,qwen25_3b,ollama,D08,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.473,Option 2
+neutral_t0436,qwen25_3b,ollama,D08,P4,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.38,Option 1
+neutral_t0437,qwen25_3b,ollama,D08,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.379,Option 2
+neutral_t0438,qwen25_3b,ollama,D08,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.348,Indifferent
+neutral_t0439,qwen25_3b,ollama,D08,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.378,Option 2
+neutral_t0440,qwen25_3b,ollama,D08,P4,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.345,Indifferent
+neutral_t0441,qwen25_3b,ollama,D08,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.347,Indifferent
+neutral_t0442,qwen25_3b,ollama,D08,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.348,Indifferent
+neutral_t0443,qwen25_3b,ollama,D08,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.349,Indifferent
+neutral_t0444,qwen25_3b,ollama,D08,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.392,Option 2
+neutral_t0445,qwen25_3b,ollama,D08,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.353,Indifferent
+neutral_t0446,qwen25_3b,ollama,D08,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.376,Option 2
+neutral_t0447,qwen25_3b,ollama,D08,P4,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.373,Option 1
+neutral_t0448,qwen25_3b,ollama,D08,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.373,Option 2
+neutral_t0449,qwen25_3b,ollama,D09,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.555,Option 2
+neutral_t0450,qwen25_3b,ollama,D09,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.383,Option 1
+neutral_t0451,qwen25_3b,ollama,D09,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.4,Option 2
+neutral_t0452,qwen25_3b,ollama,D09,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.46,Option 1
+neutral_t0453,qwen25_3b,ollama,D09,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.433,Option 2
+neutral_t0454,qwen25_3b,ollama,D09,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.435,Option 1
+neutral_t0455,qwen25_3b,ollama,D09,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.348,Indifferent
+neutral_t0456,qwen25_3b,ollama,D09,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.339,Indifferent
+neutral_t0457,qwen25_3b,ollama,D09,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.365,Option 1
+neutral_t0458,qwen25_3b,ollama,D09,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.361,Option 2
+neutral_t0459,qwen25_3b,ollama,D09,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.366,Option 1
+neutral_t0460,qwen25_3b,ollama,D09,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.373,Option 2
+neutral_t0461,qwen25_3b,ollama,D09,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.372,Option 1
+neutral_t0462,qwen25_3b,ollama,D09,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.356,Option 2
+neutral_t0463,qwen25_3b,ollama,D09,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.441,Option 2
+neutral_t0464,qwen25_3b,ollama,D09,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.368,Option 1
+neutral_t0465,qwen25_3b,ollama,D09,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.368,Option 2
+neutral_t0466,qwen25_3b,ollama,D09,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.372,Option 1
+neutral_t0467,qwen25_3b,ollama,D09,P2,1:2,1,2,-0.6931,True,Option 1,Alpha,True,True,False,False,0.357,Option 1
+neutral_t0468,qwen25_3b,ollama,D09,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.378,Option 1
+neutral_t0469,qwen25_3b,ollama,D09,P2,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.36,Indifferent
+neutral_t0470,qwen25_3b,ollama,D09,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.37,Option 1
+neutral_t0471,qwen25_3b,ollama,D09,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.37,Option 1
+neutral_t0472,qwen25_3b,ollama,D09,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.353,Option 2
+neutral_t0473,qwen25_3b,ollama,D09,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.357,Option 1
+neutral_t0474,qwen25_3b,ollama,D09,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.361,Option 2
+neutral_t0475,qwen25_3b,ollama,D09,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.362,Option 1
+neutral_t0476,qwen25_3b,ollama,D09,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.363,Option 2
+neutral_t0477,qwen25_3b,ollama,D09,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.43,Option 2
+neutral_t0478,qwen25_3b,ollama,D09,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.373,Option 1
+neutral_t0479,qwen25_3b,ollama,D09,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.363,Option 2
+neutral_t0480,qwen25_3b,ollama,D09,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.37,Option 1
+neutral_t0481,qwen25_3b,ollama,D09,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.367,Option 2
+neutral_t0482,qwen25_3b,ollama,D09,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.397,Option 1
+neutral_t0483,qwen25_3b,ollama,D09,P3,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.372,Indifferent
+neutral_t0484,qwen25_3b,ollama,D09,P3,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.357,Indifferent
+neutral_t0485,qwen25_3b,ollama,D09,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.374,Option 1
+neutral_t0486,qwen25_3b,ollama,D09,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.422,Option 2
+neutral_t0487,qwen25_3b,ollama,D09,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.383,Option 1
+neutral_t0488,qwen25_3b,ollama,D09,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.377,Option 2
+neutral_t0489,qwen25_3b,ollama,D09,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.379,Option 1
+neutral_t0490,qwen25_3b,ollama,D09,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.375,Option 2
+neutral_t0491,qwen25_3b,ollama,D09,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.458,Option 2
+neutral_t0492,qwen25_3b,ollama,D09,P4,1:9,1,9,-2.1972,False,Indifferent,Indifferent,True,False,False,False,0.346,Indifferent
+neutral_t0493,qwen25_3b,ollama,D09,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.378,Option 2
+neutral_t0494,qwen25_3b,ollama,D09,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.358,Indifferent
+neutral_t0495,qwen25_3b,ollama,D09,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.382,Option 2
+neutral_t0496,qwen25_3b,ollama,D09,P4,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.358,Indifferent
+neutral_t0497,qwen25_3b,ollama,D09,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.347,Indifferent
+neutral_t0498,qwen25_3b,ollama,D09,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.346,Indifferent
+neutral_t0499,qwen25_3b,ollama,D09,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.348,Indifferent
+neutral_t0500,qwen25_3b,ollama,D09,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.38,Option 2
+neutral_t0501,qwen25_3b,ollama,D09,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.348,Indifferent
+neutral_t0502,qwen25_3b,ollama,D09,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.376,Option 2
+neutral_t0503,qwen25_3b,ollama,D09,P4,9:1,9,1,2.1972,True,Indifferent,Indifferent,True,False,False,False,0.35,Indifferent
+neutral_t0504,qwen25_3b,ollama,D09,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.396,Option 2
+neutral_t0505,qwen25_3b,ollama,D10,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.562,Option 2
+neutral_t0506,qwen25_3b,ollama,D10,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.386,Option 1
+neutral_t0507,qwen25_3b,ollama,D10,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.384,Option 2
+neutral_t0508,qwen25_3b,ollama,D10,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.384,Option 1
+neutral_t0509,qwen25_3b,ollama,D10,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.384,Option 2
+neutral_t0510,qwen25_3b,ollama,D10,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.386,Option 1
+neutral_t0511,qwen25_3b,ollama,D10,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.347,Indifferent
+neutral_t0512,qwen25_3b,ollama,D10,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.353,Indifferent
+neutral_t0513,qwen25_3b,ollama,D10,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.388,Option 1
+neutral_t0514,qwen25_3b,ollama,D10,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.386,Option 2
+neutral_t0515,qwen25_3b,ollama,D10,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.383,Option 1
+neutral_t0516,qwen25_3b,ollama,D10,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.374,Option 2
+neutral_t0517,qwen25_3b,ollama,D10,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.374,Option 1
+neutral_t0518,qwen25_3b,ollama,D10,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.398,Option 2
+neutral_t0519,qwen25_3b,ollama,D10,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.477,Option 2
+neutral_t0520,qwen25_3b,ollama,D10,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.399,Option 1
+neutral_t0521,qwen25_3b,ollama,D10,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.396,Option 2
+neutral_t0522,qwen25_3b,ollama,D10,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.389,Option 1
+neutral_t0523,qwen25_3b,ollama,D10,P2,1:2,1,2,-0.6931,True,Option 1,Alpha,True,True,False,False,0.391,Option 1
+neutral_t0524,qwen25_3b,ollama,D10,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.383,Option 1
+neutral_t0525,qwen25_3b,ollama,D10,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.385,Option 1
+neutral_t0526,qwen25_3b,ollama,D10,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.38,Option 1
+neutral_t0527,qwen25_3b,ollama,D10,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.384,Option 1
+neutral_t0528,qwen25_3b,ollama,D10,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.383,Option 2
+neutral_t0529,qwen25_3b,ollama,D10,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.385,Option 1
+neutral_t0530,qwen25_3b,ollama,D10,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.391,Option 2
+neutral_t0531,qwen25_3b,ollama,D10,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.4,Option 1
+neutral_t0532,qwen25_3b,ollama,D10,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.413,Option 2
+neutral_t0533,qwen25_3b,ollama,D10,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.487,Option 2
+neutral_t0534,qwen25_3b,ollama,D10,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.382,Option 1
+neutral_t0535,qwen25_3b,ollama,D10,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.376,Option 2
+neutral_t0536,qwen25_3b,ollama,D10,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.375,Option 1
+neutral_t0537,qwen25_3b,ollama,D10,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.377,Option 2
+neutral_t0538,qwen25_3b,ollama,D10,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.374,Option 1
+neutral_t0539,qwen25_3b,ollama,D10,P3,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.377,Option 1
+neutral_t0540,qwen25_3b,ollama,D10,P3,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.383,Option 1
+neutral_t0541,qwen25_3b,ollama,D10,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.39,Option 1
+neutral_t0542,qwen25_3b,ollama,D10,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.381,Option 2
+neutral_t0543,qwen25_3b,ollama,D10,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.376,Option 1
+neutral_t0544,qwen25_3b,ollama,D10,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.376,Option 2
+neutral_t0545,qwen25_3b,ollama,D10,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.377,Option 1
+neutral_t0546,qwen25_3b,ollama,D10,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.376,Option 2
+neutral_t0547,qwen25_3b,ollama,D10,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.46,Option 2
+neutral_t0548,qwen25_3b,ollama,D10,P4,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.377,Option 1
+neutral_t0549,qwen25_3b,ollama,D10,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.379,Option 2
+neutral_t0550,qwen25_3b,ollama,D10,P4,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.375,Option 1
+neutral_t0551,qwen25_3b,ollama,D10,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.39,Option 2
+neutral_t0552,qwen25_3b,ollama,D10,P4,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.391,Option 1
+neutral_t0553,qwen25_3b,ollama,D10,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.356,Indifferent
+neutral_t0554,qwen25_3b,ollama,D10,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.351,Indifferent
+neutral_t0555,qwen25_3b,ollama,D10,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.349,Indifferent
+neutral_t0556,qwen25_3b,ollama,D10,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.384,Option 2
+neutral_t0557,qwen25_3b,ollama,D10,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.347,Indifferent
+neutral_t0558,qwen25_3b,ollama,D10,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.387,Option 2
+neutral_t0559,qwen25_3b,ollama,D10,P4,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.381,Option 1
+neutral_t0560,qwen25_3b,ollama,D10,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.377,Option 2
+neutral_t0561,qwen25_3b,ollama,D11,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.57,Option 2
+neutral_t0562,qwen25_3b,ollama,D11,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.398,Option 1
+neutral_t0563,qwen25_3b,ollama,D11,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.395,Option 2
+neutral_t0564,qwen25_3b,ollama,D11,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.385,Option 1
+neutral_t0565,qwen25_3b,ollama,D11,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.376,Option 2
+neutral_t0566,qwen25_3b,ollama,D11,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.375,Option 1
+neutral_t0567,qwen25_3b,ollama,D11,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.343,Indifferent
+neutral_t0568,qwen25_3b,ollama,D11,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.347,Indifferent
+neutral_t0569,qwen25_3b,ollama,D11,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.376,Option 1
+neutral_t0570,qwen25_3b,ollama,D11,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.377,Option 2
+neutral_t0571,qwen25_3b,ollama,D11,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.387,Option 1
+neutral_t0572,qwen25_3b,ollama,D11,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.386,Option 2
+neutral_t0573,qwen25_3b,ollama,D11,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.396,Option 1
+neutral_t0574,qwen25_3b,ollama,D11,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.423,Option 2
+neutral_t0575,qwen25_3b,ollama,D11,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.462,Option 2
+neutral_t0576,qwen25_3b,ollama,D11,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.381,Option 1
+neutral_t0577,qwen25_3b,ollama,D11,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.378,Option 2
+neutral_t0578,qwen25_3b,ollama,D11,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.38,Option 1
+neutral_t0579,qwen25_3b,ollama,D11,P2,1:2,1,2,-0.6931,True,Option 1,Alpha,True,True,False,False,0.381,Option 1
+neutral_t0580,qwen25_3b,ollama,D11,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.388,Option 1
+neutral_t0581,qwen25_3b,ollama,D11,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.382,Option 1
+neutral_t0582,qwen25_3b,ollama,D11,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.386,Option 1
+neutral_t0583,qwen25_3b,ollama,D11,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.375,Option 1
+neutral_t0584,qwen25_3b,ollama,D11,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.385,Option 2
+neutral_t0585,qwen25_3b,ollama,D11,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.397,Option 1
+neutral_t0586,qwen25_3b,ollama,D11,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.389,Option 2
+neutral_t0587,qwen25_3b,ollama,D11,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.392,Option 1
+neutral_t0588,qwen25_3b,ollama,D11,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.383,Option 2
+neutral_t0589,qwen25_3b,ollama,D11,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.454,Option 2
+neutral_t0590,qwen25_3b,ollama,D11,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.382,Option 1
+neutral_t0591,qwen25_3b,ollama,D11,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.381,Option 2
+neutral_t0592,qwen25_3b,ollama,D11,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.378,Option 1
+neutral_t0593,qwen25_3b,ollama,D11,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.376,Option 2
+neutral_t0594,qwen25_3b,ollama,D11,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.377,Option 1
+neutral_t0595,qwen25_3b,ollama,D11,P3,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.359,Indifferent
+neutral_t0596,qwen25_3b,ollama,D11,P3,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.37,Indifferent
+neutral_t0597,qwen25_3b,ollama,D11,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.379,Option 1
+neutral_t0598,qwen25_3b,ollama,D11,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.379,Option 2
+neutral_t0599,qwen25_3b,ollama,D11,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.376,Option 1
+neutral_t0600,qwen25_3b,ollama,D11,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.377,Option 2
+neutral_t0601,qwen25_3b,ollama,D11,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.376,Option 1
+neutral_t0602,qwen25_3b,ollama,D11,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.38,Option 2
+neutral_t0603,qwen25_3b,ollama,D11,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.461,Option 2
+neutral_t0604,qwen25_3b,ollama,D11,P4,1:9,1,9,-2.1972,False,Indifferent,Indifferent,True,False,False,False,0.344,Indifferent
+neutral_t0605,qwen25_3b,ollama,D11,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.381,Option 2
+neutral_t0606,qwen25_3b,ollama,D11,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.36,Indifferent
+neutral_t0607,qwen25_3b,ollama,D11,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.379,Option 2
+neutral_t0608,qwen25_3b,ollama,D11,P4,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.347,Indifferent
+neutral_t0609,qwen25_3b,ollama,D11,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.356,Indifferent
+neutral_t0610,qwen25_3b,ollama,D11,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.35,Indifferent
+neutral_t0611,qwen25_3b,ollama,D11,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.347,Indifferent
+neutral_t0612,qwen25_3b,ollama,D11,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.38,Option 2
+neutral_t0613,qwen25_3b,ollama,D11,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.348,Indifferent
+neutral_t0614,qwen25_3b,ollama,D11,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.373,Option 2
+neutral_t0615,qwen25_3b,ollama,D11,P4,9:1,9,1,2.1972,True,Indifferent,Indifferent,True,False,False,False,0.346,Indifferent
+neutral_t0616,qwen25_3b,ollama,D11,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.382,Option 2
+neutral_t0617,qwen25_3b,ollama,D12,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.566,Option 2
+neutral_t0618,qwen25_3b,ollama,D12,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.38,Option 1
+neutral_t0619,qwen25_3b,ollama,D12,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.372,Option 2
+neutral_t0620,qwen25_3b,ollama,D12,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.377,Option 1
+neutral_t0621,qwen25_3b,ollama,D12,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.399,Option 2
+neutral_t0622,qwen25_3b,ollama,D12,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.382,Option 1
+neutral_t0623,qwen25_3b,ollama,D12,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.347,Indifferent
+neutral_t0624,qwen25_3b,ollama,D12,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.348,Indifferent
+neutral_t0625,qwen25_3b,ollama,D12,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.381,Option 1
+neutral_t0626,qwen25_3b,ollama,D12,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.378,Option 2
+neutral_t0627,qwen25_3b,ollama,D12,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.38,Option 1
+neutral_t0628,qwen25_3b,ollama,D12,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.396,Option 2
+neutral_t0629,qwen25_3b,ollama,D12,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.386,Option 1
+neutral_t0630,qwen25_3b,ollama,D12,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.378,Option 2
+neutral_t0631,qwen25_3b,ollama,D12,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.463,Option 2
+neutral_t0632,qwen25_3b,ollama,D12,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.382,Option 1
+neutral_t0633,qwen25_3b,ollama,D12,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.391,Option 2
+neutral_t0634,qwen25_3b,ollama,D12,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.383,Option 1
+neutral_t0635,qwen25_3b,ollama,D12,P2,1:2,1,2,-0.6931,True,Option 1,Alpha,True,True,False,False,0.38,Option 1
+neutral_t0636,qwen25_3b,ollama,D12,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.381,Option 1
+neutral_t0637,qwen25_3b,ollama,D12,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.378,Option 1
+neutral_t0638,qwen25_3b,ollama,D12,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.382,Option 1
+neutral_t0639,qwen25_3b,ollama,D12,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.385,Option 1
+neutral_t0640,qwen25_3b,ollama,D12,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.378,Option 2
+neutral_t0641,qwen25_3b,ollama,D12,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.381,Option 1
+neutral_t0642,qwen25_3b,ollama,D12,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.38,Option 2
+neutral_t0643,qwen25_3b,ollama,D12,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.381,Option 1
+neutral_t0644,qwen25_3b,ollama,D12,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.377,Option 2
+neutral_t0645,qwen25_3b,ollama,D12,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.455,Option 2
+neutral_t0646,qwen25_3b,ollama,D12,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.383,Option 1
+neutral_t0647,qwen25_3b,ollama,D12,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.389,Option 2
+neutral_t0648,qwen25_3b,ollama,D12,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.373,Option 1
+neutral_t0649,qwen25_3b,ollama,D12,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.376,Option 2
+neutral_t0650,qwen25_3b,ollama,D12,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.388,Option 1
+neutral_t0651,qwen25_3b,ollama,D12,P3,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.352,Indifferent
+neutral_t0652,qwen25_3b,ollama,D12,P3,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.346,Indifferent
+neutral_t0653,qwen25_3b,ollama,D12,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.373,Option 1
+neutral_t0654,qwen25_3b,ollama,D12,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.373,Option 2
+neutral_t0655,qwen25_3b,ollama,D12,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.377,Option 1
+neutral_t0656,qwen25_3b,ollama,D12,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.372,Option 2
+neutral_t0657,qwen25_3b,ollama,D12,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.375,Option 1
+neutral_t0658,qwen25_3b,ollama,D12,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.428,Option 2
+neutral_t0659,qwen25_3b,ollama,D12,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.577,Option 2
+neutral_t0660,qwen25_3b,ollama,D12,P4,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.496,Option 1
+neutral_t0661,qwen25_3b,ollama,D12,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.439,Option 2
+neutral_t0662,qwen25_3b,ollama,D12,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.474,Indifferent
+neutral_t0663,qwen25_3b,ollama,D12,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.481,Option 2
+neutral_t0664,qwen25_3b,ollama,D12,P4,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.412,Option 1
+neutral_t0665,qwen25_3b,ollama,D12,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.36,Indifferent
+neutral_t0666,qwen25_3b,ollama,D12,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.463,Indifferent
+neutral_t0667,qwen25_3b,ollama,D12,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.376,Indifferent
+neutral_t0668,qwen25_3b,ollama,D12,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.399,Option 2
+neutral_t0669,qwen25_3b,ollama,D12,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.362,Indifferent
+neutral_t0670,qwen25_3b,ollama,D12,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.38,Option 2
+neutral_t0671,qwen25_3b,ollama,D12,P4,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.367,Option 1
+neutral_t0672,qwen25_3b,ollama,D12,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.355,Option 2
+neutral_t0673,qwen25_3b,ollama,D13,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.677,Option 2
+neutral_t0674,qwen25_3b,ollama,D13,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.355,Option 1
+neutral_t0675,qwen25_3b,ollama,D13,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.353,Option 2
+neutral_t0676,qwen25_3b,ollama,D13,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.382,Option 1
+neutral_t0677,qwen25_3b,ollama,D13,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.383,Option 2
+neutral_t0678,qwen25_3b,ollama,D13,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.377,Option 1
+neutral_t0679,qwen25_3b,ollama,D13,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.371,Indifferent
+neutral_t0680,qwen25_3b,ollama,D13,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.352,Indifferent
+neutral_t0681,qwen25_3b,ollama,D13,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.379,Option 1
+neutral_t0682,qwen25_3b,ollama,D13,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.385,Option 2
+neutral_t0683,qwen25_3b,ollama,D13,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.389,Option 1
+neutral_t0684,qwen25_3b,ollama,D13,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.39,Option 2
+neutral_t0685,qwen25_3b,ollama,D13,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.385,Option 1
+neutral_t0686,qwen25_3b,ollama,D13,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.383,Option 2
+neutral_t0687,qwen25_3b,ollama,D13,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.462,Option 2
+neutral_t0688,qwen25_3b,ollama,D13,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.379,Option 1
+neutral_t0689,qwen25_3b,ollama,D13,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.385,Option 2
+neutral_t0690,qwen25_3b,ollama,D13,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.389,Option 1
+neutral_t0691,qwen25_3b,ollama,D13,P2,1:2,1,2,-0.6931,True,Option 1,Alpha,True,True,False,False,0.374,Option 1
+neutral_t0692,qwen25_3b,ollama,D13,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.377,Option 1
+neutral_t0693,qwen25_3b,ollama,D13,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.391,Option 1
+neutral_t0694,qwen25_3b,ollama,D13,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.398,Option 1
+neutral_t0695,qwen25_3b,ollama,D13,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.377,Option 1
+neutral_t0696,qwen25_3b,ollama,D13,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.38,Option 2
+neutral_t0697,qwen25_3b,ollama,D13,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.376,Option 1
+neutral_t0698,qwen25_3b,ollama,D13,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.382,Option 2
+neutral_t0699,qwen25_3b,ollama,D13,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.387,Option 1
+neutral_t0700,qwen25_3b,ollama,D13,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.384,Option 2
+neutral_t0701,qwen25_3b,ollama,D13,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.457,Option 2
+neutral_t0702,qwen25_3b,ollama,D13,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.376,Option 1
+neutral_t0703,qwen25_3b,ollama,D13,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.381,Option 2
+neutral_t0704,qwen25_3b,ollama,D13,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.401,Option 1
+neutral_t0705,qwen25_3b,ollama,D13,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.375,Option 2
+neutral_t0706,qwen25_3b,ollama,D13,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.376,Option 1
+neutral_t0707,qwen25_3b,ollama,D13,P3,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.376,Option 1
+neutral_t0708,qwen25_3b,ollama,D13,P3,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.375,Option 1
+neutral_t0709,qwen25_3b,ollama,D13,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.379,Option 1
+neutral_t0710,qwen25_3b,ollama,D13,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.376,Option 2
+neutral_t0711,qwen25_3b,ollama,D13,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.374,Option 1
+neutral_t0712,qwen25_3b,ollama,D13,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.376,Option 2
+neutral_t0713,qwen25_3b,ollama,D13,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.378,Option 1
+neutral_t0714,qwen25_3b,ollama,D13,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.383,Option 2
+neutral_t0715,qwen25_3b,ollama,D13,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.48,Option 2
+neutral_t0716,qwen25_3b,ollama,D13,P4,1:9,1,9,-2.1972,False,Indifferent,Indifferent,True,False,False,False,0.394,Indifferent
+neutral_t0717,qwen25_3b,ollama,D13,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.378,Option 2
+neutral_t0718,qwen25_3b,ollama,D13,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.346,Indifferent
+neutral_t0719,qwen25_3b,ollama,D13,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.377,Option 2
+neutral_t0720,qwen25_3b,ollama,D13,P4,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.354,Indifferent
+neutral_t0721,qwen25_3b,ollama,D13,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.354,Indifferent
+neutral_t0722,qwen25_3b,ollama,D13,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.353,Indifferent
+neutral_t0723,qwen25_3b,ollama,D13,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.363,Indifferent
+neutral_t0724,qwen25_3b,ollama,D13,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.38,Option 2
+neutral_t0725,qwen25_3b,ollama,D13,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.35,Indifferent
+neutral_t0726,qwen25_3b,ollama,D13,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.395,Option 2
+neutral_t0727,qwen25_3b,ollama,D13,P4,9:1,9,1,2.1972,True,Indifferent,Indifferent,True,False,False,False,0.347,Indifferent
+neutral_t0728,qwen25_3b,ollama,D13,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.378,Option 2
+neutral_t0729,qwen25_3b,ollama,D14,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.56,Option 2
+neutral_t0730,qwen25_3b,ollama,D14,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.392,Option 1
+neutral_t0731,qwen25_3b,ollama,D14,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.374,Option 2
+neutral_t0732,qwen25_3b,ollama,D14,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.375,Option 1
+neutral_t0733,qwen25_3b,ollama,D14,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.375,Option 2
+neutral_t0734,qwen25_3b,ollama,D14,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.376,Option 1
+neutral_t0735,qwen25_3b,ollama,D14,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.345,Indifferent
+neutral_t0736,qwen25_3b,ollama,D14,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.345,Indifferent
+neutral_t0737,qwen25_3b,ollama,D14,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.387,Option 1
+neutral_t0738,qwen25_3b,ollama,D14,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.379,Option 2
+neutral_t0739,qwen25_3b,ollama,D14,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.381,Option 1
+neutral_t0740,qwen25_3b,ollama,D14,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.376,Option 2
+neutral_t0741,qwen25_3b,ollama,D14,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.377,Option 1
+neutral_t0742,qwen25_3b,ollama,D14,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.376,Option 2
+neutral_t0743,qwen25_3b,ollama,D14,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.473,Option 2
+neutral_t0744,qwen25_3b,ollama,D14,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.379,Option 1
+neutral_t0745,qwen25_3b,ollama,D14,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.378,Option 2
+neutral_t0746,qwen25_3b,ollama,D14,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.376,Option 1
+neutral_t0747,qwen25_3b,ollama,D14,P2,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.389,Option 2
+neutral_t0748,qwen25_3b,ollama,D14,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.487,Option 1
+neutral_t0749,qwen25_3b,ollama,D14,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.436,Option 1
+neutral_t0750,qwen25_3b,ollama,D14,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.537,Option 1
+neutral_t0751,qwen25_3b,ollama,D14,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.439,Option 1
+neutral_t0752,qwen25_3b,ollama,D14,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.423,Option 2
+neutral_t0753,qwen25_3b,ollama,D14,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.41,Option 1
+neutral_t0754,qwen25_3b,ollama,D14,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.389,Option 2
+neutral_t0755,qwen25_3b,ollama,D14,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.38,Option 1
+neutral_t0756,qwen25_3b,ollama,D14,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.378,Option 2
+neutral_t0757,qwen25_3b,ollama,D14,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.456,Option 2
+neutral_t0758,qwen25_3b,ollama,D14,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.378,Option 1
+neutral_t0759,qwen25_3b,ollama,D14,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.382,Option 2
+neutral_t0760,qwen25_3b,ollama,D14,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.377,Option 1
+neutral_t0761,qwen25_3b,ollama,D14,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.374,Option 2
+neutral_t0762,qwen25_3b,ollama,D14,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.378,Option 1
+neutral_t0763,qwen25_3b,ollama,D14,P3,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.342,Indifferent
+neutral_t0764,qwen25_3b,ollama,D14,P3,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.356,Indifferent
+neutral_t0765,qwen25_3b,ollama,D14,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.39,Option 1
+neutral_t0766,qwen25_3b,ollama,D14,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.376,Option 2
+neutral_t0767,qwen25_3b,ollama,D14,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.382,Option 1
+neutral_t0768,qwen25_3b,ollama,D14,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.373,Option 2
+neutral_t0769,qwen25_3b,ollama,D14,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.374,Option 1
+neutral_t0770,qwen25_3b,ollama,D14,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.373,Option 2
+neutral_t0771,qwen25_3b,ollama,D14,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.456,Option 2
+neutral_t0772,qwen25_3b,ollama,D14,P4,1:9,1,9,-2.1972,False,Indifferent,Indifferent,True,False,False,False,0.347,Indifferent
+neutral_t0773,qwen25_3b,ollama,D14,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.381,Option 2
+neutral_t0774,qwen25_3b,ollama,D14,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.352,Indifferent
+neutral_t0775,qwen25_3b,ollama,D14,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.378,Option 2
+neutral_t0776,qwen25_3b,ollama,D14,P4,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.362,Indifferent
+neutral_t0777,qwen25_3b,ollama,D14,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.348,Indifferent
+neutral_t0778,qwen25_3b,ollama,D14,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.348,Indifferent
+neutral_t0779,qwen25_3b,ollama,D14,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.35,Indifferent
+neutral_t0780,qwen25_3b,ollama,D14,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.377,Option 2
+neutral_t0781,qwen25_3b,ollama,D14,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.345,Indifferent
+neutral_t0782,qwen25_3b,ollama,D14,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.376,Option 2
+neutral_t0783,qwen25_3b,ollama,D14,P4,9:1,9,1,2.1972,True,Indifferent,Indifferent,True,False,False,False,0.344,Indifferent
+neutral_t0784,qwen25_3b,ollama,D14,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.379,Option 2
+neutral_t0785,qwen25_3b,ollama,D15,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.551,Option 2
+neutral_t0786,qwen25_3b,ollama,D15,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.386,Option 1
+neutral_t0787,qwen25_3b,ollama,D15,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.401,Option 2
+neutral_t0788,qwen25_3b,ollama,D15,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.38,Option 1
+neutral_t0789,qwen25_3b,ollama,D15,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.376,Option 2
+neutral_t0790,qwen25_3b,ollama,D15,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.376,Option 1
+neutral_t0791,qwen25_3b,ollama,D15,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.345,Indifferent
+neutral_t0792,qwen25_3b,ollama,D15,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.345,Indifferent
+neutral_t0793,qwen25_3b,ollama,D15,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.372,Option 1
+neutral_t0794,qwen25_3b,ollama,D15,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.371,Option 2
+neutral_t0795,qwen25_3b,ollama,D15,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.378,Option 1
+neutral_t0796,qwen25_3b,ollama,D15,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.373,Option 2
+neutral_t0797,qwen25_3b,ollama,D15,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.377,Option 1
+neutral_t0798,qwen25_3b,ollama,D15,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.401,Option 2
+neutral_t0799,qwen25_3b,ollama,D15,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.459,Option 2
+neutral_t0800,qwen25_3b,ollama,D15,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.383,Option 1
+neutral_t0801,qwen25_3b,ollama,D15,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.379,Option 2
+neutral_t0802,qwen25_3b,ollama,D15,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.375,Option 1
+neutral_t0803,qwen25_3b,ollama,D15,P2,1:2,1,2,-0.6931,True,Option 1,Alpha,True,True,False,False,0.377,Option 1
+neutral_t0804,qwen25_3b,ollama,D15,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.374,Option 1
+neutral_t0805,qwen25_3b,ollama,D15,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.374,Option 1
+neutral_t0806,qwen25_3b,ollama,D15,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.374,Option 1
+neutral_t0807,qwen25_3b,ollama,D15,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.376,Option 1
+neutral_t0808,qwen25_3b,ollama,D15,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.375,Option 2
+neutral_t0809,qwen25_3b,ollama,D15,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.378,Option 1
+neutral_t0810,qwen25_3b,ollama,D15,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.396,Option 2
+neutral_t0811,qwen25_3b,ollama,D15,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.383,Option 1
+neutral_t0812,qwen25_3b,ollama,D15,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.377,Option 2
+neutral_t0813,qwen25_3b,ollama,D15,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.454,Option 2
+neutral_t0814,qwen25_3b,ollama,D15,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.375,Option 1
+neutral_t0815,qwen25_3b,ollama,D15,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.378,Option 2
+neutral_t0816,qwen25_3b,ollama,D15,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.38,Option 1
+neutral_t0817,qwen25_3b,ollama,D15,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.377,Option 2
+neutral_t0818,qwen25_3b,ollama,D15,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.375,Option 1
+neutral_t0819,qwen25_3b,ollama,D15,P3,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.347,Indifferent
+neutral_t0820,qwen25_3b,ollama,D15,P3,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.392,Option 1
+neutral_t0821,qwen25_3b,ollama,D15,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.377,Option 1
+neutral_t0822,qwen25_3b,ollama,D15,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.388,Option 2
+neutral_t0823,qwen25_3b,ollama,D15,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.376,Option 1
+neutral_t0824,qwen25_3b,ollama,D15,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.374,Option 2
+neutral_t0825,qwen25_3b,ollama,D15,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.375,Option 1
+neutral_t0826,qwen25_3b,ollama,D15,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.375,Option 2
+neutral_t0827,qwen25_3b,ollama,D15,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.456,Option 2
+neutral_t0828,qwen25_3b,ollama,D15,P4,1:9,1,9,-2.1972,False,Indifferent,Indifferent,True,False,False,False,0.344,Indifferent
+neutral_t0829,qwen25_3b,ollama,D15,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.376,Option 2
+neutral_t0830,qwen25_3b,ollama,D15,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.353,Indifferent
+neutral_t0831,qwen25_3b,ollama,D15,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.393,Option 2
+neutral_t0832,qwen25_3b,ollama,D15,P4,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.353,Indifferent
+neutral_t0833,qwen25_3b,ollama,D15,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.354,Indifferent
+neutral_t0834,qwen25_3b,ollama,D15,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.35,Indifferent
+neutral_t0835,qwen25_3b,ollama,D15,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.352,Indifferent
+neutral_t0836,qwen25_3b,ollama,D15,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.384,Option 2
+neutral_t0837,qwen25_3b,ollama,D15,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.351,Indifferent
+neutral_t0838,qwen25_3b,ollama,D15,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.375,Option 2
+neutral_t0839,qwen25_3b,ollama,D15,P4,9:1,9,1,2.1972,True,Indifferent,Indifferent,True,False,False,False,0.346,Indifferent
+neutral_t0840,qwen25_3b,ollama,D15,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.391,Option 2
+neutral_t0841,qwen25_3b,ollama,D16,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.573,Option 2
+neutral_t0842,qwen25_3b,ollama,D16,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.381,Option 1
+neutral_t0843,qwen25_3b,ollama,D16,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.376,Option 2
+neutral_t0844,qwen25_3b,ollama,D16,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.375,Option 1
+neutral_t0845,qwen25_3b,ollama,D16,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.375,Option 2
+neutral_t0846,qwen25_3b,ollama,D16,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.375,Option 1
+neutral_t0847,qwen25_3b,ollama,D16,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.346,Indifferent
+neutral_t0848,qwen25_3b,ollama,D16,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.352,Indifferent
+neutral_t0849,qwen25_3b,ollama,D16,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.378,Option 1
+neutral_t0850,qwen25_3b,ollama,D16,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.376,Option 2
+neutral_t0851,qwen25_3b,ollama,D16,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.377,Option 1
+neutral_t0852,qwen25_3b,ollama,D16,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.383,Option 2
+neutral_t0853,qwen25_3b,ollama,D16,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.389,Option 1
+neutral_t0854,qwen25_3b,ollama,D16,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.381,Option 2
+neutral_t0855,qwen25_3b,ollama,D16,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.459,Option 2
+neutral_t0856,qwen25_3b,ollama,D16,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.389,Option 1
+neutral_t0857,qwen25_3b,ollama,D16,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.383,Option 2
+neutral_t0858,qwen25_3b,ollama,D16,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.379,Option 1
+neutral_t0859,qwen25_3b,ollama,D16,P2,1:2,1,2,-0.6931,True,Option 1,Alpha,True,True,False,False,0.386,Option 1
+neutral_t0860,qwen25_3b,ollama,D16,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.393,Option 1
+neutral_t0861,qwen25_3b,ollama,D16,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.383,Option 1
+neutral_t0862,qwen25_3b,ollama,D16,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.38,Option 1
+neutral_t0863,qwen25_3b,ollama,D16,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.388,Option 1
+neutral_t0864,qwen25_3b,ollama,D16,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.388,Option 2
+neutral_t0865,qwen25_3b,ollama,D16,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.38,Option 1
+neutral_t0866,qwen25_3b,ollama,D16,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.379,Option 2
+neutral_t0867,qwen25_3b,ollama,D16,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.381,Option 1
+neutral_t0868,qwen25_3b,ollama,D16,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.377,Option 2
+neutral_t0869,qwen25_3b,ollama,D16,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.457,Option 2
+neutral_t0870,qwen25_3b,ollama,D16,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.374,Option 1
+neutral_t0871,qwen25_3b,ollama,D16,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.374,Option 2
+neutral_t0872,qwen25_3b,ollama,D16,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.378,Option 1
+neutral_t0873,qwen25_3b,ollama,D16,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.419,Option 2
+neutral_t0874,qwen25_3b,ollama,D16,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.381,Option 1
+neutral_t0875,qwen25_3b,ollama,D16,P3,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.379,Indifferent
+neutral_t0876,qwen25_3b,ollama,D16,P3,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.346,Indifferent
+neutral_t0877,qwen25_3b,ollama,D16,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.375,Option 1
+neutral_t0878,qwen25_3b,ollama,D16,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.379,Option 2
+neutral_t0879,qwen25_3b,ollama,D16,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.381,Option 1
+neutral_t0880,qwen25_3b,ollama,D16,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.399,Option 2
+neutral_t0881,qwen25_3b,ollama,D16,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.38,Option 1
+neutral_t0882,qwen25_3b,ollama,D16,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.402,Option 2
+neutral_t0883,qwen25_3b,ollama,D16,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.483,Option 2
+neutral_t0884,qwen25_3b,ollama,D16,P4,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.38,Option 1
+neutral_t0885,qwen25_3b,ollama,D16,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.379,Option 2
+neutral_t0886,qwen25_3b,ollama,D16,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.377,Indifferent
+neutral_t0887,qwen25_3b,ollama,D16,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.375,Option 2
+neutral_t0888,qwen25_3b,ollama,D16,P4,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.346,Indifferent
+neutral_t0889,qwen25_3b,ollama,D16,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.348,Indifferent
+neutral_t0890,qwen25_3b,ollama,D16,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.347,Indifferent
+neutral_t0891,qwen25_3b,ollama,D16,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.344,Indifferent
+neutral_t0892,qwen25_3b,ollama,D16,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.378,Option 2
+neutral_t0893,qwen25_3b,ollama,D16,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.351,Indifferent
+neutral_t0894,qwen25_3b,ollama,D16,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.392,Option 2
+neutral_t0895,qwen25_3b,ollama,D16,P4,9:1,9,1,2.1972,True,Indifferent,Indifferent,True,False,False,False,0.349,Indifferent
+neutral_t0896,qwen25_3b,ollama,D16,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.387,Option 2
+neutral_t0897,qwen25_3b,ollama,D17,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.563,Option 2
+neutral_t0898,qwen25_3b,ollama,D17,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.378,Option 1
+neutral_t0899,qwen25_3b,ollama,D17,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.386,Option 2
+neutral_t0900,qwen25_3b,ollama,D17,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.38,Option 1
+neutral_t0901,qwen25_3b,ollama,D17,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.378,Option 2
+neutral_t0902,qwen25_3b,ollama,D17,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.383,Option 1
+neutral_t0903,qwen25_3b,ollama,D17,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.347,Indifferent
+neutral_t0904,qwen25_3b,ollama,D17,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.352,Indifferent
+neutral_t0905,qwen25_3b,ollama,D17,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.385,Option 1
+neutral_t0906,qwen25_3b,ollama,D17,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.379,Option 2
+neutral_t0907,qwen25_3b,ollama,D17,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.397,Option 1
+neutral_t0908,qwen25_3b,ollama,D17,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.39,Option 2
+neutral_t0909,qwen25_3b,ollama,D17,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.399,Option 1
+neutral_t0910,qwen25_3b,ollama,D17,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.381,Option 2
+neutral_t0911,qwen25_3b,ollama,D17,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.456,Option 2
+neutral_t0912,qwen25_3b,ollama,D17,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.38,Option 1
+neutral_t0913,qwen25_3b,ollama,D17,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.386,Option 2
+neutral_t0914,qwen25_3b,ollama,D17,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.372,Option 1
+neutral_t0915,qwen25_3b,ollama,D17,P2,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.372,Option 2
+neutral_t0916,qwen25_3b,ollama,D17,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.409,Option 1
+neutral_t0917,qwen25_3b,ollama,D17,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.385,Option 1
+neutral_t0918,qwen25_3b,ollama,D17,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.449,Option 1
+neutral_t0919,qwen25_3b,ollama,D17,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.416,Option 1
+neutral_t0920,qwen25_3b,ollama,D17,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.412,Option 2
+neutral_t0921,qwen25_3b,ollama,D17,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.406,Option 1
+neutral_t0922,qwen25_3b,ollama,D17,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.394,Option 2
+neutral_t0923,qwen25_3b,ollama,D17,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.4,Option 1
+neutral_t0924,qwen25_3b,ollama,D17,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.352,Option 2
+neutral_t0925,qwen25_3b,ollama,D17,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.46,Option 2
+neutral_t0926,qwen25_3b,ollama,D17,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.369,Option 1
+neutral_t0927,qwen25_3b,ollama,D17,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.378,Option 2
+neutral_t0928,qwen25_3b,ollama,D17,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.407,Option 1
+neutral_t0929,qwen25_3b,ollama,D17,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.382,Option 2
+neutral_t0930,qwen25_3b,ollama,D17,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.379,Option 1
+neutral_t0931,qwen25_3b,ollama,D17,P3,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.358,Indifferent
+neutral_t0932,qwen25_3b,ollama,D17,P3,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.378,Option 1
+neutral_t0933,qwen25_3b,ollama,D17,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.358,Option 1
+neutral_t0934,qwen25_3b,ollama,D17,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.352,Option 2
+neutral_t0935,qwen25_3b,ollama,D17,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.364,Option 1
+neutral_t0936,qwen25_3b,ollama,D17,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.373,Option 2
+neutral_t0937,qwen25_3b,ollama,D17,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.387,Option 1
+neutral_t0938,qwen25_3b,ollama,D17,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.377,Option 2
+neutral_t0939,qwen25_3b,ollama,D17,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.471,Option 2
+neutral_t0940,qwen25_3b,ollama,D17,P4,1:9,1,9,-2.1972,False,Indifferent,Indifferent,True,False,False,False,0.338,Indifferent
+neutral_t0941,qwen25_3b,ollama,D17,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.42,Option 2
+neutral_t0942,qwen25_3b,ollama,D17,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.349,Indifferent
+neutral_t0943,qwen25_3b,ollama,D17,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.364,Option 2
+neutral_t0944,qwen25_3b,ollama,D17,P4,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.331,Indifferent
+neutral_t0945,qwen25_3b,ollama,D17,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.344,Indifferent
+neutral_t0946,qwen25_3b,ollama,D17,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.35,Indifferent
+neutral_t0947,qwen25_3b,ollama,D17,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.358,Indifferent
+neutral_t0948,qwen25_3b,ollama,D17,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.354,Option 2
+neutral_t0949,qwen25_3b,ollama,D17,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.323,Indifferent
+neutral_t0950,qwen25_3b,ollama,D17,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.392,Option 2
+neutral_t0951,qwen25_3b,ollama,D17,P4,9:1,9,1,2.1972,True,Indifferent,Indifferent,True,False,False,False,0.339,Indifferent
+neutral_t0952,qwen25_3b,ollama,D17,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.347,Option 2
+neutral_t0953,qwen25_3b,ollama,D18,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.516,Option 2
+neutral_t0954,qwen25_3b,ollama,D18,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.349,Option 1
+neutral_t0955,qwen25_3b,ollama,D18,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.354,Option 2
+neutral_t0956,qwen25_3b,ollama,D18,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.347,Option 1
+neutral_t0957,qwen25_3b,ollama,D18,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.347,Option 2
+neutral_t0958,qwen25_3b,ollama,D18,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.346,Option 1
+neutral_t0959,qwen25_3b,ollama,D18,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.32,Indifferent
+neutral_t0960,qwen25_3b,ollama,D18,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.321,Indifferent
+neutral_t0961,qwen25_3b,ollama,D18,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.349,Option 1
+neutral_t0962,qwen25_3b,ollama,D18,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.347,Option 2
+neutral_t0963,qwen25_3b,ollama,D18,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.349,Option 1
+neutral_t0964,qwen25_3b,ollama,D18,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.348,Option 2
+neutral_t0965,qwen25_3b,ollama,D18,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.349,Option 1
+neutral_t0966,qwen25_3b,ollama,D18,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.352,Option 2
+neutral_t0967,qwen25_3b,ollama,D18,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.421,Option 2
+neutral_t0968,qwen25_3b,ollama,D18,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.351,Option 1
+neutral_t0969,qwen25_3b,ollama,D18,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.351,Option 2
+neutral_t0970,qwen25_3b,ollama,D18,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.348,Option 1
+neutral_t0971,qwen25_3b,ollama,D18,P2,1:2,1,2,-0.6931,True,Option 1,Alpha,True,True,False,False,0.35,Option 1
+neutral_t0972,qwen25_3b,ollama,D18,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.349,Option 1
+neutral_t0973,qwen25_3b,ollama,D18,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.349,Option 1
+neutral_t0974,qwen25_3b,ollama,D18,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.354,Option 1
+neutral_t0975,qwen25_3b,ollama,D18,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.349,Option 1
+neutral_t0976,qwen25_3b,ollama,D18,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.351,Option 2
+neutral_t0977,qwen25_3b,ollama,D18,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.359,Option 1
+neutral_t0978,qwen25_3b,ollama,D18,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.349,Option 2
+neutral_t0979,qwen25_3b,ollama,D18,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.348,Option 1
+neutral_t0980,qwen25_3b,ollama,D18,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.349,Option 2
+neutral_t0981,qwen25_3b,ollama,D18,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.424,Option 2
+neutral_t0982,qwen25_3b,ollama,D18,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.35,Option 1
+neutral_t0983,qwen25_3b,ollama,D18,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.346,Option 2
+neutral_t0984,qwen25_3b,ollama,D18,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.346,Option 1
+neutral_t0985,qwen25_3b,ollama,D18,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.345,Option 2
+neutral_t0986,qwen25_3b,ollama,D18,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.346,Option 1
+neutral_t0987,qwen25_3b,ollama,D18,P3,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.325,Indifferent
+neutral_t0988,qwen25_3b,ollama,D18,P3,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.355,Option 1
+neutral_t0989,qwen25_3b,ollama,D18,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.346,Option 1
+neutral_t0990,qwen25_3b,ollama,D18,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.347,Option 2
+neutral_t0991,qwen25_3b,ollama,D18,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.346,Option 1
+neutral_t0992,qwen25_3b,ollama,D18,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.345,Option 2
+neutral_t0993,qwen25_3b,ollama,D18,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.346,Option 1
+neutral_t0994,qwen25_3b,ollama,D18,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.35,Option 2
+neutral_t0995,qwen25_3b,ollama,D18,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.425,Option 2
+neutral_t0996,qwen25_3b,ollama,D18,P4,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.347,Option 1
+neutral_t0997,qwen25_3b,ollama,D18,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.346,Option 2
+neutral_t0998,qwen25_3b,ollama,D18,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.327,Indifferent
+neutral_t0999,qwen25_3b,ollama,D18,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.372,Option 2
+neutral_t1000,qwen25_3b,ollama,D18,P4,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.325,Indifferent
+neutral_t1001,qwen25_3b,ollama,D18,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.333,Indifferent
+neutral_t1002,qwen25_3b,ollama,D18,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.322,Indifferent
+neutral_t1003,qwen25_3b,ollama,D18,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.321,Indifferent
+neutral_t1004,qwen25_3b,ollama,D18,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.349,Option 2
+neutral_t1005,qwen25_3b,ollama,D18,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.324,Indifferent
+neutral_t1006,qwen25_3b,ollama,D18,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.347,Option 2
+neutral_t1007,qwen25_3b,ollama,D18,P4,9:1,9,1,2.1972,True,Indifferent,Indifferent,True,False,False,False,0.321,Indifferent
+neutral_t1008,qwen25_3b,ollama,D18,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.346,Option 2
+neutral_t1009,qwen25_3b,ollama,D19,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.517,Option 2
+neutral_t1010,qwen25_3b,ollama,D19,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.355,Option 1
+neutral_t1011,qwen25_3b,ollama,D19,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.372,Option 2
+neutral_t1012,qwen25_3b,ollama,D19,P1,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.326,Indifferent
+neutral_t1013,qwen25_3b,ollama,D19,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.349,Option 2
+neutral_t1014,qwen25_3b,ollama,D19,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.348,Option 1
+neutral_t1015,qwen25_3b,ollama,D19,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.323,Indifferent
+neutral_t1016,qwen25_3b,ollama,D19,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.32,Indifferent
+neutral_t1017,qwen25_3b,ollama,D19,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.347,Option 1
+neutral_t1018,qwen25_3b,ollama,D19,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.347,Option 2
+neutral_t1019,qwen25_3b,ollama,D19,P1,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.32,Indifferent
+neutral_t1020,qwen25_3b,ollama,D19,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.348,Option 2
+neutral_t1021,qwen25_3b,ollama,D19,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.352,Option 1
+neutral_t1022,qwen25_3b,ollama,D19,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.356,Option 2
+neutral_t1023,qwen25_3b,ollama,D19,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.422,Option 2
+neutral_t1024,qwen25_3b,ollama,D19,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.348,Option 1
+neutral_t1025,qwen25_3b,ollama,D19,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.35,Option 2
+neutral_t1026,qwen25_3b,ollama,D19,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.349,Option 1
+neutral_t1027,qwen25_3b,ollama,D19,P2,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.349,Option 2
+neutral_t1028,qwen25_3b,ollama,D19,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.348,Option 1
+neutral_t1029,qwen25_3b,ollama,D19,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.347,Option 1
+neutral_t1030,qwen25_3b,ollama,D19,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.348,Option 1
+neutral_t1031,qwen25_3b,ollama,D19,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.349,Option 1
+neutral_t1032,qwen25_3b,ollama,D19,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.352,Option 2
+neutral_t1033,qwen25_3b,ollama,D19,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.353,Option 1
+neutral_t1034,qwen25_3b,ollama,D19,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.348,Option 2
+neutral_t1035,qwen25_3b,ollama,D19,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.349,Option 1
+neutral_t1036,qwen25_3b,ollama,D19,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.348,Option 2
+neutral_t1037,qwen25_3b,ollama,D19,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.421,Option 2
+neutral_t1038,qwen25_3b,ollama,D19,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.349,Option 1
+neutral_t1039,qwen25_3b,ollama,D19,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.356,Option 2
+neutral_t1040,qwen25_3b,ollama,D19,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.347,Option 1
+neutral_t1041,qwen25_3b,ollama,D19,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.35,Option 2
+neutral_t1042,qwen25_3b,ollama,D19,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.35,Option 1
+neutral_t1043,qwen25_3b,ollama,D19,P3,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.325,Indifferent
+neutral_t1044,qwen25_3b,ollama,D19,P3,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.333,Indifferent
+neutral_t1045,qwen25_3b,ollama,D19,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.346,Option 1
+neutral_t1046,qwen25_3b,ollama,D19,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.349,Option 2
+neutral_t1047,qwen25_3b,ollama,D19,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.347,Option 1
+neutral_t1048,qwen25_3b,ollama,D19,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.352,Option 2
+neutral_t1049,qwen25_3b,ollama,D19,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.347,Option 1
+neutral_t1050,qwen25_3b,ollama,D19,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.348,Option 2
+neutral_t1051,qwen25_3b,ollama,D19,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.423,Option 2
+neutral_t1052,qwen25_3b,ollama,D19,P4,1:9,1,9,-2.1972,False,Indifferent,Indifferent,True,False,False,False,0.321,Indifferent
+neutral_t1053,qwen25_3b,ollama,D19,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.349,Option 2
+neutral_t1054,qwen25_3b,ollama,D19,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.326,Indifferent
+neutral_t1055,qwen25_3b,ollama,D19,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.347,Option 2
+neutral_t1056,qwen25_3b,ollama,D19,P4,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.32,Indifferent
+neutral_t1057,qwen25_3b,ollama,D19,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.323,Indifferent
+neutral_t1058,qwen25_3b,ollama,D19,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.321,Indifferent
+neutral_t1059,qwen25_3b,ollama,D19,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.32,Indifferent
+neutral_t1060,qwen25_3b,ollama,D19,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.347,Option 2
+neutral_t1061,qwen25_3b,ollama,D19,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.32,Indifferent
+neutral_t1062,qwen25_3b,ollama,D19,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.346,Option 2
+neutral_t1063,qwen25_3b,ollama,D19,P4,9:1,9,1,2.1972,True,Indifferent,Indifferent,True,False,False,False,0.32,Indifferent
+neutral_t1064,qwen25_3b,ollama,D19,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.35,Option 2
+neutral_t1065,qwen25_3b,ollama,D20,P1,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.519,Option 2
+neutral_t1066,qwen25_3b,ollama,D20,P1,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.347,Option 1
+neutral_t1067,qwen25_3b,ollama,D20,P1,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.348,Option 2
+neutral_t1068,qwen25_3b,ollama,D20,P1,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.353,Option 1
+neutral_t1069,qwen25_3b,ollama,D20,P1,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.348,Option 2
+neutral_t1070,qwen25_3b,ollama,D20,P1,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.347,Option 1
+neutral_t1071,qwen25_3b,ollama,D20,P1,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.323,Indifferent
+neutral_t1072,qwen25_3b,ollama,D20,P1,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.32,Indifferent
+neutral_t1073,qwen25_3b,ollama,D20,P1,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.349,Option 1
+neutral_t1074,qwen25_3b,ollama,D20,P1,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.347,Option 2
+neutral_t1075,qwen25_3b,ollama,D20,P1,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.35,Option 1
+neutral_t1076,qwen25_3b,ollama,D20,P1,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.356,Option 2
+neutral_t1077,qwen25_3b,ollama,D20,P1,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.349,Option 1
+neutral_t1078,qwen25_3b,ollama,D20,P1,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.346,Option 2
+neutral_t1079,qwen25_3b,ollama,D20,P2,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.424,Option 2
+neutral_t1080,qwen25_3b,ollama,D20,P2,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.348,Option 1
+neutral_t1081,qwen25_3b,ollama,D20,P2,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.349,Option 2
+neutral_t1082,qwen25_3b,ollama,D20,P2,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.348,Option 1
+neutral_t1083,qwen25_3b,ollama,D20,P2,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.349,Option 2
+neutral_t1084,qwen25_3b,ollama,D20,P2,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.351,Option 1
+neutral_t1085,qwen25_3b,ollama,D20,P2,1:1,1,1,0.0,True,Option 1,Alpha,True,True,True,False,0.347,Option 1
+neutral_t1086,qwen25_3b,ollama,D20,P2,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.356,Option 1
+neutral_t1087,qwen25_3b,ollama,D20,P2,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.367,Option 1
+neutral_t1088,qwen25_3b,ollama,D20,P2,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.351,Option 2
+neutral_t1089,qwen25_3b,ollama,D20,P2,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.351,Option 1
+neutral_t1090,qwen25_3b,ollama,D20,P2,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.348,Option 2
+neutral_t1091,qwen25_3b,ollama,D20,P2,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.352,Option 1
+neutral_t1092,qwen25_3b,ollama,D20,P2,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.348,Option 2
+neutral_t1093,qwen25_3b,ollama,D20,P3,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.427,Option 2
+neutral_t1094,qwen25_3b,ollama,D20,P3,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.357,Option 1
+neutral_t1095,qwen25_3b,ollama,D20,P3,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.346,Option 2
+neutral_t1096,qwen25_3b,ollama,D20,P3,1:5,1,5,-1.6094,False,Option 1,Beta,True,True,False,True,0.347,Option 1
+neutral_t1097,qwen25_3b,ollama,D20,P3,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.355,Option 2
+neutral_t1098,qwen25_3b,ollama,D20,P3,1:2,1,2,-0.6931,False,Option 1,Beta,True,True,False,True,0.37,Option 1
+neutral_t1099,qwen25_3b,ollama,D20,P3,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.32,Indifferent
+neutral_t1100,qwen25_3b,ollama,D20,P3,1:1,1,1,0.0,False,Option 1,Beta,True,True,True,False,0.347,Option 1
+neutral_t1101,qwen25_3b,ollama,D20,P3,2:1,2,1,0.6931,True,Option 1,Alpha,True,True,False,True,0.348,Option 1
+neutral_t1102,qwen25_3b,ollama,D20,P3,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.345,Option 2
+neutral_t1103,qwen25_3b,ollama,D20,P3,5:1,5,1,1.6094,True,Option 1,Alpha,True,True,False,True,0.348,Option 1
+neutral_t1104,qwen25_3b,ollama,D20,P3,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.35,Option 2
+neutral_t1105,qwen25_3b,ollama,D20,P3,9:1,9,1,2.1972,True,Option 1,Alpha,True,True,False,True,0.348,Option 1
+neutral_t1106,qwen25_3b,ollama,D20,P3,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.346,Option 2
+neutral_t1107,qwen25_3b,ollama,D20,P4,1:9,1,9,-2.1972,True,Option 2,Beta,True,True,False,True,0.43,Option 2
+neutral_t1108,qwen25_3b,ollama,D20,P4,1:9,1,9,-2.1972,False,Option 1,Beta,True,True,False,True,0.353,Option 1
+neutral_t1109,qwen25_3b,ollama,D20,P4,1:5,1,5,-1.6094,True,Option 2,Beta,True,True,False,True,0.348,Option 2
+neutral_t1110,qwen25_3b,ollama,D20,P4,1:5,1,5,-1.6094,False,Indifferent,Indifferent,True,False,False,False,0.32,Indifferent
+neutral_t1111,qwen25_3b,ollama,D20,P4,1:2,1,2,-0.6931,True,Option 2,Beta,True,True,False,True,0.346,Option 2
+neutral_t1112,qwen25_3b,ollama,D20,P4,1:2,1,2,-0.6931,False,Indifferent,Indifferent,True,False,False,False,0.32,Indifferent
+neutral_t1113,qwen25_3b,ollama,D20,P4,1:1,1,1,0.0,True,Indifferent,Indifferent,True,False,True,True,0.323,Indifferent
+neutral_t1114,qwen25_3b,ollama,D20,P4,1:1,1,1,0.0,False,Indifferent,Indifferent,True,False,True,True,0.321,Indifferent
+neutral_t1115,qwen25_3b,ollama,D20,P4,2:1,2,1,0.6931,True,Indifferent,Indifferent,True,False,False,False,0.322,Indifferent
+neutral_t1116,qwen25_3b,ollama,D20,P4,2:1,2,1,0.6931,False,Option 2,Alpha,True,True,False,True,0.347,Option 2
+neutral_t1117,qwen25_3b,ollama,D20,P4,5:1,5,1,1.6094,True,Indifferent,Indifferent,True,False,False,False,0.323,Indifferent
+neutral_t1118,qwen25_3b,ollama,D20,P4,5:1,5,1,1.6094,False,Option 2,Alpha,True,True,False,True,0.354,Option 2
+neutral_t1119,qwen25_3b,ollama,D20,P4,9:1,9,1,2.1972,True,Indifferent,Indifferent,True,False,False,False,0.329,Indifferent
+neutral_t1120,qwen25_3b,ollama,D20,P4,9:1,9,1,2.1972,False,Option 2,Alpha,True,True,False,True,0.349,Option 2

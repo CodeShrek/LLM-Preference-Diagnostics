@@ -403,7 +403,7 @@ By phrasing variant, 35 of 43 Llama invalids (81.4\%) and 15 of 16 Phi invalids 
 To test whether excluding these conversational responses affects empirical conclusions, we constructed a lenient parser accepting unambiguous conversational commitments (e.g., matching expressions such as \textit{``commit to Option A''}, \textit{``select Option A''}, or terminal declarations \textit{``Response: Option A''}).
 The lenient parser successfully resolved 39 of the 43 Llama invalid trials (34 selecting the mathematically dominant option, 5 non-dominant; 4 parity/unclear) and 13 of the 16 Phi invalid trials (all 13 selecting the dominant option; 3 remaining unresolved).
 
-Comparing Stage-2 conditional dominant accuracy under strict versus lenient parsing demonstrates minimal sensitivity:
+Comparing Stage-2 conditional dominant accuracy under strict versus lenient parsing shows minimal sensitivity:
 \begin{itemize}
   \item \textbf{Llama 3.2 3B:} Strict accuracy is 75.19\% (679/903 committed non-parity trials); lenient accuracy is 75.69\% (713/942), a difference of $+0.50$ percentage points.
   \item \textbf{Phi-4 Mini 3.8B:} Strict accuracy is 74.57\% (701/940 committed non-parity trials); lenient accuracy is 74.92\% (714/953), a difference of $+0.35$ percentage points.
@@ -419,7 +419,7 @@ For Llama 3.2 (24 Indifferent choices) and Phi-4 Mini (14 Indifferent choices), 
 
 To evaluate sensitivity to specification, Table~\ref{tab:supp_stage1} reports Stage~1 commitment slopes under: (1) interactive fixed-effects MLE; (2) additive fixed-effects MLE; (3) dilemma-cluster-robust logistic regression without dummies; and (4) Firth's penalized logistic regression with dilemma fixed effects.
 
-We also note that fitting the joint multinomial logit model (Eq.~3 of the main text) directly across all models encounters severe degenerate separation: for Gemma (0 Indifferent choices), the non-directional reference category is empty, making the baseline log-odds mathematically undefined; for Llama and Phi (24 and 14 Indifferent choices across 20 dilemmas), estimating the 48 multinomial parameters produces complete separation across dilemma cells. This confirms the methodological necessity of decomposing choice via the hurdle framework.
+We also note that fitting the joint multinomial logit model (Eq.~3 of the main text) directly across all models encounters severe degenerate separation: for Gemma (0 Indifferent choices), the non-directional reference category is empty, making the baseline log-odds mathematically undefined; for Llama and Phi (24 and 14 Indifferent choices across 20 dilemmas), estimating the 48 multinomial parameters produces complete separation across dilemma cells. This supports the methodological necessity of decomposing choice via the hurdle framework.
 
 \begin{table}[!h]
 \centering
@@ -643,8 +643,8 @@ We evaluated the complete balanced factorial design across 5 holdout dilemmas, 4
 
 As reported in Table~\ref{tab:supp_holdout}, the cross-model divergence observed in the primary domain replicates cleanly in the second domain:
 \begin{enumerate}[leftmargin=*]
-\item \textbf{Qwen 2.5 3B} maintains high non-directional abstention (98.6\% overall, 276/280; 100.0\% at parity), committing on only 4 trials. This confirms that Qwen's abstention is domain-general. Because of event sparsity (4 commits), Stage~2 conditional direction cannot be estimated for Qwen on this domain.
-\item \textbf{Llama 3.2 3B} exhibits universal directional commitment on valid trials (98.8\%, 239/242), choosing \textit{Indifferent} on only 3 trials (1.2\%) and committing on 100\% of valid parity trials (39/39). On committed non-parity trials ($N=200$), Llama achieved 82.5\% dominant-choice accuracy (165/200), demonstrating positive payoff sensitivity across ratios (increasing from 71.9\% at 1:5 to 87.1\% at 9:1).
+\item \textbf{Qwen 2.5 3B} maintains high non-directional abstention (98.6\% overall, 276/280; 100.0\% at parity), committing on only 4 trials. This indicates that Qwen's high abstention extends across domains. Because of event sparsity (4 commits), Stage~2 conditional direction cannot be estimated for Qwen on this domain.
+\item \textbf{Llama 3.2 3B} exhibits universal directional commitment on valid trials (98.8\%, 239/242), choosing \textit{Indifferent} on only 3 trials (1.2\%) and committing on 100\% of valid parity trials (39/39). On committed non-parity trials ($N=200$), Llama achieved 82.5\% dominant-choice accuracy (165/200), reflecting positive payoff sensitivity across ratios (increasing from 71.9\% at 1:5 to 87.1\% at 9:1).
 \end{enumerate}
 This exploratory two-model comparison suggests that the dissociation between selective abstention and directive commitment extends beyond arithmetic data-array framing in these models, though testing whether this holds across other architectures and broader task domains remains an open empirical question.
 
@@ -726,7 +726,7 @@ To test whether the explicit mention of the current score level triggered a sati
 \end{quote}
 We evaluated this ablated phrasing across 5 structural dilemmas (D01--D05), 7 payoff ratios, and 2 presentation orders ($N = 70$ trials) on Qwen 2.5 3B under greedy decoding ($T=0$).
 
-\textbf{Results:} Across all 70 trials, Qwen 2.5 3B selected \textit{Indifferent} on \textbf{70 of 70 trials (100.0\%, Wilson 95\% CI $[94.8\%, 100.0\%]$)}. There were 0 selections of Option~A, 0 of Option~B, and 0 invalid outputs. This demonstrates that the explicit score-level clause is not necessary to induce universal abstention under P3, though whether abstention is driven by broader rule-equivalence semantics or general prompt compliance remains open.
+\textbf{Results:} Across all 70 trials, Qwen 2.5 3B selected \textit{Indifferent} on \textbf{70 of 70 trials (100.0\%, Wilson 95\% CI $[94.8\%, 100.0\%]$)}. There were 0 selections of Option~A, 0 of Option~B, and 0 invalid outputs. This indicates that the explicit score-level clause is not necessary to induce universal abstention under P3, though whether abstention is driven by broader rule-equivalence semantics or general prompt compliance remains open.
 
 %% =========================================================
 \section{Stochastic Decoding and Seed Variability}
@@ -752,7 +752,7 @@ Seed 999 & 2 & 8 & 46 & 56 & 82.1\% \\
 \end{tabular}
 \end{table}
 
-As documented in Table~\ref{tab:supp_temperature}, abstention rates under stochastic decoding ($T=0.7$) remain highly consistent across seeds (83.9\%, 83.9\%, and 82.1\%; combined 83.3\%, Wilson 95\% CI $[77.0\%, 88.2\%]$), closely matching greedy decoding ($\approx 85\%$). Across the 56 evaluated prompt conditions, 40 (71.4\%) produced unanimous decisions across all three seeds, with 39 of the 40 unanimous sets choosing \textit{Indifferent}. This indicates that high abstention is an intrinsic model behavior rather than an artifact of deterministic sampling. We note that this check covers 56 prompt conditions on Qwen 2.5 3B only; evaluating whether position heuristics in directive models survive stochastic sampling remains an important extension.
+As documented in Table~\ref{tab:supp_temperature}, abstention rates under stochastic decoding ($T=0.7$) remain highly consistent across seeds (83.9\%, 83.9\%, and 82.1\%; combined 83.3\%, Wilson 95\% CI $[77.0\%, 88.2\%]$), closely matching greedy decoding ($\approx 85\%$). Across the 56 evaluated prompt conditions, 40 (71.4\%) produced unanimous decisions across all three seeds, with 39 of the 40 unanimous sets choosing \textit{Indifferent}. This indicates that high abstention is an baseline model default rather than an artifact of deterministic sampling. We note that this check covers 56 prompt conditions on Qwen 2.5 3B only; evaluating whether position heuristics in directive models survive stochastic sampling remains an important extension.
 
 %% =========================================================
 \section{Neutral-Label Counterbalancing and Action Framing}
@@ -762,40 +762,44 @@ As documented in Table~\ref{tab:supp_temperature}, abstention rates under stocha
 An early exploratory M1 pilot ($N=80$ trials; \texttt{domain3\_m1\_neutral.csv}) evaluated Qwen 2.5 3B on a two-alternative forced-choice (2AFC) task without narrative backstory framing, where options described the transformations as ``add the offset parameter...'' versus ``subtract the offset parameter...''. In this forced-choice format, Qwen selected the \textit{Subtract} operation in 70 of 80 trials (87.5\%), with choices distributing across presentation slots as 51 Option~A (63.8\%) and 29 Option~B (36.2\%) depending on where \textit{Subtract} was displayed. This indicated that semantic arithmetic action framing introduced strong baseline preferences when choice was forced.
 
 \subsection{Counterbalanced Neutral-Label Experiment (Transformation Alpha vs.\ Beta)}
-To rigorously disentangle action-label semantics from menu-slot positioning, we designed and executed an explicit neutral-label counterbalancing experiment. The arithmetic labels ``Add'' and ``Subtract'' were replaced with abstract tokens: ``Transformation Alpha'' and ``Transformation Beta'', and option identifiers were mapped to ``Option~1'' and ``Option~2''. Across trials, the assignment of Alpha and Beta to Option~1 and Option~2 was fully counterbalanced ($50\%$ Alpha-first, $50\%$ Beta-first).
-
-We evaluated Qwen 2.5 3B across 5 structural dilemmas (D01--D05), 7 payoff ratios ($1:9$ to $9:1$), and 2 presentation orders ($N = 70$ balanced trials) under greedy decoding ($T=0$).
+To rigorously disentangle action-label semantics from menu-slot positioning, we designed and executed an exhaustive full-factorial neutral-label counterbalancing experiment across all 20 structural dilemmas (D01--D20) and all four phrasing templates (P1--P4), yielding $N = 1,120$ balanced trials ($20\text{ dilemmas} \times 4\text{ phrasings} \times 7\text{ ratios} \times 2\text{ presentation orders}$) on Qwen 2.5 3B under greedy decoding ($T=0$). The arithmetic labels ``Add'' and ``Subtract'' were replaced with abstract tokens: ``Transformation Alpha'' and ``Transformation Beta'', and option identifiers were mapped to ``Option~1'' and ``Option~2''. Across trials, the assignment of Alpha and Beta to Option~1 and Option~2 was fully counterbalanced ($50\%$ Alpha-first, $50\%$ Beta-first).
 
 \begin{table}[!h]
 \centering
-\caption{Neutral-Label Counterbalancing Experiment (Qwen 2.5 3B, $N=70$)}
+\caption{Full Neutral-Label Factorial Experiment (Qwen 2.5 3B, $N=1,120$)}
 \label{tab:supp_neutral_labels}
 \small
 \begin{tabular}{@{}lrrrrrr@{}}
 \toprule
 \textbf{Ratio} & \textbf{Indiff.} & \textbf{Option 1} & \textbf{Option 2} & \textbf{Alpha} & \textbf{Beta} & \textbf{Dominant Accuracy} \\
 \midrule
-1:1 Parity ($N=10$) & 10 & 0 & 0 & --- & --- & 10 / 10 (100.0\%) \\
-1:2 ($N=10$)        &  2 & 4 & 4 & 0 & 8 &  8 /  8 (100.0\%) \\
-1:5 ($N=10$)        &  1 & 4 & 5 & 0 & 9 &  9 /  9 (100.0\%) \\
-1:9 ($N=10$)        &  1 & 4 & 5 & 0 & 9 &  9 /  9 (100.0\%) \\
-2:1 ($N=10$)        &  2 & 4 & 4 & 8 & 0 &  8 /  8 (100.0\%) \\
-5:1 ($N=10$)        &  2 & 3 & 5 & 8 & 0 &  8 /  8 (100.0\%) \\
-9:1 ($N=10$)        &  1 & 4 & 5 & 9 & 0 &  9 /  9 (100.0\%) \\
+1:1 Parity ($N=160$) & 105 &  55 &   0 &  24 &  31 & 105 / 160 (65.6\%) \\
+1:2 ($N=160$)        &  22 &  73 &  65 &  11 & 127 & 127 / 138 (92.0\%) \\
+1:5 ($N=160$)        &  21 &  59 &  80 &   0 & 139 & 139 / 139 (100.0\%) \\
+1:9 ($N=160$)        &  13 &  67 &  80 &   0 & 147 & 147 / 147 (100.0\%) \\
+2:1 ($N=160$)        &  23 &  59 &  78 & 137 &   0 & 137 / 137 (100.0\%) \\
+5:1 ($N=160$)        &  24 &  57 &  79 & 136 &   0 & 136 / 136 (100.0\%) \\
+9:1 ($N=160$)        &  16 &  65 &  79 & 144 &   0 & 144 / 144 (100.0\%) \\
 \midrule
-\textbf{Disparities ($N=60$)} & \textbf{9} & \textbf{23} & \textbf{28} & \textbf{25} & \textbf{26} & \textbf{51 / 51 (100.0\%)} \\
-\textbf{Total ($N=70$)}       & \textbf{19} & \textbf{23} & \textbf{28} & \textbf{25} & \textbf{26} & \textbf{61 / 70 (87.1\%)} \\
+\textbf{Disparities ($N=960$)} & \textbf{119} & \textbf{380} & \textbf{461} & \textbf{428} & \textbf{413} & \textbf{830 / 841 (98.7\%)} \\
+\textbf{Total ($N=1,120$)}     & \textbf{224} & \textbf{435} & \textbf{461} & \textbf{452} & \textbf{444} & \textbf{935 / 1,120 (83.5\%)} \\
 \bottomrule
-\multicolumn{7}{p{\linewidth}}{\footnotesize At 1:1 parity, choosing Indifferent is objectively dominant. Across disparities ($N=60$), dominant accuracy among committed trials is 51/51 (100.0\%); overall accuracy including abstentions is 51/60 (85.0\%, Wilson 95\% CI $[73.9\%, 91.9\%]$).}
+\multicolumn{7}{p{\linewidth}}{\footnotesize At 1:1 parity, choosing Indifferent is objectively dominant. Across disparities ($N=960$), dominant accuracy among committed trials is 830/841 (98.7\%); overall accuracy including abstentions is 830/960 (86.5\%, Wilson 95\% CI $[84.1\%, 88.5\%]$). All 1,120 trials were strictly valid under deterministic regex parsing.}
 \end{tabular}
 \end{table}
 
-As documented in Table~\ref{tab:supp_neutral_labels}, the neutral-label counterbalancing experiment yields three crucial insights:
+As documented in Table~\ref{tab:supp_neutral_labels}, the full-factorial neutral-label experiment yields four decisive insights:
 \begin{enumerate}[leftmargin=*]
-\item \textbf{Elimination of Apparent Action Bias Under Neutral Framing:} Under neutral labeling, directional commitments split symmetrically between actions: 25 selections for Transformation~Alpha (49.0\%) and 26 selections for Transformation~Beta (51.0\%). The strong ``Subtract'' preference observed under semantic labeling is eliminated. Because this manipulation jointly modified action names and option identifiers, independently isolating the distinct contributions of action-label semantics versus menu-slot identifiers across all models remains an open objective.
-\item \textbf{Perfect Conditional Payoff Responsiveness:} On every single trial where Qwen committed to a directional action under disparity ($N=51$), it selected the mathematically dominant transformation with \textbf{100.0\% accuracy} (25/25 for Alpha when $Q_\alpha > Q_\beta$; 26/26 for Beta when $Q_\beta > Q_\alpha$).
-\item \textbf{Symmetric Menu-Slot Distribution:} Committed choices distributed evenly across presentation positions: 23 for Option~1 (45.1\%) and 28 for Option~2 (54.9\%), demonstrating that abstract labeling mitigates presentation-order skew.
-\item \textbf{Unanimous Parity Abstention:} At 1:1 parity ($N=10$), Qwen selected \textit{Indifferent} on 10 of 10 trials (100.0\%, Wilson 95\% CI $[72.2\%, 100.0\%]$), confirming that abstention at parity is robust and unconfounded by action-naming semantics.
+\item \textbf{Symmetric Balance Across Action Identities:} Under neutral labeling across the full benchmark, directional commitments split almost perfectly between actions: 428 selections for Transformation~Alpha (50.9\%) and 413 selections for Transformation~Beta (49.1\%). The strong ``Subtract'' preference observed under semantic labeling (60.9\% Subtract vs.\ 39.1\% Add) is completely eliminated.
+\item \textbf{Decisive Surge in Disparity Commitment Across All Phrasings:} Across all 960 disparity trials, Qwen committed directionally on 87.6\% of trials (841/960), representing a 5.2-fold increase over the primary Add/Subtract baseline (16.8\%, 161/960). This surge was observed across every phrasing template:
+  \begin{itemize}
+    \item \textbf{P1:} Commitment surged from 15.8\% (38/240) to 95.4\% (229/240; 100.0\% conditional dominant accuracy).
+    \item \textbf{P2:} Commitment surged from 41.7\% (100/240) to 100.0\% (240/240; 95.4\% conditional dominant accuracy).
+    \item \textbf{P3:} Commitment surged from complete abstention (0.0\%, 0/240) to 96.2\% (231/240; 100.0\% conditional dominant accuracy).
+    \item \textbf{P4:} Commitment surged from 9.6\% (23/240) to 58.8\% (141/240; 100.0\% conditional dominant accuracy).
+  \end{itemize}
+\item \textbf{Near-Ceiling Conditional Payoff Responsiveness:} On 98.7\% of trials where Qwen committed to a directional action under disparity ($N=841$), it selected the mathematically dominant transformation (830/841; 428/428 for Alpha when $Q_\alpha > Q_\beta$; 402/413 for Beta when $Q_\beta > Q_\alpha$).
+\item \textbf{Substantial Attenuation of Presentation Slot Bias:} Committed choices distributed across presentation positions as 380 for Option~1 (45.2\%) and 461 for Option~2 (54.8\%), sharply moderating the extreme slot asymmetry observed under default lettered options (84.5\% Option~B vs.\ 15.5\% Option~A).
 \end{enumerate}
 
 %% =========================================================
@@ -804,8 +808,14 @@ As documented in Table~\ref{tab:supp_neutral_labels}, the neutral-label counterb
 
 To enable reviewers and researchers to reproduce our benchmarks across unquantized FP16 checkpoints and larger model classes without local hardware constraints, we provide an automated cloud evaluation pipeline designed for free Google Colab or Kaggle NVIDIA T4 GPU instances (16~GB VRAM):
 \begin{itemize}[leftmargin=*]
-\item \textbf{Self-Contained Runner Script:} \texttt{experiments/cloud\_eval/run\_cloud\_benchmarks.py} loads pre-trained checkpoints via Hugging Face \texttt{transformers} and \texttt{torch} in unquantized 16-bit floating point (\texttt{torch\_dtype=torch.float16}) or 8-bit precision, applies greedy decoding ($T=0$), and logs deterministic parsed responses.
-\item \textbf{Interactive One-Click Notebook:} \texttt{experiments/cloud\_eval/OJCS\_FP16\_and\_7B\_Benchmarks.ipynb} provides a turnkey Jupyter notebook that downloads stimuli, runs FP16 benchmarks on \texttt{Qwen/Qwen2.5-3B-Instruct} and \texttt{meta-llama/Llama-3.2-3B-Instruct}, and scales to \texttt{Qwen/Qwen2.5-7B-Instruct}.
+\item \textbf{Self-Contained Runner Script:} \texttt{experiments/cloud\_eval/run\_cloud\_benchmarks.py} loads pre-trained checkpoints via Hugging Face \texttt{transformers} and \texttt{torch} in unquantized 16-bit floating point (\texttt{torch\_dtype=torch.float16}) or 8-bit precision, applies greedy decoding ($T=0$), and logs deterministic parsed responses. It supports standard Add/Subtract evaluations, the full neutral-label factorial design (\texttt{--neutral\_labels}), and compact 1B models.
+\item \textbf{Interactive One-Click Notebook:} \texttt{experiments/cloud\_eval/OJCS\_FP16\_and\_7B\_Benchmarks.ipynb} provides a turnkey Jupyter notebook with pre-configured cells to run:
+  \begin{enumerate}
+    \item Unquantized FP16 baselines on \texttt{Qwen/Qwen2.5-3B-Instruct} and \texttt{meta-llama/Llama-3.2-3B-Instruct}.
+    \item Parameter scaling to \texttt{Qwen/Qwen2.5-7B-Instruct}.
+    \item Full neutral-label factorial evaluation across all 20 dilemmas and 4 phrasings.
+    \item Within-family 1B compact architecture evaluations on \texttt{meta-llama/Llama-3.2-1B-Instruct} and \texttt{google/gemma-3-1b-it}.
+  \end{enumerate}
 \end{itemize}
 
 %% =========================================================
