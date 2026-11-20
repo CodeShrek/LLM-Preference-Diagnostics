@@ -1,0 +1,94 @@
+{
+  "qwen25_3b": {
+    "model_name": "Qwen 2.5 3B",
+    "stage2_n": 161,
+    "n_boot": 2000,
+    "successful_replicates": 2000,
+    "firth_beta": 1.230636709425964,
+    "firth_se": 0.3731608115017173,
+    "penalized_wald_ci": [
+      0.4992,
+      1.962
+    ],
+    "cluster_boot_percentile_ci_fe": [
+      0.8046,
+      2.1042
+    ],
+    "cluster_boot_percentile_ci_nofe": [
+      0.8231,
+      1.9977
+    ],
+    "boot_mean": 1.3543,
+    "boot_sd": 0.3382,
+    "boot_median": 1.3244
+  },
+  "llama32_3b": {
+    "model_name": "Llama 3.2 3B",
+    "stage2_n": 903,
+    "n_boot": 2000,
+    "successful_replicates": 2000,
+    "firth_beta": 0.28172422051473645,
+    "firth_se": 0.12480772529323456,
+    "penalized_wald_ci": [
+      0.0371,
+      0.5263
+    ],
+    "cluster_boot_percentile_ci_fe": [
+      0.0258,
+      0.5332
+    ],
+    "cluster_boot_percentile_ci_nofe": [
+      0.0263,
+      0.5284
+    ],
+    "boot_mean": 0.284,
+    "boot_sd": 0.132,
+    "boot_median": 0.2847
+  },
+  "phi4mini_38b": {
+    "model_name": "Phi-4 Mini 3.8B",
+    "stage2_n": 940,
+    "n_boot": 2000,
+    "successful_replicates": 2000,
+    "firth_beta": 0.22480154035261482,
+    "firth_se": 0.12227683111887529,
+    "penalized_wald_ci": [
+      -0.0149,
+      0.4645
+    ],
+    "cluster_boot_percentile_ci_fe": [
+      0.0473,
+      0.4184
+    ],
+    "cluster_boot_percentile_ci_nofe": [
+      0.0491,
+      0.4196
+    ],
+    "boot_mean": 0.2276,
+    "boot_sd": 0.0938,
+    "boot_median": 0.2246
+  },
+  "gemma3_4b": {
+    "model_name": "Gemma 3 4B",
+    "stage2_n": 960,
+    "n_boot": 2000,
+    "successful_replicates": 2000,
+    "firth_beta": 1.5308508814542554,
+    "firth_se": 0.5210753339544089,
+    "penalized_wald_ci": [
+      0.5095,
+      2.5522
+    ],
+    "cluster_boot_percentile_ci_fe": [
+      -0.0419,
+      3.2164
+    ],
+    "cluster_boot_percentile_ci_nofe": [
+      -0.0435,
+      3.1912
+    ],
+    "boot_mean": 1.6665,
+    "boot_sd": 0.7938,
+    "boot_median": 1.6133
+  }
+}

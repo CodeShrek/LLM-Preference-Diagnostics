@@ -147,7 +147,7 @@ def create_overview_diagram():
     ax.text(3.95, 2.0, "Stage 2: Conditional Dominance Selection", weight='bold', fontsize=9, ha='center', color='#1a237e')
     s2_str = (
         "Conditional Outcome: P(Dominant = 1 | Commitment = 1) across non-parity trials\n"
-        "Separation-Resistant Estimator: Firth's penalized likelihood [95% profile CIs]:\n"
+        "Separation-Resistant Estimator: Firth's penalized likelihood [95% penalized Wald CIs]:\n"
         " • Qwen: β = 1.231 [0.50, 1.96]; Gemma: β = 1.531 [0.51, 2.55] (strong sensitivity)\n"
         " • Llama: β = 0.282 [0.04, 0.53]; Phi: β = 0.225 [-0.01, 0.46] (moderate sensitivity)\n"
         "Order Moderation: Accuracy drops severely when dominant option is in disfavored slot"

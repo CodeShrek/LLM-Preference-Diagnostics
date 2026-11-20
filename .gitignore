@@ -9,3 +9,7 @@ __pycache__/
 .vscode/
 .idea/
 /*.pdf
+scratch/
+paper_revision_package/
+paper_revision_package.zip
+results/firth_cluster_bootstrap_2000_full.json

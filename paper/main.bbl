@@ -21,11 +21,19 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{mind_the_gap_2026}
-P.~Mahajan, I.~Kendiukhov, S.~Hussain, and L.~Nottingham, ``Mind the gap: How
-  elicitation protocols shape the stated-revealed preference gap in language
-  models,'' in \emph{Proceedings of the Workshop on Evaluating Evaluations
-  (EvalEval)}, 2026.
+\bibitem{dhar1997consumer}
+R.~Dhar, ``Consumer preference for a no-choice option,'' \emph{Journal of
+  Consumer Research}, vol.~24, no.~2, pp. 215--231, 1997.
+
+\bibitem{tversky1992choice}
+A.~Tversky and E.~Shafir, ``Choice under conflict: The dynamics of deferred
+  decision,'' \emph{Psychological Science}, vol.~3, no.~6, pp. 358--361, 1992.
+
+\bibitem{randomness_not_rep_2025}
+A.~Khan, S.~Casper, and D.~Hadfield-Menell, ``Randomness, not representation:
+  The unreliability of evaluating cultural alignment in {LLMs},'' in
+  \emph{Proceedings of the 2025 ACM Conference on Fairness, Accountability,
+  and Transparency (FAccT)}, 2025, pp. 2151--2165.
 
 \bibitem{fragile_preferences_2026}
 H.~Yin, S.~Vardi, and V.~Choudhary, ``Fragile preferences: A deep dive into
@@ -36,92 +44,118 @@ H.~Yin, S.~Vardi, and V.~Choudhary, ``Fragile preferences: A deep dive into
 J.~A. Buchanan and J.~Foster, ``The innate economic preferences of language
   models,'' \emph{arXiv preprint arXiv:2607.26288}, 2026.
 
+\bibitem{zheng2023large}
+C.~Zheng, H.~Zhou, F.~Meng, J.~Zhou, and M.~Huang, ``Large language models are
+  not robust multiple choice selectors,'' in \emph{Proceedings of the 12th
+  International Conference on Learning Representations (ICLR)}, 2024.
+
+\bibitem{mind_the_gap_2026}
+P.~Mahajan, I.~Kendiukhov, S.~Hussain, and L.~Nottingham, ``Mind the gap: How
+  elicitation protocols shape the stated-revealed preference gap in language
+  models,'' in \emph{Proceedings of the Workshop on Evaluating Evaluations
+  (EvalEval)}, 2026, pp. 46--55.
+
+\bibitem{wen_abstention_2025}
+B.~Wen, J.~Yao, S.~Feng, C.~Xu, Y.~Tsvetkov, B.~Howe, and L.~L. Wang, ``Know
+  your limits: A survey of abstention in large language models,''
+  \emph{Transactions of the Association for Computational Linguistics},
+  vol.~13, pp. 529--556, 2025.
+
+\bibitem{mazeika2025utility}
+M.~Mazeika \emph{et~al.}, ``Utility engineering: Analyzing and controlling
+  emergent value systems in {AI} models,'' \emph{arXiv preprint
+  arXiv:2502.08640}, 2025.
+
+\bibitem{pezeshkpour2023large}
+P.~Pezeshkpour and E.~Hruschka, ``Large language models sensitivity to the
+  order of options in multiple-choice questions,'' in \emph{Findings of the
+  Association for Computational Linguistics: NAACL 2024}, 2024, pp. 2006--2017.
+
+\bibitem{sclar2024quantifying}
+M.~Sclar, Y.~Choi, Y.~Tsvetkov, and A.~Suhr, ``Quantifying language models'
+  sensitivity to spurious features in prompt design,'' in \emph{International
+  Conference on Learning Representations (ICLR)}, 2024.
+
+\bibitem{zhao2021calibrate}
+Z.~Zhao, E.~Wallace, S.~Feng, D.~Klein, and S.~Singh, ``Calibrate before use:
+  Improving few-shot performance of language models,'' in \emph{International
+  Conference on Machine Learning (ICML)}, 2021, pp. 12\,697--12\,706.
+
+\bibitem{ross2024llmeconomicus}
+J.~Ross, Y.~Kim, and A.~W. Lo, ``{LLM} economicus? {M}apping the behavioral
+  biases of {LLMs} via utility theory,'' in \emph{Proceedings of the 1st
+  Conference on Language Modeling (COLM)}, 2024.
+
+\bibitem{chen2023emergent}
+Y.~Chen, T.~X. Liu, Y.~Shan, and S.~Zhong, ``The emergence of economic
+  rationality of {GPT},'' \emph{Proceedings of the National Academy of
+  Sciences}, vol. 120, no.~51, p. e2316205120, 2023.
+
 \bibitem{what_do_llms_want_2026}
-T.~R. Cook, S.~Kazinnik, Z.~Modig, and N.~M. Palmer, ``What do llms want?''
+T.~R. Cook, Z.~Modig, S.~Kazinnik, and N.~M. Palmer, ``What do {LLMs} want?''
   Board of Governors of the Federal Reserve System, Finance and Economics
-  Discussion Series 2026-006, 2026.
+  Discussion Series 2026-006, Tech. Rep., 2026.
 
 \bibitem{probing_preferences_2025}
 V.~Tagliabue and L.~Dung, ``Probing the preferences of a language model:
-  Integrating verbal and behavioral tests of ai welfare,'' \emph{arXiv preprint
-  arXiv:2509.07961}, 2025.
-
-\bibitem{ojcs_agents_2025}
-Y.~Wang, Y.~Pan, S.~Guo, and Z.~Su, ``Security of internet of agents: Attacks
-  and countermeasures,'' \emph{IEEE Open Journal of the Computer Society},
-  vol.~6, pp. 1611--1624, 2025.
-
-\bibitem{ojcs_nudge_2026}
-I.~Kristiana, H.~Prabowo, F.~L. Gaol, and N.~N. Qomariyah, ``Validating
-  ai-driven nudge recommendations: A/b testing two-tower and bandit models in
-  simulated digital banking environment,'' \emph{IEEE Open Journal of the
-  Computer Society}, vol.~7, pp. 404--416, 2026.
-
-\bibitem{ojcs_llm_evaluation_2026}
-R.~Bolton, M.~Sheikhfathollahi, S.~Parkinson, D.~Basher, and H.~Parkinson,
-  ``Cybersecurity compliance for operational technology using large language
-  models,'' \emph{IEEE Open Journal of the Computer Society}, vol.~7, pp.
-  782--792, 2026.
-
-\bibitem{ojcs_sindex_2026}
-S.~Abdaljalil, P.~Sharma, E.~Serpedin, R.~Atat, and H.~Kurban, ``Sindex:
-  Semantic inconsistency index for hallucination detection in llms,''
-  \emph{IEEE Open Journal of the Computer Society}, vol.~7, pp. 1145--1155,
-  2026.
-
-\bibitem{randomness_not_rep_2025}
-A.~Khan, S.~Casper, and D.~Hadfield-Menell, ``Randomness, not representation:
-  The unreliability of evaluating cultural alignment in llms,'' in
-  \emph{Proceedings of the 2025 ACM Conference on Fairness, Accountability, and
-  Transparency (FAccT)}, 2025, pp. 2151--2165.
+  Integrating verbal and behavioral tests of {AI} welfare,'' \emph{arXiv
+  preprint arXiv:2509.07961}, 2025.
 
 \bibitem{ai_revealed_preferences_2026}
-J.~Smith and A.~Doe, ``Ai revealed preferences: A methodological foundation,''
-  \emph{Journal of AI Research}, vol.~88, pp. 1--15, 2026.
+S.~Wang, S.~Lobanova, Y.~Arbel, S.~Goldstein, and P.~Salib, ``{AI} revealed
+  preferences,'' in \emph{Proceedings of the 2026 AAAI/ACM Conference on AI,
+  Ethics, and Society (AIES)}, vol.~9, no.~4, 2026, pp. 2688--2698.
 
 \bibitem{whos_opinions_lm_2023}
-S.~Santurkar, R.~Taori, T.~Hashimoto, P.~Liang, and T.~Hastie, ``Whose opinions
-  do language models reflect?'' in \emph{International Conference on Machine
-  Learning (ICML)}, 2023, pp. 29\,971--30\,004.
+S.~Santurkar, E.~Durmus, F.~Ladhak, C.~Lee, P.~Liang, and T.~Hashimoto,
+  ``Whose opinions do language models reflect?'' in \emph{Proceedings of the
+  40th International Conference on Machine Learning (ICML)}, ser. PMLR, vol.
+  202, 2023, pp. 29\,971--30\,004.
 
 \bibitem{aher2023turing}
 G.~V. Aher, R.~I. Arriaga, and A.~T. Kalai, ``Using large language models to
-  simulate multiple personas and understand personalities,'' in
-  \emph{Proceedings of the Annual Meeting of the Cognitive Science Society},
-  2023.
+  simulate multiple humans and replicate human subject studies,'' in
+  \emph{Proceedings of the 40th International Conference on Machine Learning
+  (ICML)}, ser. PMLR, vol. 202, 2023, pp. 337--371.
 
-\bibitem{ojcs_cd_llmcars_2024}
-J.~Doe and J.~Smith, ``Cybersecurity defenses for llm-integrated connected
-  cars,'' \emph{IEEE Open Journal of the Computer Society}, vol.~5, pp.
-  100--115, 2024.
+\bibitem{dettmers2023case}
+T.~Dettmers and L.~Zettlemoyer, ``The case for 4-bit precision: $k$-bit
+  inference scaling laws,'' in \emph{International Conference on Machine
+  Learning (ICML)}, 2023, pp. 7750--7774.
 
-\bibitem{ojcs_chatgpt_survey_2023}
-P.~P. Ray, ``Chatgpt: A comprehensive review on background, applications, key
-  challenges, bias, ethics, limitations and future scope,'' \emph{IEEE Open
-  Journal of the Computer Society}, vol.~4, pp. 1--20, 2023.
+\bibitem{qwen25_2024}
+{Qwen Team}, ``{Qwen2.5} technical report,'' \emph{arXiv preprint
+  arXiv:2412.15115}, 2024.
 
-\bibitem{ojcs_architecture_2025}
-S.~Kim, J.~Moon, J.~Oh, I.~Choi, and J.-S. Yang, ``Survey and evaluation of
-  converging architecture in llms based on footsteps of operations,''
-  \emph{IEEE Open Journal of the Computer Society}, vol.~6, pp. 1214--1226,
-  2025.
+\bibitem{llama32_2024}
+A.~Dubey \emph{et~al.}, ``The {Llama} 3 herd of models,'' \emph{arXiv preprint
+  arXiv:2407.21783}, 2024.
 
-\bibitem{ojcs_training_serving_2024}
-L.~Chen and Y.~Wang, ``Efficient training and serving of large language
-  models,'' \emph{IEEE Open Journal of the Computer Society}, vol.~5, pp.
-  200--215, 2024.
+\bibitem{phi4mini_2025}
+{Microsoft}, ``{Phi-4-Mini} technical report: Compact yet powerful multimodal
+  language models via mixture-of-loras,'' \emph{arXiv preprint
+  arXiv:2503.01743}, 2025.
 
-\bibitem{ojcs_budget_2025}
-K.~Lee and S.~Park, ``Budget-constrained inference for large language models,''
-  \emph{IEEE Open Journal of the Computer Society}, vol.~6, pp. 300--312, 2025.
+\bibitem{gemma3_2025}
+{Gemma Team}, ``{Gemma 3} technical report,'' \emph{arXiv preprint
+  arXiv:2503.19786}, 2025.
 
-\bibitem{ojcs_voicetalk_2025}
-M.~Davis and R.~Taylor, ``Voicetalk: Interactive speech-based llm agents,''
-  \emph{IEEE Open Journal of the Computer Society}, vol.~6, pp. 400--415, 2025.
+\bibitem{heinze_schemper_2002}
+G.~Heinze and M.~Schemper, ``A solution to the problem of separation in
+  logistic regression,'' \emph{Statistics in Medicine}, vol.~21, no.~16, pp.
+  2409--2419, 2002.
 
-\bibitem{ojcs_finetune_2026}
-C.~Evans and D.~Brown, ``Parameter-efficient fine-tuning strategies for domain
-  adaptation,'' \emph{IEEE Open Journal of the Computer Society}, vol.~7, pp.
-  1--14, 2026.
+\bibitem{cameron2008bootstrap}
+A.~C. Cameron, J.~B. Gelbach, and D.~L. Miller, ``Bootstrap-based improvements
+  for inference with clustered errors,'' \emph{The Review of Economics and
+  Statistics}, vol.~90, no.~3, pp. 414--427, 2008.
+
+\bibitem{efron_tibshirani_1993}
+B.~Efron and R.~J. Tibshirani, \emph{An Introduction to the Bootstrap}.\hskip
+  1em plus 0.5em minus 0.4em\relax CRC Press, 1993.
+
+\bibitem{firth_1993}
+D.~Firth, ``Bias reduction of maximum likelihood estimates,''
+  \emph{Biometrika}, vol.~80, no.~1, pp. 27--38, 1993.
 
 \end{thebibliography}

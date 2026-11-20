@@ -157,7 +157,7 @@ def load_model_data(model_key: str) -> pd.DataFrame:
 
 
 def prepare_stage2_matrix(df: pd.DataFrame, include_interaction: bool = False):
-    """Prepare design matrix for Stage 2 (no dilemma FE for Firth — too many dummies)."""
+    """Prepare design matrix for Stage 2 with dilemma fixed effects (D02-D20)."""
     s2 = df[
         (df["Y_commit"] == 1) & 
         (df["abs_log_Q"] > 0) & 
@@ -243,7 +243,7 @@ def run_firth_analysis():
             print(f"  N (Stage 2): {n}")
             print(f"  Converged: {converged}")
             print(f"  Firth payoff coef (abs_log_Q): {payoff_beta:.4f} (SE={payoff_se:.4f})")
-            print(f"  95% CI: [{payoff_ci_lo:.4f}, {payoff_ci_hi:.4f}]")
+            print(f"  95% Penalized Wald CI: [{payoff_ci_lo:.4f}, {payoff_ci_hi:.4f}]")
             print(f"  Position coef: {pos_beta:.4f} (SE={pos_se:.4f})")
             
             results[model_key] = {

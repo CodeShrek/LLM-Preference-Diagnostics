@@ -221,6 +221,29 @@ def call_mock(rng_choice: str, alpha_is_option_1: bool, q_alpha: int, q_beta: in
 # -----------------------------------------------------------------------------
 
 def run_experiment(args):
+    if getattr(args, "verify_only", False):
+        if not os.path.exists(args.output):
+            print(f"[ERROR] Output file {args.output} not found for verification.")
+            sys.exit(1)
+        print(f"\n[VERIFY-ONLY] Loading existing records from {args.output}...")
+        records = []
+        with open(args.output, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for r in reader:
+                rec = dict(r)
+                rec["is_valid"] = rec["is_valid"] in ["True", "true", True, "1"]
+                rec["is_committed"] = rec["is_committed"] in ["True", "true", True, "1"]
+                rec["is_parity"] = rec["is_parity"] in ["True", "true", True, "1"]
+                rec["dominant_chosen"] = rec["dominant_chosen"] in ["True", "true", True, "1"]
+                rec["alpha_is_option_1"] = rec["alpha_is_option_1"] in ["True", "true", True, "1"]
+                rec["Q_alpha"] = int(rec["Q_alpha"]) if rec.get("Q_alpha") else 0
+                rec["Q_beta"] = int(rec["Q_beta"]) if rec.get("Q_beta") else 0
+                rec["log_ratio"] = float(rec["log_ratio"]) if rec.get("log_ratio") else 0.0
+                records.append(rec)
+        print(f"[VERIFY-ONLY] Loaded {len(records)} records.")
+        run_comparative_analysis(records, args.model_key, args.output)
+        return
+
     with open(STIMULI_PATH) as f:
         stimuli = json.load(f)
 
@@ -458,6 +481,8 @@ def main():
     parser.add_argument("--phrasings", type=str, default="all", help="'all' or comma-separated phrasing IDs (e.g. P1,P2)")
     parser.add_argument("--output", type=str, default="results/qwen25_3b/neutral_labels_full_1120.csv",
                         help="Output CSV path")
+    parser.add_argument("--verify-only", action="store_true",
+                        help="Verify and analyze existing results CSV without running inference")
     args = parser.parse_args()
 
     run_experiment(args)

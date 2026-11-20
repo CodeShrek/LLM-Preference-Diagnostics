@@ -73,11 +73,13 @@ In direct response to reviewer feedback, this repository includes dedicated empi
 │   │   ├── run_all_models.py                 # Multi-model batch orchestration script
 │   │   ├── forced_choice_runner.py           # Matched 2AFC runner (omitting Indifferent)
 │   │   ├── compare_forced_choice.py          # 2AFC vs. 3-option comparative statistical analysis
-│   │   ├── firth_stage2_robustness.py        # Firth penalized likelihood logistic regression
+│   │   ├── firth_stage2_robustness.py        # Firth penalized likelihood logistic regression (Wald CIs)
+│   │   ├── firth_cluster_bootstrap.py        # 2,000-resample dilemma-cluster Firth bootstrap
 │   │   ├── run_nonzero_indifferent.py        # Non-zero indifferent payoff robustness runner
 │   │   ├── run_label_slot_checks.py          # Menu-slot and non-directional label ablations
 │   │   ├── run_p3_wording_ablation.py        # P3 phrasing score-level wording ablation runner
-│   │   ├── run_neutral_labels_counterbalancing.py # Neutral-label counterbalancing runner
+│   │   ├── run_full_neutral_label_experiment.py # Authoritative 1,120-trial neutral-label factorial runner & verifier
+│   │   ├── run_neutral_labels_counterbalancing.py # Initial 70-trial exploratory neutral-label pilot (D01-D05)
 │   │   ├── run_temperature_seeds.py          # Stochastic decoding sampling runner (T=0.7)
 │   │   └── multimodel_analysis.py            # Primary econometric analysis and figure generator
 │   ├── followups/
@@ -91,11 +93,12 @@ In direct response to reviewer feedback, this repository includes dedicated empi
 │   └── cloud_eval/                           # Cloud GPU benchmarks for unquantized & larger models
 │       ├── run_cloud_benchmarks.py           # Self-contained HuggingFace/PyTorch FP16 execution script
 │       └── OJCS_FP16_and_7B_Benchmarks.ipynb # Interactive one-click Google Colab / Kaggle notebook
-├── results/                                  # Strictly frozen raw trial records (CSVs)
-│   ├── qwen25_3b/                            # Qwen 2.5 3B primary (1,120), C4, T=10, 2AFC, and ablations
+├── results/                                  # Strictly frozen raw trial records (CSVs) and bootstrap JSONs
+│   ├── qwen25_3b/                            # Qwen 2.5 3B primary (1,120), C4, T=10, 2AFC, neutral-labels (1,120), and ablations
 │   ├── llama32_3b/                           # Llama 3.2 3B primary (1,120), C4, and T=10
 │   ├── phi4mini_38b/                         # Phi-4 Mini 3.8B primary (1,120), C4, and T=10
-│   └── gemma3_4b/                            # Gemma 3 4B primary (1,120), C4, and T=10
+│   ├── gemma3_4b/                            # Gemma 3 4B primary (1,120), C4, and T=10
+│   └── firth_cluster_bootstrap_2000.json     # Frozen 2,000-resample dilemma-cluster bootstrap estimates across all models
 └── paper/                                    # Manuscript, supplement, and reviewer responses
     ├── main.tex                              # Primary IEEE OJ-CS manuscript LaTeX source
     ├── main.txt                              # Exact plain-text mirror of main.tex
@@ -130,11 +133,17 @@ To reproduce the complete statistical results, Stage 1 hurdle models, Stage 2 Fi
 # Generate primary figures (Figs A through F) and statistical summaries:
 python experiments/m3v2/multimodel_analysis.py
 
-# Run Firth's penalized likelihood regression for Stage-2 separation robustness:
+# Run Firth's penalized likelihood regression for Stage-2 separation robustness (Wald CIs):
 python experiments/m3v2/firth_stage2_robustness.py
+
+# Run 2,000-resample dilemma-cluster Firth bootstrap (Cluster-aware percentile CIs):
+python experiments/m3v2/firth_cluster_bootstrap.py
 
 # Run matched 2AFC comparison analysis (Figure G):
 python experiments/m3v2/compare_forced_choice.py
+
+# Verify and inspect the authoritative 1,120-trial neutral-label factorial experiment:
+python experiments/m3v2/run_full_neutral_label_experiment.py --verify-only
 ```
 
 Generated publication figures are saved directly to `paper/figures/`.
@@ -171,8 +180,14 @@ python experiments/m3v2/forced_choice_runner.py
 python experiments/m3v2/run_nonzero_indifferent.py
 python experiments/m3v2/run_label_slot_checks.py
 python experiments/m3v2/run_p3_wording_ablation.py
-python experiments/m3v2/run_neutral_labels_counterbalancing.py
 python experiments/m3v2/run_temperature_seeds.py
+
+# Full-factorial neutral-label counterbalancing experiment (N=1,120):
+python experiments/m3v2/run_full_neutral_label_experiment.py --verify-only  # offline verification mode
+# python experiments/m3v2/run_full_neutral_label_experiment.py --backend ollama # live re-inference mode
+
+# Initial exploratory neutral-label pilot (D01-D05, P1 only, N=70):
+python experiments/m3v2/run_neutral_labels_counterbalancing.py
 ```
 
 ### 4. Running Cloud GPU Benchmarks (Unquantized FP16 & Larger 7B Models)

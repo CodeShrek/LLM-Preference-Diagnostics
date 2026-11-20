@@ -1,6 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{enumitem}
 
@@ -26,29 +27,32 @@ Thank you for the opportunity to revise and resubmit our manuscript to the \text
 We have conducted a thorough, exhaustive overhaul of the paper in response to the valuable evaluations of the Associate Editor and the three reviewers. Specifically:
 
 \begin{enumerate}[leftmargin=*]
-    \item \textbf{Complete Task \& Protocol Specification (R1.1, R2.1):} Added a dedicated Methods section (\S~IV), an experimental workflow diagram (Fig.~1), formal state-transition equations, verbatim prompt phrasings (Table~II), and complete turn-by-turn transcripts (Supplementary~\S~III).
-    \item \textbf{Statistical Rigor \& Separation-Robust Modeling (R2.2, R2.3, R3.2):} Explicitly formulated all joint multinomial and hurdle regression equations (Eqs.~3--7), implemented Firth penalized likelihood estimation to resolve separation on sparse cells (Table~IV, Supp.~Table~IV), aligned all point estimates with matching dilemma-cluster bootstrap intervals, and verified asymptotic convergence properties.
-    \item \textbf{Threshold Follow-Up Mathematical Verification (R2.4, R3.3):} Mathematically proved that the follow-up threshold is non-binding ($s_0 + 5 \times 9 < T$ across all 20 dilemmas; \S~V-B, Supp.~\S~X) and corrected illustrative figure parameters to match the actual experimental distribution.
-    \item \textbf{Matched 2AFC Baseline \& Construct Validity (R2.6, R3.1):} Evaluated a paired two-alternative forced-choice (2AFC) baseline ($N=439$), non-zero indifferent payoffs ($N=280$), and a 70-trial counterbalanced neutral-label experiment (Supp.~\S~XVI), demonstrating that simultaneously neutralizing action labels and presentation slots resolves directional disparities while preserving 100\% payoff sensitivity.
-    \item \textbf{Phrasing Sensitivity \& Hardware Audit (R1.2):} Added a full cross-model phrasing breakdown (Table~VI), evaluated stochastic decoding across random seeds (Supp.~\S~XV), documented local hardware memory constraints (Supp.~\S~XI), and provided a self-contained execution suite and Jupyter notebook for evaluating unquantized FP16 and 7B models on free cloud GPUs (Supp.~\S~XVII).
+    \item \textbf{Complete Task \& Protocol Specification (R1.1, R2.1):} Added a dedicated Methods section (\S~IV), an experimental workflow diagram (Supplementary Fig.~S1), formal state-transition equations, verbatim prompt phrasings (Table~II), and complete turn-by-turn transcripts (Supplementary~\S~III).
+    \item \textbf{Statistical Rigor \& Separation-Robust Modeling (R2.2, R2.3, R3.2):} Explicitly formulated all joint multinomial and hurdle regression equations (Eqs.~3--7), implemented Firth penalized likelihood estimation to resolve separation on sparse cells (Table~IV, Supp.~Table~IV), and aligned all point estimates with matching dilemma-cluster bootstrap intervals.
+    \item \textbf{Threshold Mechanics \& Verification (R2.4, R3.3):} Mathematically verified that in the primary task, no single batch crosses the aspirational threshold ($s_0 + 9 \times \text{length}_{\max} < T$), and that in the $T=10$ control, initial scores strictly exceed the threshold ($s_0 \ge 40 > 10$), rendering it non-binding prior to action selection (\S~V-B, Supp.~\S~X).
+    \item \textbf{Matched 2AFC Baseline \& Construct Validity (R2.6, R3.1):} Evaluated a paired two-alternative forced-choice (2AFC) baseline ($N=1,120$), non-zero indifferent payoffs ($N=280$), and a complete 1,120-trial full-factorial counterbalanced neutral-label experiment (Supp.~\S~XVI, Supp.~Table~XIII), showing that simultaneously neutralizing action labels and presentation slots attenuates disparity skew while preserving high payoff sensitivity.
+    \item \textbf{Phrasing Sensitivity \& Hardware Audit (R1.2):} Added a full cross-model phrasing breakdown (Table~VI), evaluated stochastic decoding across random seeds (Supp.~\S~XV), documented local hardware memory boundaries where FP16 models are expected to exceed allocatable limits (Supp.~\S~XI), and provided a self-contained execution suite and Jupyter notebook for evaluating unquantized FP16 and 7B models on free cloud GPUs (Supp.~\S~XVII). We state plainly that larger 70B+ architectures and local FP16/Q8\_0 runs across the full design were not executed due to single-machine memory boundaries (8.0~GB unified RAM / 5.30~GiB Metal ceiling), but are fully supported via our cloud execution pipeline.
     \item \textbf{Open Science \& Transparency (R1.1, R2.1, R3.6):} Fully deposited all experimental runners, deterministic response parsers, stimulus specifications, and frozen raw CSV trial records in our public GitHub repository:\\
     \url{https://github.com/CodeShrek/LLM-Preference-Diagnostics}.
 \end{enumerate}
 
 \noindent Along with this resubmission, we have provided:
 \begin{itemize}[leftmargin=*]
-    \item A \textbf{clean, unmarked main manuscript} (\texttt{main.pdf}), formatted strictly within the 12-page budget.
-    \item A comprehensive \textbf{Supplementary Material package} (\texttt{supplementary.pdf}, 18 sections, 13 tables).
+    \item A \textbf{clean, unmarked main manuscript} (\texttt{main.pdf}), formatted as an IEEE Open Journal of the Computer Society regular paper.
+    \item A comprehensive \textbf{Supplementary Material package} (\texttt{supplementary.pdf}, 18 sections, 13 tables, Supplementary Figures~S1 and~S2).
     \item A detailed, point-by-point \textbf{Response to Reviewers} document (\texttt{response\_to\_reviewers.pdf}).
 \end{itemize}
 
-\noindent We believe the manuscript is now mature, technically rigorous, and directly answers every concern raised by the reviewers. We look forward to your reconsideration.\\[1.5em]
+\noindent\textbf{Note on Authorship:}\\
+The ScholarOne submission record lists five authors, whereas the initial PDF submission showed three; all five authors (Shriyam Baloni, Achin Jain, Debojyoti Roy, Prof.~Vanita Jain, and Prof.~Massimo Donelli) have confirmed their authorship, with written consent obtained from all authors prior to upload. Achin Jain is designated as the corresponding author (\href{mailto:achin.mails@gmail.com}{achin.mails@gmail.com}).\\[0.8em]
+
+\noindent We believe the manuscript is now mature, technically rigorous, and systematically addresses the feedback raised by the reviewers. We look forward to your reconsideration.\\[1.5em]
 
 \noindent Sincerely,\\[1em]
 \textbf{Achin Jain} \textit{(Corresponding Author)}\\
-Department of Computer Engineering, University of Delhi, Delhi, India\\
+Department of Computer Science and Engineering, University of Delhi, Delhi, India\\
 Email: \href{mailto:achin.mails@gmail.com}{achin.mails@gmail.com}\\[0.5em]
 \textit{On behalf of co-authors:}\\
-Achin Jain, Debojyoti Roy, Prof. Vanita Jain (Head, Dept. of ECE, University of Delhi), and Prof. Massimo Donelli (University of Trento)
+Shriyam Baloni, Debojyoti Roy, Prof. Vanita Jain (Head, Dept. of ECE, University of Delhi), and Prof. Massimo Donelli (University of Trento)
 
 \end{document}

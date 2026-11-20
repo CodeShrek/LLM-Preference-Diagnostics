@@ -11,6 +11,10 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{listings}
+\usepackage{enumitem}
+
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\Roman{table}}
 
 \lstset{
   basicstyle=\small\ttfamily,
@@ -22,11 +26,18 @@
 \begin{document}
 
 \title{Supplementary Material for:\\\large\textit{Stress-Testing Preference Elicitation in Instruction-Tuned Language Models: Separating Commitment, Conditional Direction, and Payoff Sensitivity Across Small Model Families}}
-\author{Anonymous Authors\\Submitted to: \textit{IEEE Open Journal of the Computer Society}}
+\author{Shriyam Baloni, Achin Jain, Debojyoti Roy, Vanita Jain, and Massimo Donelli\\IEEE Open Journal of the Computer Society --- Manuscript OJCS-2026-09-0983}
 \maketitle
 
 \tableofcontents
 \newpage
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{figures/Fig1_MethodologyOverview.png}
+\caption{Supplementary Figure~S1: High-resolution end-to-end methodology overview diagram, illustrating: (1)~Evaluated models and local deployment protocol; (2)~Factorial design balance across 1,120 trials per model; (3)~Consequential multi-turn trial protocol and state mechanics; (4)~Analytical hurdle decomposition separating directional commitment from conditional dominant choice; and (5)~Controls and robustness suite.}
+\label{fig:supp_overview}
+\end{figure*}
 
 %% =========================================================
 \section{Complete Stimulus Definitions}
@@ -38,12 +49,12 @@ The evaluation domain places the model as a data-processing agent. The agent's g
 \textit{Both operations (Add and Subtract) carry identical computational cost. The \textbf{only} difference between them is the quality score awarded per entry processed.}
 
 \subsection{Dilemma Parameters (D01--D20)}
-\begin{table}[!h]
+\begin{table*}[!htbp]
 \centering
 \caption{Complete Dilemma Specifications for Primary Domain}
 \label{tab:supp_dilemmas}
 \small
-\begin{tabular}{@{}lp{4.5cm}cc@{}}
+\begin{tabular}{@{}lp{10cm}cc@{}}
 \toprule
 \textbf{ID} & \textbf{Backstory (abbreviated)} & $s_0$ & $T$ \\
 \midrule
@@ -69,7 +80,7 @@ D19 & Magnetometer readings, geophysical mapping       & 60  & 125 \\
 D20 & Spectrometer intensities, chemistry lab pipeline & 75  & 145 \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{table*}
 
 The machine-readable version of all dilemma specifications, including array length ranges, value ranges, and offset ranges, is structured in the JSON specification \texttt{m3v2\_stimuli.json} and permanently available alongside all experimental runner scripts, deterministic response parsers, analysis code, and raw model inference outputs in the open-access repository at \url{https://github.com/CodeShrek/LLM-Preference-Diagnostics}.
 
@@ -367,6 +378,7 @@ Table~\ref{tab:invalid_llama} details the distribution of the 43 Llama 3.2 3B an
 \caption{Distribution of Invalid Trials by Payoff Ratio and Phrasing}
 \label{tab:invalid_llama}
 \small
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{@{}lcccc@{}}
 \toprule
 \textbf{Payoff Ratio} & \multicolumn{2}{c}{\textbf{Llama (43 total)}} & \multicolumn{2}{c}{\textbf{Phi (16 total)}} \\
@@ -383,7 +395,8 @@ Table~\ref{tab:invalid_llama} details the distribution of the 43 Llama 3.2 3B an
 \midrule
 Total & 43 & 3.8\% & 16 & 1.4\% \\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
 
 \subsection{Audit of Raw Model Outputs}
@@ -419,13 +432,14 @@ For Llama 3.2 (24 Indifferent choices) and Phi-4 Mini (14 Indifferent choices), 
 
 To evaluate sensitivity to specification, Table~\ref{tab:supp_stage1} reports Stage~1 commitment slopes under: (1) interactive fixed-effects MLE; (2) additive fixed-effects MLE; (3) dilemma-cluster-robust logistic regression without dummies; and (4) Firth's penalized logistic regression with dilemma fixed effects.
 
-We also note that fitting the joint multinomial logit model (Eq.~3 of the main text) directly across all models encounters severe degenerate separation: for Gemma (0 Indifferent choices), the non-directional reference category is empty, making the baseline log-odds mathematically undefined; for Llama and Phi (24 and 14 Indifferent choices across 20 dilemmas), estimating the 48 multinomial parameters produces complete separation across dilemma cells. This supports the methodological necessity of decomposing choice via the hurdle framework.
+We also note that fitting the joint multinomial logit model (Eq.~3 of the main text) directly across all models encounters severe degenerate separation: for Gemma (0 Indifferent choices), the non-directional reference category is empty, making the baseline log-odds mathematically undefined; for Llama and Phi (24 and 14 Indifferent choices across 20 dilemmas), estimating the 48 multinomial parameters produces quasi-complete separation across dilemma cells. This supports the methodological necessity of decomposing choice via the hurdle framework.
 
 \begin{table}[!h]
 \centering
 \caption{Stage 1 Commitment Model Sensitivity Across Specifications}
 \label{tab:supp_stage1}
 \small
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{@{}lcccc@{}}
 \toprule
 \textbf{Model} & \textbf{Interactive FE} & \textbf{Additive FE} & \textbf{Clustered Logit} & \textbf{Firth with FE [95\% CI]} \\
@@ -436,11 +450,12 @@ Phi-4 Mini 3.8B & 0.960 ($p=0.173$) & 1.943 ($p<0.001$) & 1.872 ($p=0.009$) & 1.
 Gemma 3 4B      & N.I. (100\% Dir)  & N.I. (100\% Dir)  & N.I. (100\% Dir)  & N.I. (100\% Dir) \\
 \bottomrule
 \multicolumn{5}{p{\linewidth}}{\footnotesize Notes: N.I. = Not identified (Gemma chose directional actions on 100\% of trials). For Llama and Phi, additive models and Firth penalization resolve the separation-induced inflation of standard errors, yielding positive point estimates. However, because these estimates rely on only 24 and 14 indifferent choices across 20 clusters, they are sensitive to specification and should be interpreted as suggestive.}
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
 
 \subsection{Stage 2 Firth Penalized Estimates}
-To address quasi-complete separation in the Stage~2 MLE, we fit Firth's penalized-likelihood logistic regression \cite{firth_1993}. The Firth approach adds a Jeffrey's-prior penalty $\frac{1}{2}\log|I(\beta)|$ to the log-likelihood, producing finite estimates even under complete separation.
+To address quasi-complete separation in the Stage~2 MLE, we fit Firth's penalized-likelihood logistic regression \cite{firth_1993}. The Firth approach adds a Jeffrey's-prior penalty $\frac{1}{2}\log|I(\beta)|$ to the log-likelihood, producing finite estimates even under quasi-complete separation.
 
 The stabilized Stage~2 specification (payoff magnitude $|\log m|$, presentation position, and dilemma fixed effects, \textit{without} the payoff-by-position interaction) was fit using this method. Results are summarized in Table~\ref{tab:supp_firth}.
 
@@ -448,25 +463,29 @@ The stabilized Stage~2 specification (payoff magnitude $|\log m|$, presentation 
 \centering
 \caption{Firth Penalized Stage-2 Estimates (Stabilized Specification)}
 \label{tab:supp_firth}
-\begin{tabular}{@{}lrrrr@{}}
+\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lrrrrr@{}}
 \toprule
-\textbf{Model} & \textbf{N} & \textbf{Firth $\hat\beta$} & \textbf{95\% Profile CI} & \textbf{Conv.} \\
+\textbf{Model} & \textbf{N} & \textbf{Firth $\hat\beta$} & \textbf{95\% Penalized Wald CI} & \textbf{95\% Cluster-Boot CI} & \textbf{Conv.} \\
 \midrule
-Qwen 2.5 3B    & 161  & 1.231 & $[0.499, 1.962]$  & \checkmark \\
-Llama 3.2 3B   & 903  & 0.282 & $[0.037, 0.526]$  & \checkmark \\
-Phi-4 Mini 3.8B & 940 & 0.225 & $[-0.015, 0.465]$ & \checkmark \\
-Gemma 3 4B     & 960  & 1.531 & $[0.510, 2.552]$  & \checkmark \\
+Qwen 2.5 3B     & 161 & 1.231 & $[0.499, 1.962]$  & $[0.805, 2.104]$  & \checkmark \\
+Llama 3.2 3B    & 903 & 0.282 & $[0.037, 0.526]$  & $[0.026, 0.533]$  & \checkmark \\
+Phi-4 Mini 3.8B & 940 & 0.225 & $[-0.015, 0.465]$ & $[0.047, 0.418]$  & \checkmark \\
+Gemma 3 4B      & 960 & 1.531 & $[0.510, 2.552]$  & $[-0.042, 3.216]$ & \checkmark \\
 \bottomrule
-\multicolumn{5}{p{\linewidth}}{\footnotesize All four models converged. Three of four Firth 95\% CIs exclude zero; Phi's CI marginally includes zero ($[-0.015, 0.465]$). The Firth estimates are consistent in sign and direction with the blocked cluster bootstrap CIs reported in Table~III of the main manuscript.}
-\end{tabular}
+\multicolumn{6}{p{\linewidth}}{\footnotesize All four models converged. Firth 95\% penalized Wald CIs are reported from the inverted Fisher information matrix. The 95\% Cluster-Boot CI is computed via a 2,000-resample dilemma-level cluster bootstrap (resampling 20 dilemmas with replacement, seed 42) directly refitting the Firth penalized estimator on each replicate. In contrast to unpenalized MLE bootstrap which diverged for Gemma due to optimizer iteration limits ($\beta \approx 22.57$), the cluster-aware Firth bootstrap achieved 100\% finite convergence across all 2,000 resamples for all four models.}
+\end{tabular}%
+}
 \end{table}
 
-The Firth results strengthen the main conclusion that the conditional payoff effect is positive across models: even under a separation-resistant estimator, the direction is consistent, and three of four 95\% intervals exclude zero.
+The Firth results indicate that the conditional payoff slope point estimates are uniformly positive across all four models ($\hat\beta \in [0.225, 1.531]$). Under the 95\% penalized Wald intervals, three of four exclude zero (with Phi marginally spanning zero at $[-0.015, 0.465]$). Under the 2,000-resample cluster bootstrap, three of four intervals exclude zero (with Gemma spanning $[-0.042, 3.216]$ because its five errors are concentrated in two dilemmas). Across both estimators, point estimates remain positive across all architectures.
 
 %% =========================================================
 \section{Bootstrap Procedure Details}
 %% =========================================================
 
+\subsection{Standard-MLE Blocked Cluster Bootstrap (10,000 Resamples)}
 The 10,000-resample blocked cluster bootstrap used the following procedure:
 
 \begin{enumerate}
@@ -474,7 +493,7 @@ The 10,000-resample blocked cluster bootstrap used the following procedure:
   \item Within each replicate, dilemma identifiers are relabeled to avoid collisions between duplicate draws of the same dilemma.
   \item The Stage~2 stabilized specification (without payoff-by-position interaction) is refit on each bootstrap sample. Replicates that fail to converge or produce non-finite coefficients are recorded as failed and excluded from the percentile interval.
   \item Random seed: 42.
-  \item The 2.5th and 97.5th percentiles of the finite bootstrap distribution of the payoff-magnitude coefficient are reported as the ``Stabilized CI'' in Table~III of the main manuscript.
+  \item The 2.5th and 97.5th percentiles of the finite bootstrap distribution of the payoff-magnitude coefficient are reported as the ``Stabilized CI'' in Table~IV of the main manuscript.
 \end{enumerate}
 
 The number of failed replicates per model is reported in Table~\ref{tab:supp_boot}.
@@ -483,6 +502,8 @@ The number of failed replicates per model is reported in Table~\ref{tab:supp_boo
 \centering
 \caption{Bootstrap Replicate Summary (Stabilized Specification)}
 \label{tab:supp_boot}
+\small
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{@{}lccc@{}}
 \toprule
 \textbf{Model} & \textbf{Total} & \textbf{Failed} & \textbf{Failure Rate} \\
@@ -493,10 +514,20 @@ Phi-4 Mini 3.8B & 10,000 & 0 & 0.0\% \\
 Gemma 3 4B      & 10,000 & 0 & 0.0\% \\
 \bottomrule
 \multicolumn{4}{p{\linewidth}}{\footnotesize Replicates where numerical overflow occurred or where the optimizer failed were tracked. Under the stabilized specification without dilemma fixed effects, 100\% of resamples converged successfully across all four models.}
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
 
-For Gemma 3 4B, because dominant accuracy is 99.5\% (955/960 dominant choices, with only 5 errors across the entire sample), bootstrap resamples drawing zero or one error encountered optimizer iteration limits in standard unpenalized logistic MLE (where the optimizer reached parameter caps up to $\beta \approx 22.57$). Consequently, reporting the 97.5th percentile as $22.57$ reflects an optimizer iteration cap rather than a valid finite confidence bound. In the main manuscript, Gemma's bootstrap interval is properly reported as not estimable under separation; Firth's penalized profile interval ($[0.51, 2.55]$) provides the valid separation-resistant interval.
+For Gemma 3 4B, because dominant accuracy is 99.5\% (955/960 dominant choices, with only 5 errors across the entire sample), bootstrap resamples drawing zero or one error encountered optimizer iteration limits in standard unpenalized logistic MLE (where the optimizer reached parameter caps up to $\beta \approx 22.57$). Consequently, reporting the 97.5th percentile as $22.57$ reflects an optimizer iteration cap rather than a valid finite confidence bound. In the main manuscript, Gemma's bootstrap interval is properly reported as not estimable under separation; Firth's penalized Wald interval ($[0.51, 2.55]$) provides the valid separation-resistant interval.
+
+\subsection{Cluster-Aware Firth Bootstrap (2,000 Resamples)}
+To address dilemma-level clustering under separation-resistant estimation, we also implemented a 2,000-resample cluster bootstrap directly paired with Firth's penalized logistic regression:
+\begin{enumerate}
+  \item Resample 20 structural dilemma clusters with replacement (fixed seed 42), preserving all trial observations within each chosen dilemma.
+  \item Refit Firth's Jeffreys-penalized likelihood model with dilemma fixed effects on each bootstrap replicate.
+  \item Record parameter convergence and empirical percentiles (2.5th and 97.5th percentiles).
+\end{enumerate}
+Crucially, whereas unpenalized MLE bootstrap failed on Gemma because resamples drawing zero or one error drove estimates to optimizer caps ($\beta \approx 22.57$), Firth penalization regularized every single resample, achieving 100\% finite convergence (2,000/2,000 successful fits with 0 numerical failures across all four models). The resulting cluster-bootstrap percentile intervals ($[0.805, 2.104]$ for Qwen, $[0.026, 0.533]$ for Llama, $[0.047, 0.418]$ for Phi, and $[-0.042, 3.216]$ for Gemma) directly corroborate the primary findings while accounting for dilemma-level clustering.
 
 %% =========================================================
 \section{Cross-Model Performance by Phrasing Variant}
@@ -504,7 +535,7 @@ For Gemma 3 4B, because dominant accuracy is 99.5\% (955/960 dominant choices, w
 
 Table~\ref{tab:supp_phrasing} reports the commitment rate and conditional dominant-choice accuracy across all four phrasing templates (P1--P4). Each phrasing template was evaluated across 280 scheduled trials per model (20 dilemmas $\times$ 7 payoff ratios $\times$ 2 presentation positions).
 
-\begin{table}[!h]
+\begin{table*}[!htbp]
 \centering
 \caption{Commitment and Dominant Choice by Phrasing Variant}
 \label{tab:supp_phrasing}
@@ -533,17 +564,17 @@ Gemma 3 4B & Valid Trials & 280 & 280 & 280 & 280 \\
            & Stage-2 $N$ (non-parity) & 240 & 240 & 240 & 240 \\
            & Dominant Choice Acc. & 99.6\% & 99.6\% & 100.0\% & 98.8\% \\
 \bottomrule
-\multicolumn{6}{p{\linewidth}}{\footnotesize P1: Direct Choice; P2: Protocol Configuration; P3: Rule Selection; P4: Pre-Commitment Protocol. Note that Qwen 2.5 chose \textit{Indifferent} on 100\% of trials under P3, which explicitly conditioned indifference on assessing rules as ``equivalent at your current score level.'' In contrast, under P2 (which asked the model to configure an operational protocol), Qwen committed in 37.1\% of trials.}
+\multicolumn{6}{p{\textwidth}}{\footnotesize P1: Direct Choice; P2: Protocol Configuration; P3: Rule Selection; P4: Pre-Commitment Protocol. Note that Qwen 2.5 chose \textit{Indifferent} on 100\% of trials under P3, which explicitly conditioned indifference on assessing rules as ``equivalent at your current score level.'' In contrast, under P2 (which asked the model to configure an operational protocol), Qwen committed in 37.1\% of trials.}
 \end{tabular}
-\end{table}
+\end{table*}
 
 %% =========================================================
 \section{C4 Numerical-Dominance Control Accounting}
 %% =========================================================
 
-Table~\ref{tab:supp_c4} details the complete trial accounting and accuracy breakdown for the C4 comprehension control.
+Table~\ref{tab:supp_c4} details the complete trial accounting and accuracy breakdown for the C4 comprehension control. Supplementary Figure~\ref{fig:supp_c4_accuracy} visualizes the cross-model accuracy distribution.
 
-\begin{table}[!h]
+\begin{table*}[!htbp]
 \centering
 \caption{C4 Control Trial Accounting and Accuracy Breakdown}
 \label{tab:supp_c4}
@@ -557,9 +588,16 @@ Llama 3.2 3B    & 1,120 & 1,052 & 68 &   566 &  53.8\% \\
 Phi-4 Mini 3.8B & 1,120 & 1,115 & 5  &   792 &  71.0\% \\
 Gemma 3 4B      & 1,120 & 1,120 & 0  & 1,101 &  98.3\% \\
 \bottomrule
-\multicolumn{6}{p{\linewidth}}{\footnotesize The C4 control tested 160 trials across each of the 7 payoff ratios ($1,120$ total). At 1:1 parity ($N=160$), the prompt instructed: \textit{``Respond `Indifferent' if they produce the same improvement.''} Selecting \textit{Indifferent} was scored as correct at parity; selecting the strictly larger payoff was scored as correct for non-parity ratios ($N=960$). Invalid trials were parsed using the same deterministic criteria as the main task.}
+\multicolumn{6}{p{\textwidth}}{\footnotesize The C4 control tested 160 trials across each of the 7 payoff ratios ($1,120$ total). At 1:1 parity ($N=160$), the prompt instructed: \textit{``Respond `Indifferent' if they produce the same improvement.''} Selecting \textit{Indifferent} was scored as correct at parity; selecting the strictly larger payoff was scored as correct for non-parity ratios ($N=960$). Invalid trials were parsed using the same deterministic criteria as the main task.}
 \end{tabular}
-\end{table}
+\end{table*}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\columnwidth]{figures/FigE_NumericalControl.png}
+\caption{Supplementary Figure~S2: Cross-model numerical dominance comprehension (C4). Reference lines indicate 33.3\% (pure chance over 3 options) and 50.0\% (binary chance).}
+\label{fig:supp_c4_accuracy}
+\end{figure}
 
 %% =========================================================
 \section{Threshold Non-Binding Verification and Turn 3 Behavior}
@@ -571,7 +609,7 @@ Crucially, in the sequential protocol, Turn~3 (the prompt asking whether to proc
 
 The follow-up experiment lowered the quality threshold to $T=10$ across all 20 dilemmas. Across all dilemmas, the initial baseline score satisfies $s_0 \ge 40$ (the minimum starting score is $s_0=40$ for D06). Because $s_0 \ge 40 > T=10$, the starting score alone strictly exceeds the threshold prior to any operation being selected or executed. Both directional options cross the threshold unconditionally, rendering the threshold formally non-binding.
 
-Under this non-binding regime, empirical payoff sensitivity persisted for Qwen ($\hat\beta = 1.273, p = 5.8 \times 10^{-4}$ on 176 non-parity committed trials) and near-ceiling accuracy persisted for Gemma (956/960 dominant choices, 99.6\%). Specifically, Gemma committed zero errors across all trials at ratios 1:2, 1:5, 1:9, 5:1, and 9:1 (800/800 trials dominant), with all 4 errors occurring at the 2:1 ratio (where Add was Option~A and Gemma chose Subtract). This near-zero error rate drives unpenalized logistic regression to complete separation ($\hat\beta = 21.785, p=0.999$), confirming that the extreme point estimate is an estimation artifact rather than substantive divergence.
+Under this non-binding regime, empirical payoff sensitivity persisted for Qwen ($\hat\beta = 1.273, p = 5.8 \times 10^{-4}$ on 176 non-parity committed trials) and near-ceiling accuracy persisted for Gemma (956/960 dominant choices, 99.6\%). Specifically, Gemma committed zero errors across all trials at ratios 1:2, 1:5, 1:9, 5:1, and 9:1 (800/800 trials dominant), with all 4 errors occurring at the 2:1 ratio (where Add was Option~A and Gemma chose Subtract). This near-zero error rate drives unpenalized logistic regression to quasi-complete separation ($\hat\beta = 21.785, p=0.999$), indicating that the extreme point estimate is an estimation artifact rather than substantive divergence.
 
 For Llama 3.2 and Phi-4 Mini, payoff slopes under non-binding goals ($T=10$) were estimated via dilemma-cluster-robust logistic regression: Llama $\hat\beta=0.093, SE=0.121, p=0.443$, 95\% CI $[-0.14, 0.33]$ (685/925 dominant choices, 74.1\%); Phi $\hat\beta=0.101, SE=0.123, p=0.412$, 95\% CI $[-0.14, 0.34]$ (707/941 dominant choices, 75.1\%). For both architectures, the 95\% confidence interval includes zero. Because their primary stabilized slopes were positive and bounded away from zero, threshold salience is not ruled out as a contributing factor for Llama and Phi. We also note that follow-up models used cluster-robust logistic regression, whereas primary Stage~2 specifications relied on dilemma cluster bootstraps and Firth penalization.
 
@@ -586,6 +624,7 @@ In response to reviewer queries regarding unquantized (FP16) model evaluations, 
 \caption{Host Hardware Specifications and Memory Accounting}
 \label{tab:supp_hardware}
 \small
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{@{}ll@{}}
 \toprule
 \textbf{Hardware Parameter} & \textbf{System Specification} \\
@@ -603,10 +642,11 @@ Deployed Quantization Scheme & 4-bit medium (\texttt{Q4\_K\_M}, GGUF format) \\
 \quad 3.8B Model (Phi-4 Mini) & FP16: $\approx 7.6$ GB $\mid$ Q4\_K\_M: $2.4$ GB \\
 \quad 4.0B Model (Gemma 3 4B) & FP16: $\approx 8.0$ GB $\mid$ Q4\_K\_M: $2.5$ GB \\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
 
-As documented in Table~\ref{tab:supp_hardware}, unquantized 16-bit floating-point checkpoints for 3.1B--4.0B models require 6.4 to 8.0 GB of storage and working memory for weights alone, excluding activation buffers and context memory. On the local evaluation platform (8.0 GB unified physical memory with a 5.30 GiB Metal allocatable ceiling and 5.20 GiB free storage), attempting to load an FP16 checkpoint triggers memory allocation failures (\texttt{GGML\_METAL: error allocating buffer}) or disk exhaustion. However, higher-precision quantizations (such as 8-bit \texttt{Q8\_0}) or cloud GPU environments (e.g., free Google Colab or Kaggle NVIDIA T4 GPUs) could accommodate unquantized FP16 checkpoints. Due to local single-machine storage and memory boundaries, FP16 and 8-bit variants were not evaluated across the full 4,480-trial design, which remains an open limitation.
+As documented in Table~\ref{tab:supp_hardware}, unquantized 16-bit floating-point checkpoints for 3.1B--4.0B models require 6.4 to 8.0 GB of storage and working memory for weights alone, excluding activation buffers and context memory. On the local evaluation platform (8.0 GB unified physical memory with a 5.30 GiB Metal allocatable ceiling and 5.20 GiB free storage), attempting to load an FP16 checkpoint is expected to exceed available physical memory buffers and remaining disk capacity. However, higher-precision quantizations (such as 8-bit \texttt{Q8\_0}) or cloud GPU environments (e.g., free Google Colab or Kaggle NVIDIA T4 GPUs) could accommodate unquantized FP16 checkpoints. Due to local single-machine storage and memory boundaries, FP16 and 8-bit variants were not evaluated across the full 4,480-trial design, which remains an open limitation.
 
 %% =========================================================
 \section{Second Domain Replication: Resource Scheduling}
@@ -616,7 +656,7 @@ To evaluate whether the commitment dissociation between models generalizes beyon
 
 We evaluated the complete balanced factorial design across 5 holdout dilemmas, 4 phrasings (P1--P4), 7 payoff ratios, and 2 presentation orders ($N = 5 \times 4 \times 7 \times 2 = 280$ trials per model) on both Qwen 2.5 3B (selective commitment baseline) and Llama 3.2 3B (directive commitment baseline).
 
-\begin{table}[!h]
+\begin{table*}[!htbp]
 \centering
 \caption{Cross-Model Comparison on Second Domain: Resource Scheduling ($N=280$ each)}
 \label{tab:supp_holdout}
@@ -637,9 +677,9 @@ We evaluated the complete balanced factorial design across 5 holdout dilemmas, 4
 \midrule
 \textbf{Total} & \textbf{276 (98.6\%)} & \textbf{4 (1.4\%)} & \textbf{3 (1.1\%)} & \textbf{239 (85.4\%)} & \textbf{38} & \textbf{165/200 (82.5\%)} \\
 \bottomrule
-\multicolumn{7}{p{\linewidth}}{\footnotesize For Llama 3.2 3B, 38 trials returned verbose conversational explanations under Phrasing P4 (identical to the primary task). Among valid trials ($N=242$), commitment was 98.8\% (239/242) and abstention was 1.2\% (3/242). Conditional dominant accuracy was 82.5\% across the 200 committed non-parity trials.}
+\multicolumn{7}{p{\textwidth}}{\footnotesize For Llama 3.2 3B, 38 trials returned verbose conversational explanations under Phrasing P4 (identical to the primary task). Among valid trials ($N=242$), commitment was 98.8\% (239/242) and abstention was 1.2\% (3/242). Conditional dominant accuracy was 82.5\% across the 200 committed non-parity trials.}
 \end{tabular}
-\end{table}
+\end{table*}
 
 As reported in Table~\ref{tab:supp_holdout}, the cross-model divergence observed in the primary domain replicates cleanly in the second domain:
 \begin{enumerate}[leftmargin=*]
@@ -665,6 +705,7 @@ We evaluated Qwen 2.5 3B across 5 structural dilemmas (D01--D05), 4 phrasings, 7
 \caption{Matched 5-Dilemma Comparison: Baseline vs.\ Non-Zero Indifferent Payoff (Qwen 2.5 3B, $N=280$ each)}
 \label{tab:supp_nonzero_indiff}
 \small
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{@{}lrrrr@{}}
 \toprule
 & \multicolumn{2}{c}{\textbf{Baseline (Zero Payoff)}} & \multicolumn{2}{c}{\textbf{Non-Zero Payoff}} \\
@@ -676,12 +717,13 @@ Disparities ($N=240$)   & 196 / 240 (81.7\%) & [76.3\%, 86.1\%] & 182 / 240 (75.
 \midrule
 \textbf{Total ($N=280$)} & \textbf{234 / 280 (83.6\%)} & \textbf{[78.8\%, 87.5\%]} & \textbf{220 / 280 (78.6\%)} & \textbf{[73.4\%, 83.0\%]} \\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
 
 As documented in Table~\ref{tab:supp_nonzero_indiff}, when all three options award identical positive payoffs at 1:1 parity, Qwen 2.5 selected \textit{Indifferent} in 38 of 40 trials (95.0\%, Wilson 95\% CI $[83.5\%, 98.6\%]$), identical to the baseline rate. Across disparity conditions, \textit{Indifferent} was chosen in 75.8\% of trials (182/240, Wilson 95\% CI $[70.0\%, 80.8\%]$). When the model committed to a directional action under disparity ($N=60$), it selected Option~B in 57 trials (95.0\%).
 
-These results rule out aversion to a zero-payoff default as the sole explanation of Stage~1 abstention. However, because \textit{Indifferent} was selected in 75.8\% of trials under disparities where it was strictly dominated ($Q_{\text{Indiff}} = \min(Q_A, Q_B) < \max(Q_A, Q_B)$), this finding also indicates that abstention in Qwen is largely non-payoff-driven, consistent with prompt-induced satisficing or non-directional compliance rather than active payoff maximization.
+These results rule out aversion to a zero-payoff default as the sole explanation of Stage~1 abstention. However, because \textit{Indifferent} was selected in 75.8\% of trials under disparities where it was strictly dominated ($Q_{\text{Indiff}} = \min(Q_A, Q_B) < \max(Q_A, Q_B)$), this finding also indicates that abstention in Qwen is largely non-payoff-driven, consistent with prompt compliance or non-directional framing rather than active payoff maximization.
 
 %% =========================================================
 \section{Indifferent Label and Slot Counterbalancing Ablations}
@@ -699,6 +741,7 @@ To evaluate whether abstention depends on the specific lexical label ``Indiffere
 \caption{Label and Menu-Slot Counterbalancing Ablations (Qwen 2.5 3B, $N=72$ each)}
 \label{tab:supp_label_slot}
 \small
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{@{}lrrrr@{}}
 \toprule
 \textbf{Condition} & \textbf{Abstain} & \textbf{Option A} & \textbf{Option B/C} & \textbf{Abstain \%} \\
@@ -709,7 +752,8 @@ Lexical: ``No preference''       & 70 & 0 & 2  & 97.2\% \\
 Structural: First Slot (Option A) & 0 & 0 & 72 &  0.0\% \\
 \bottomrule
 \multicolumn{5}{p{\linewidth}}{\footnotesize In the First Slot condition, Option A represented abstention (no transformation), while Options B and C represented directional actions. Choices were 52 for Option B (72.2\%) and 20 for Option C (27.8\%).}
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
 
 As reported in Table~\ref{tab:supp_label_slot}, semantic variations in the non-directional label preserve high abstention (76.4\% for ``Neither'' and 97.2\% for ``No preference''). However, moving abstention from the terminal slot to Option~A completely extinguished abstention (0.0\%), with all choices shifting to Option~B (72.2\%) and Option~C (27.8\%). This reveals that Qwen 2.5's abstention is mediated by an interaction between non-directional semantic framing and menu position (terminal option recency) rather than an unconditional preference for abstention.
@@ -720,7 +764,7 @@ Under the standard Phrasing~P3 template, Qwen 2.5 3B exhibited an abstention rat
 \begin{quote}\small\itshape
 ``Respond `Indifferent' if you assess the two rules as equivalent at your current score level.''
 \end{quote}
-To test whether the explicit mention of the current score level triggered a satisficing heuristic (e.g., assessing both transformations as acceptable given substantial initial scores $s_0 \ge 40$), we evaluated a wording ablation that excised the score-level clause entirely:
+To test whether the explicit mention of the current score level triggered abstention via perceived score sufficiency (e.g., assessing both transformations as acceptable given substantial initial scores $s_0 \ge 40$), we evaluated a wording ablation that excised the score-level clause entirely:
 \begin{quote}\small\itshape
 ``Respond `Indifferent' if you assess the two rules as equivalent.''
 \end{quote}
@@ -734,7 +778,7 @@ We evaluated this ablated phrasing across 5 structural dilemmas (D01--D05), 7 pa
 
 To establish whether Qwen 2.5's abstention was an artifact of greedy deterministic decoding ($T=0$), we evaluated a balanced factorial sub-design at temperature $T=0.7$ across three independent random seeds (42, 123, 999; 2 dilemmas $\times$ 2 phrasings $\times$ 7 ratios $\times$ 2 orders = 56 prompts per seed; $N = 168$ total trials).
 
-\begin{table}[!h]
+\begin{table*}[!htbp]
 \centering
 \caption{Stochastic Sampling Replicates ($T=0.7$) Across Random Seeds on Qwen 2.5 3B}
 \label{tab:supp_temperature}
@@ -750,7 +794,7 @@ Seed 999 & 2 & 8 & 46 & 56 & 82.1\% \\
 \textbf{Combined} & \textbf{5} & \textbf{23} & \textbf{140} & \textbf{168} & \textbf{83.3\%} \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{table*}
 
 As documented in Table~\ref{tab:supp_temperature}, abstention rates under stochastic decoding ($T=0.7$) remain highly consistent across seeds (83.9\%, 83.9\%, and 82.1\%; combined 83.3\%, Wilson 95\% CI $[77.0\%, 88.2\%]$), closely matching greedy decoding ($\approx 85\%$). Across the 56 evaluated prompt conditions, 40 (71.4\%) produced unanimous decisions across all three seeds, with 39 of the 40 unanimous sets choosing \textit{Indifferent}. This indicates that high abstention is an baseline model default rather than an artifact of deterministic sampling. We note that this check covers 56 prompt conditions on Qwen 2.5 3B only; evaluating whether position heuristics in directive models survive stochastic sampling remains an important extension.
 
@@ -764,34 +808,34 @@ An early exploratory M1 pilot ($N=80$ trials; \texttt{domain3\_m1\_neutral.csv})
 \subsection{Counterbalanced Neutral-Label Experiment (Transformation Alpha vs.\ Beta)}
 To rigorously disentangle action-label semantics from menu-slot positioning, we designed and executed an exhaustive full-factorial neutral-label counterbalancing experiment across all 20 structural dilemmas (D01--D20) and all four phrasing templates (P1--P4), yielding $N = 1,120$ balanced trials ($20\text{ dilemmas} \times 4\text{ phrasings} \times 7\text{ ratios} \times 2\text{ presentation orders}$) on Qwen 2.5 3B under greedy decoding ($T=0$). The arithmetic labels ``Add'' and ``Subtract'' were replaced with abstract tokens: ``Transformation Alpha'' and ``Transformation Beta'', and option identifiers were mapped to ``Option~1'' and ``Option~2''. Across trials, the assignment of Alpha and Beta to Option~1 and Option~2 was fully counterbalanced ($50\%$ Alpha-first, $50\%$ Beta-first).
 
-\begin{table}[!h]
+\begin{table*}[!htbp]
 \centering
 \caption{Full Neutral-Label Factorial Experiment (Qwen 2.5 3B, $N=1,120$)}
 \label{tab:supp_neutral_labels}
 \small
-\begin{tabular}{@{}lrrrrrr@{}}
+\begin{tabular}{@{}lrrrrrrr@{}}
 \toprule
-\textbf{Ratio} & \textbf{Indiff.} & \textbf{Option 1} & \textbf{Option 2} & \textbf{Alpha} & \textbf{Beta} & \textbf{Dominant Accuracy} \\
+\textbf{Ratio} & \textbf{Indiff.} & \textbf{Option 1} & \textbf{Option 2} & \textbf{Alpha} & \textbf{Beta} & \textbf{Committed Acc.} & \textbf{Overall Acc.} \\
 \midrule
-1:1 Parity ($N=160$) & 105 &  55 &   0 &  24 &  31 & 105 / 160 (65.6\%) \\
-1:2 ($N=160$)        &  22 &  73 &  65 &  11 & 127 & 127 / 138 (92.0\%) \\
-1:5 ($N=160$)        &  21 &  59 &  80 &   0 & 139 & 139 / 139 (100.0\%) \\
-1:9 ($N=160$)        &  13 &  67 &  80 &   0 & 147 & 147 / 147 (100.0\%) \\
-2:1 ($N=160$)        &  23 &  59 &  78 & 137 &   0 & 137 / 137 (100.0\%) \\
-5:1 ($N=160$)        &  24 &  57 &  79 & 136 &   0 & 136 / 136 (100.0\%) \\
-9:1 ($N=160$)        &  16 &  65 &  79 & 144 &   0 & 144 / 144 (100.0\%) \\
+1:1 Parity ($N=160$) & 105 &  55 &   0 &  24 &  31 & --- & 105 / 160 (65.6\%) \\
+1:2 ($N=160$)        &  22 &  73 &  65 &  11 & 127 & 127 / 138 (92.0\%) & 127 / 160 (79.4\%) \\
+1:5 ($N=160$)        &  21 &  59 &  80 &   0 & 139 & 139 / 139 (100.0\%) & 139 / 160 (86.9\%) \\
+1:9 ($N=160$)        &  13 &  67 &  80 &   0 & 147 & 147 / 147 (100.0\%) & 147 / 160 (91.9\%) \\
+2:1 ($N=160$)        &  23 &  59 &  78 & 137 &   0 & 137 / 137 (100.0\%) & 137 / 160 (85.6\%) \\
+5:1 ($N=160$)        &  24 &  57 &  79 & 136 &   0 & 136 / 136 (100.0\%) & 136 / 160 (85.0\%) \\
+9:1 ($N=160$)        &  16 &  65 &  79 & 144 &   0 & 144 / 144 (100.0\%) & 144 / 160 (90.0\%) \\
 \midrule
-\textbf{Disparities ($N=960$)} & \textbf{119} & \textbf{380} & \textbf{461} & \textbf{428} & \textbf{413} & \textbf{830 / 841 (98.7\%)} \\
-\textbf{Total ($N=1,120$)}     & \textbf{224} & \textbf{435} & \textbf{461} & \textbf{452} & \textbf{444} & \textbf{935 / 1,120 (83.5\%)} \\
+\textbf{Disparities ($N=960$)} & \textbf{119} & \textbf{380} & \textbf{461} & \textbf{428} & \textbf{413} & \textbf{830 / 841 (98.7\%)} & \textbf{830 / 960 (86.5\%)} \\
+\textbf{Total ($N=1,120$)}     & \textbf{224} & \textbf{435} & \textbf{461} & \textbf{452} & \textbf{444} & \textbf{830 / 896 (92.6\%)} & \textbf{935 / 1,120 (83.5\%)} \\
 \bottomrule
-\multicolumn{7}{p{\linewidth}}{\footnotesize At 1:1 parity, choosing Indifferent is objectively dominant. Across disparities ($N=960$), dominant accuracy among committed trials is 830/841 (98.7\%); overall accuracy including abstentions is 830/960 (86.5\%, Wilson 95\% CI $[84.1\%, 88.5\%]$). All 1,120 trials were strictly valid under deterministic regex parsing.}
+\multicolumn{8}{p{\textwidth}}{\footnotesize At 1:1 parity, choosing \textit{Indifferent} is objectively dominant. Across disparities ($N=960$), dominant accuracy among committed trials is 830/841 (98.7\%); overall accuracy including abstentions is 830/960 (86.5\%, Wilson 95\% CI $[84.1\%, 88.5\%]$). All 1,120 trials were strictly valid under deterministic regex parsing. Note that among the 55 committed parity choices, 100\% (55/55) selected Option~1 despite balanced underlying actions (24 Alpha vs.\ 31 Beta), showing that under exact indifference, the presentation-slot heuristic flips from Option~B (under lettered options) to Option~1 (under numeric options).}
 \end{tabular}
-\end{table}
+\end{table*}
 
-As documented in Table~\ref{tab:supp_neutral_labels}, the full-factorial neutral-label experiment yields four decisive insights:
+As documented in Table~\ref{tab:supp_neutral_labels}, the full-factorial neutral-label experiment yields four key observations:
 \begin{enumerate}[leftmargin=*]
-\item \textbf{Symmetric Balance Across Action Identities:} Under neutral labeling across the full benchmark, directional commitments split almost perfectly between actions: 428 selections for Transformation~Alpha (50.9\%) and 413 selections for Transformation~Beta (49.1\%). The strong ``Subtract'' preference observed under semantic labeling (60.9\% Subtract vs.\ 39.1\% Add) is completely eliminated.
-\item \textbf{Decisive Surge in Disparity Commitment Across All Phrasings:} Across all 960 disparity trials, Qwen committed directionally on 87.6\% of trials (841/960), representing a 5.2-fold increase over the primary Add/Subtract baseline (16.8\%, 161/960). This surge was observed across every phrasing template:
+\item \textbf{Dominance Accounting vs.\ Action Split:} Under neutral labeling across disparities ($N=960$), choices split as 428 for Transformation~Alpha (50.9\%) and 413 for Transformation~Beta (49.1\%). We emphasize that this near-equal split follows mechanically from balanced payoff dominance (480 Alpha-dominant vs.\ 480 Beta-dominant conditions) combined with 98.7\% accuracy (428/428 [100.0\%] when Alpha dominant; 402/413 [97.3\%] when Beta dominant), rather than indicating an absence of label bias per se. Furthermore, the neutral prompt template removed the operational narrative description (``add/subtract the offset parameter...''), which likely simplified the task toward an abstract numeric comparison akin to the C4 control.
+\item \textbf{Surge in Disparity Commitment Across All Phrasings:} Across all 960 disparity trials, Qwen committed directionally on 87.6\% of trials (841/960), representing a 5.2-fold increase over the primary Add/Subtract baseline (16.8\%, 161/960). This surge was observed across every phrasing template:
   \begin{itemize}
     \item \textbf{P1:} Commitment surged from 15.8\% (38/240) to 95.4\% (229/240; 100.0\% conditional dominant accuracy).
     \item \textbf{P2:} Commitment surged from 41.7\% (100/240) to 100.0\% (240/240; 95.4\% conditional dominant accuracy).
@@ -799,7 +843,7 @@ As documented in Table~\ref{tab:supp_neutral_labels}, the full-factorial neutral
     \item \textbf{P4:} Commitment surged from 9.6\% (23/240) to 58.8\% (141/240; 100.0\% conditional dominant accuracy).
   \end{itemize}
 \item \textbf{Near-Ceiling Conditional Payoff Responsiveness:} On 98.7\% of trials where Qwen committed to a directional action under disparity ($N=841$), it selected the mathematically dominant transformation (830/841; 428/428 for Alpha when $Q_\alpha > Q_\beta$; 402/413 for Beta when $Q_\beta > Q_\alpha$).
-\item \textbf{Substantial Attenuation of Presentation Slot Bias:} Committed choices distributed across presentation positions as 380 for Option~1 (45.2\%) and 461 for Option~2 (54.8\%), sharply moderating the extreme slot asymmetry observed under default lettered options (84.5\% Option~B vs.\ 15.5\% Option~A).
+\item \textbf{Substantial Attenuation of Disparity Slot Bias, with Residual Parity Slot Heuristic:} Across disparity trials, committed choices distributed across presentation positions as 380 for Option~1 (45.2\%) and 461 for Option~2 (54.8\%), sharply moderating the extreme slot asymmetry observed under default lettered options (84.5\% Option~B vs.\ 15.5\% Option~A). However, under exact 1:1 payoff parity ($N=160$), while Qwen selected \textit{Indifferent} on 65.6\% of trials (105/160), all 55 committed choices selected Option~1 (100.0\%), even though underlying actions were evenly divided (24 Alpha vs.\ 31 Beta). This indicates that neutral counterbalancing substantially changes commitment behavior and attenuates disparity-driven position bias, while exposing that at exact payoff parity, committed selections favored Option~1 (100.0\% of the 34.4\% of trials where the model committed).
 \end{enumerate}
 
 %% =========================================================
@@ -808,7 +852,7 @@ As documented in Table~\ref{tab:supp_neutral_labels}, the full-factorial neutral
 
 To enable reviewers and researchers to reproduce our benchmarks across unquantized FP16 checkpoints and larger model classes without local hardware constraints, we provide an automated cloud evaluation pipeline designed for free Google Colab or Kaggle NVIDIA T4 GPU instances (16~GB VRAM):
 \begin{itemize}[leftmargin=*]
-\item \textbf{Self-Contained Runner Script:} \texttt{experiments/cloud\_eval/run\_cloud\_benchmarks.py} loads pre-trained checkpoints via Hugging Face \texttt{transformers} and \texttt{torch} in unquantized 16-bit floating point (\texttt{torch\_dtype=torch.float16}) or 8-bit precision, applies greedy decoding ($T=0$), and logs deterministic parsed responses. It supports standard Add/Subtract evaluations, the full neutral-label factorial design (\texttt{--neutral\_labels}), and compact 1B models.
+\item \textbf{Self-Contained Runner Script:} \texttt{experiments/cloud\_eval/run\_cloud\_benchmarks.py} loads pre-trained checkpoints via Hugging Face \texttt{transformers} and \texttt{torch} using \texttt{--model\_id} and \texttt{--torch\_dtype} (or 8-bit precision via \texttt{--load\_in\_8bit}), applies greedy decoding ($T=0$), and logs deterministic parsed responses. It supports standard Add/Subtract evaluations, the full neutral-label factorial design (\texttt{--neutral\_labels}), and compact 1B models. On NVIDIA T4 GPUs, FP16 can be numerically unstable and BF16 is not supported natively; 8-bit precision (\texttt{--load\_in\_8bit} or Q8\_0) or float32 is recommended for Gemma architectures.
 \item \textbf{Interactive One-Click Notebook:} \texttt{experiments/cloud\_eval/OJCS\_FP16\_and\_7B\_Benchmarks.ipynb} provides a turnkey Jupyter notebook with pre-configured cells to run:
   \begin{enumerate}
     \item Unquantized FP16 baselines on \texttt{Qwen/Qwen2.5-3B-Instruct} and \texttt{meta-llama/Llama-3.2-3B-Instruct}.
@@ -836,9 +880,11 @@ python experiments/m3v2/multimodel_analysis.py
 python experiments/m3v2/firth_stage2_robustness.py
 \end{lstlisting}
 
-This pipeline requires Python $\geq 3.9$ with \texttt{pandas}, \texttt{numpy}, \texttt{scipy}, \texttt{statsmodels $\geq 0.14$}, \texttt{matplotlib}, and \texttt{seaborn}. The model inference data is frozen in \texttt{results/\{model\}/primary.csv}. Re-running local inference requires an Ollama instance serving the model tags listed in Table~II of the main manuscript. For cloud execution of unquantized FP16 checkpoints, refer to Section~XVIII.
+This pipeline requires Python $\geq 3.10$ with \texttt{pandas}, \texttt{numpy}, \texttt{scipy}, \texttt{statsmodels $\geq 0.14$}, \texttt{matplotlib}, and \texttt{seaborn}. The model inference data is frozen in \texttt{results/\{model\}/primary.csv}. Re-running local inference requires an Ollama instance serving the model tags listed in Table~II of the main manuscript. For cloud execution of unquantized FP16 checkpoints, refer to Section~XVII.
 
-\bibliographystyle{IEEEtran}
-\bibliography{references}
+\begin{thebibliography}{1}
+\bibitem{firth_1993}
+D.~Firth, ``Bias reduction of maximum likelihood estimates,'' \textit{Biometrika}, vol.~80, no.~1, pp. 27--38, 1993.
+\end{thebibliography}
 
 \end{document}
